@@ -1,0 +1,263 @@
+#inventory {
+    color: #fff;
+    font-family: Montserrat;
+    margin: auto;
+    margin-top: 10vh;
+    text-transform: uppercase;
+    width: 122vh;
+}
+
+#inventory p {
+    color: #fff;
+}
+
+#inventory #feet-items {
+    height: 7vh;
+    width: 67%;
+}
+
+#inventory #feet-items .health {
+    background: linear-gradient(to right, #0fa04b 10%, #1a5932 10%);
+    margin-top: 1vh;
+}
+
+#inventory #feet-items .satiety {
+    background: linear-gradient(to right, #a67d10 100%, #493d20 100%);
+}
+
+#inventory #feet-items .thirst {
+    background: linear-gradient(to right, #1070a0 100%, #1b475c 100%);
+}
+
+#inventory #feet-items .info {
+    border: none;
+    font-size: 1vh;
+    text-align: right;
+}
+
+#inventory #feet-items .info p {
+    font-size: 1.2vh;
+    margin: 0;
+}
+
+#inventory #feet-items .progress {
+    height: 1.2vh;
+    margin-bottom: 0.8vh;
+    width: 10vh;
+}
+
+#inventory #feet-items .progress img {
+    height: 1.1vh;
+    opacity: 0.8;
+    position: relative;
+    right: -1.7vh;
+}
+
+#inventory #head-items {
+    height: 7vh;
+    margin-top: 4vh;
+}
+
+#inventory #legs-items {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 12vh;
+}
+
+#inventory #top-items {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 12vh;
+}
+
+#inventory .bank {
+    color: #06ca5a;
+}
+
+#inventory .block {
+    background: #000;
+    height: 60vh;
+    margin: auto;
+    width: 40vh;
+}
+
+#inventory .container .items {
+    display: grid;
+    height: 20vh;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    opacity: 0.9;
+    margin-bottom: 0.5vh;
+    margin-top: 0.2vh;
+}
+
+#inventory .container .items .column {
+    background: #222;
+    border-bottom: 1px solid #5c5c5d;
+    border-right: 1px solid #5c5c5d;
+    display: flex;
+}
+
+#inventory .container .items .filled {
+    background: #000;
+}
+
+#inventory .container .items .item {
+    height: 3vh;
+    width: 3vh;
+}
+
+#inventory .container .header {
+    background: #000;
+    margin: 0;
+    padding: 1vh;
+}
+
+#inventory .container .header .name {
+    color: #06ca5a;
+}
+
+#inventory .hands {
+    background: #000;
+    height: 11vh;
+    margin: 0.5vh auto;
+    opacity: 0.9;
+    width: 40vh;
+}
+
+#inventory .hands .hands_name {
+    color: #3a3a3a;
+}
+
+#inventory .hands .header {
+    padding: 1vh 0vh;
+}
+
+#inventory .hands .left-hand {
+    float: left;
+    margin-left: 10vh;
+    width: 3vh;
+}
+
+#inventory .hands .right-hand {
+    float: right;
+    margin-right: 10vh;
+    transform: scaleX(-1);
+    width: 3vh;
+}
+
+#inventory .header {
+    margin: 0 1vh;
+}
+
+#inventory .inventory_menu {
+    background: #000;
+    color: #fff;
+    min-width: 15vh;
+    position: absolute;
+    /*top: 10vh;
+    right: 11vh;*/
+}
+
+#inventory .inventory_menu .menu-item {
+    border-bottom: 1px solid #222;
+    border-left: 1px solid #000;
+    font-weight: bold;
+    padding: 1vh;
+}
+
+#inventory .inventory_menu .menu-item:hover {
+    background: #fff;
+    border-left: 2px solid #196;
+    color: #000;
+}
+
+#inventory .item {
+    background-image: url("../img/items/1.png");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    background-size: contain;
+    height: 4vh;
+    margin: auto;
+    width: 4vh;
+}
+
+#inventory .item_name {
+    background: #000;
+    border-right: 2px solid #196;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.5vh;
+    position: absolute;
+}
+
+#inventory .left-block {
+    background: none;
+    float: left;
+    height: 72.5vh;
+    margin-right: 0.5vh;
+}
+
+#inventory .left-block .container .header {
+    text-align: right;
+}
+
+#inventory .left-block .container .items {
+    /* position: relative; */
+}
+
+#inventory .main {
+    opacity: 0.9;
+    padding-top: 1vh;
+}
+
+#inventory .bottom_info {
+    bottom: -2vh;
+    margin-right: 1vh;
+    position: relative;
+    text-align: right;
+}
+
+#inventory .main .center {
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    width: 9vh;
+}
+
+#inventory .main .column {
+    border: 2px solid #5c5c5d;
+    display: flex;
+    background-size: 3vh;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+}
+
+#inventory .main .items {
+    border-collapse: separate;
+    border-spacing: 1vh 1vh;
+    display: grid;
+    grid-gap: 1vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    margin: 3vh auto;
+    width: 53%;
+}
+
+#inventory .right-block {
+    background: none;
+    float: right;
+    height: 72.5vh;
+    margin-right: 1vh;
+}
+
+#inventory .money {
+    color: #06ca5a;
+}
+
+#inventory .playerName {
+    color: #06ca5a;
+}

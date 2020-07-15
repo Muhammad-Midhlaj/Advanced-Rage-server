@@ -1,0 +1,5 @@
+﻿<meta>
+  <info name="Save Command" author="CMHDev"/>
+  <assembly ref="System.IO.dll"/>
+  <script src="saved_pos.cs" type="server" lang="csharp" />
+</meta>

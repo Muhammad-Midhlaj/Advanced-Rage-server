@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+body {
+    font-family: 'Open Sans', sans-serif;
+
+    /* background: url('../img/bg.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+}
+body .taxiMenu {
+    /* background-image: ('../img/bg.svg'); */
+    background-image: url('../img/bgtaxi.png');
+
+    /* width: 26.875em; /* 430px; 
+    height: 27.500em; /* 440px; */
+    width: 546px;
+    height: 439px;
+    position: relative;
+}
+/* Вход - 1 */
+body .taxiMenu .logIn .text, 
+body .taxiMenu .logIn button {
+    font-weight: 600;
+    text-transform: uppercase;
+
+    font-size: 1.125em;
+    text-align: center;
+}
+body .taxiMenu .logIn .text {
+    color: #373737;
+}
+body .taxiMenu .logIn button {
+    margin: auto;
+    margin-top: 1.55em;
+    display: block;
+    
+    width: 180px;
+    height: 43px;
+
+    background-color: #deaf40;
+
+    border: 0;
+    transition: 1s;
+    border-radius: 5px;
+    /* background-image: linear-gradient(#ffc037, #dca332); */
+    background-image: linear-gradient(#ffc02f, #febb00,#d09f3f);
+    color: white;
+    font-weight: 300;
+}
+body .taxiMenu .logIn.center {
+    top: 53.59% !important;
+}
+body .taxiMenu .logIn button:hover {
+
+}
+.active {
+    background-color: white !important;
+    outline: black;
+    outline-width: 2px;
+    outline-style: solid;
+}
+button:focus,
+body .taxiMenu .logInAnim .logIn input {
+    /* outline: none; */
+}
+/* Анимация входа - 2*/
+body .taxiMenu .logInAnim {
+    animation-name: example;
+    animation-duration: 0.9s;
+}
+@keyframes example {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+body .taxiMenu .logInAnim .header,
+body .taxiMenu .header {
+    margin-top: 60px;
+    display: inline-block;
+    
+    width: 100%;
+    height: 45px;
+
+    background-color: #e9a711;
+
+    font-weight: 700;
+    font-size: 1.125em;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+
+    line-height: 45px;
+}
+body .taxiMenu .logInAnim .logIn input {
+    border-color: #f3b31b;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+
+    width: 200px;
+    /* height: 43px; */
+    height: 36px;
+
+    background-color: #e8e8e8;
+    color: #4f4f4f;
+
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+
+    margin: auto;
+}
+body .taxiMenu .logInAnim .logIn input:nth-child(2) {
+    margin-top: 10px;
+}
+body .taxiMenu .logInAnim .logIn input[type="password"]
+{
+    font-size: 20px;
+}
+body .taxiMenu .logInAnim .logIn.center button {
+    color: white;
+    font-weight: 400;
+}
+/* Загрузка - 3 */
+body .taxiMenu .center.text {
+    animation-name: example;
+    animation-duration: 0.3s;
+
+    font-weight: 700;
+    font-size: 1.500em;
+    text-transform: uppercase;
+    color: #4e4e4e;
+
+    top: 56.2% !important;
+}
+/* Меню - 4 */
+body .taxiMenu .main {
+    animation-name: example;
+    animation-duration: 0.3s;
+
+    display: inline-block;
+    font-weight: 700;
+    margin-top: 60px;
+}
+body .taxiMenu .main .menu {
+    float: left;
+
+    background: #2e3345;
+    color: #fff;
+    height: 21.1em;
+    /* width: 13vh; */
+    width: 8.41em;
+
+    font-size: 1.125em;
+
+    margin-right: 10px;
+}
+body .taxiMenu .main .menu .title-menu {
+    /* margin-top: 60px; */
+    
+    width: 100%;
+    height: 44px;
+
+    /* background-color: #c29d48; */
+
+    font-weight: 700;
+    font-size: 1.125em;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+
+    line-height: 45px;
+    margin-bottom: 20px;
+
+    border-bottom-width: 1px;
+    border-bottom-color: #dadada;
+    border-bottom-style: solid;
+}
+body .taxiMenu .main .menu a {
+    margin: 0 auto;
+    display: table;
+    margin-top: 0.17em;
+}
+body .taxiMenu .main .menu .item {
+    width: 127px;
+    height: 27px;
+
+    border-radius: 2px;
+
+    font-size: 1em;
+    font-weight: 400;
+
+    padding-left: 0.8em;
+}
+body .taxiMenu .main .menu .item.last {
+    margin-top: 12em;
+}
+body .taxiMenu .main .menu .item.selected {
+    background: #d09e3f;
+    color: #283044;
+    font-weight: 600 !important;
+}
+body .taxiMenu .main .menu .item.selected .red {
+    color: white;
+}
+body .taxiMenu .main .menu .item .red {
+    background-color: #923a3a;
+    display: initial;
+    border-radius: 3px;
+    margin-left: 1em;
+    padding: 0.em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+body .taxiMenu .main .content {
+    /* float: right; */
+    font-weight: 400;
+    /* width: 26.8em; */
+    /* width: 34em; */ /* LAST */
+    width: 34.2em;
+}
+body .taxiMenu .main .content div {
+    color: #2e3345;
+}
+body .taxiMenu .main .content hr {
+    background: #d09e3f;
+    border: none;
+    height: 6px;
+    margin: 1vh 0;
+    width: 32%;
+    border-radius: 30px;
+
+    margin: 0;
+    margin-top: 16px;
+}
+body .taxiMenu .main .content .headerfix {
+    font-size: 30px;
+    color: #d09e3f;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: 0;
+}
+body .taxiMenu .main .content .info {
+    text-transform: uppercase;
+}
+body .taxiMenu .main .content .info_about .bold,
+body .taxiMenu .main .content .info .bold {
+    font-weight: 700;
+}
+body .taxiMenu .main .content .info svg{
+    width: 25px;
+    height: 22px;
+    position: absolute;
+    right: 1em;
+    top: 7em;
+}
+body .taxiMenu .main .content div .money {
+    font-size: 48px;
+    font-weight: 700;
+}
+body .taxiMenu .main .content div .tarif {
+    font-size: 1em;
+    font-weight: 700;
+}
+body .taxiMenu .main .content .gridButtons {
+    margin-top: 10em;
+    display: flex;
+}
+
+body .taxiMenu .main .content table {
+    margin-top: 0.55em;
+    color: #2e3345;
+    font-weight: 700;
+}
+body .taxiMenu .main .content table tr td {
+    font-size: 1em;
+    width: 15px;
+    line-height: 1.0em;
+    /* text-transform: uppercase; */
+}
+body .taxiMenu .main .content table tr td.orders,
+body .taxiMenu .main .content table tr td.pay,
+body .taxiMenu .main .content table tr td.rating {
+    font-size: 3em;
+    display: unset;
+    /* margin-left: 50px; */
+    /* margin-left: 4em; */
+    margin-left: 0.5em;
+}
+body .taxiMenu .main .content table tr td.pay {
+
+}
+body .taxiMenu .main .content table tr:nth-child(2) {
+    line-height: 70px;
+}
+
+body .taxiMenu .main .content .scroll {
+    height: 17.8em;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+body .taxiMenu .main .content .scroll table.order {
+    background: #d09e3f;
+    border-radius: 5px;
+    color: #283044;
+    font-size: 1.6vh;
+    /* margin-bottom: 2vh; */
+
+    /* width: 66%; */
+    width: 98%;
+
+    padding-top: 7px;
+    padding-bottom: 10px;
+    margin-top: 1em;
+}
+body .taxiMenu .main .content table.order tr td {
+    font-size: 14px;
+}
+body .taxiMenu .main .content table.order tr td.name,
+body .taxiMenu .main .content table.order tr td.distance {
+    font-weight: 600;
+    text-align: right;
+    padding-right: 5px;
+}
+body .taxiMenu .main .content table.order tr.centertext{
+    text-align: center;
+}
+body .taxiMenu .main .content table.order tr td button,
+body .taxiMenu .main .content div div button.buttonOk,
+body .taxiMenu .main .content div .fix button {
+    background-color: #2e3345;
+    color: white;
+    border: 0;
+    width: 110px;
+    height: 30px;
+    border-radius: 25px;
+}
+body .taxiMenu .main .content table.order tr td button{ 
+    /* width: 9em; */
+    border-radius: 5px;
+    width: 160px;
+    height: 30px;
+    text-transform: uppercase;
+}
+body .taxiMenu .main .content div div button.buttonOk {
+    margin: auto;
+    display: block;
+}
+/* 4 */
+body .taxiMenu .main .content div .fix .text{
+    text-align: center;
+}
+body .taxiMenu .main .content div .fix button {
+    margin: auto; 
+    display: block;
+    margin-top: 1em;
+    outline: none;
+}
+
+body .taxiMenu .main .content .endJob {
+    width: 375px;
+    height: 115px;
+    background-color: #d09e3f;
+    margin: auto;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+}
+body .taxiMenu .main .content .endJob .a {
+    height: 23px;
+    width: 122px;
+    background-color: white;
+    /* text-align: center; */
+    margin: auto;
+    border-radius: 0 0 5px 5px;
+    font-size: 13px;
+    font-weight: 600;
+}
+body .taxiMenu .main .content .endJob .b {
+    font-size: 14px;
+    font-weight: 700;
+    width: 70%;
+    margin: auto;
+}
+body .taxiMenu .main .content .endJob button {
+    background-color: #2e3345;
+    color: white;
+    border: 0;
+    width: 110px;
+    height: 30px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 1em;
+}
+
+/* */
+body .taxiSmallMenu {
+    /* background-image: ('../img/bg.svg'); */
+    background-image: url('../img/bg_small.png');
+
+    /* width: 26.875em; /* 430px; 
+    height: 27.500em; /* 440px; */
+    width: 150px;
+    height: 220px;
+    position: relative;
+
+    color: white;
+}
+body .taxiSmallMenu .red {
+    background-color: #923a3a;
+    display: initial;
+    border-radius: 3px;
+    margin-left: 1em;
+    padding: 0.em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    font-size: 13px;
+    font-weight: 400;
+
+    right: -0.5em;
+    position: absolute;
+    top: -0.5em;
+}
+body .taxiSmallMenu .informations {
+    margin-top: 4em;
+    margin-left: 1em;
+    display: inline-block;
+}
+body .taxiSmallMenu .informations .bold {
+    font-weight: 700;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, .5);
+}
+
+/* */
+.center1 {
+    margin-top: 26.7vh;
+}
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.center.fix {
+    top: 33% !important;
+    left: 12% !important;
+}

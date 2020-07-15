@@ -1,0 +1,251 @@
+#taxiMenu {
+    height: 40vh;
+    margin-top: 30vh;
+    width: 40vh;
+}
+
+#taxiMenu .auth input {
+    border: 2px solid #fb0;
+    font-size: 2vh;
+    margin-bottom: 1vh;
+    outline: none;
+    text-align: center;
+    width: 50%;
+}
+
+#taxiMenu .auth-btn {
+    background: #fb0;
+    border: none;
+    font-size: 1.7vh;
+    font-weight: bold;
+    margin-top: 1vh;
+    outline: none;
+    padding: 1vh 2vh;
+}
+
+#taxiMenu .auth-btn:active {
+    background: #d09e3f;
+    color: #fff;
+}
+
+#taxiMenu .auth-btn:hover {
+    color: #fff;
+}
+
+#taxiMenu .body {
+    background-image: url("../img/map.png");
+    border-radius: 0 0 5px 5px;
+    height: 100%;
+}
+
+#taxiMenu .header {
+    background: #fb0;
+    border-radius: 5px 5px 0 0;
+    color: #fff;
+    font-size: 2vh;
+    font-weight: bold;
+    padding: 1vh;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#taxiMenu .main {
+    display: flex;
+}
+
+#taxiMenu .main .content {
+    color: #234;
+    padding: 1vh;
+    width: 62%;
+}
+
+#taxiMenu .main .content h1 {
+    color: #d09e3f;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+#taxiMenu .main .content hr {
+    background: #fb0;
+    border: none;
+    height: 3px;
+    margin: 1vh 0;
+    width: 60%;
+}
+
+#taxiMenu .main .content .free_orders {
+    width: 100%;
+}
+
+#taxiMenu .main .content .order {
+    background: #d09e3f;
+    border-radius: 2px;
+    color: #000;
+    font-size: 1.6vh;
+    margin-bottom: 2vh;
+    width: 100%;
+}
+
+#taxiMenu .main .content .order button {
+    background: #234;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.6vh;
+    font-weight: bold;
+    outline: none;
+    margin-bottom: 0.5vh;
+    padding: 1vh 2vh;
+    width: 10vh;
+}
+
+#taxiMenu .main .content .order button:hover {
+    color: #234;
+    background: #fff;
+}
+
+#taxiMenu .main .content .order td {
+    padding: 0.5vh;
+}
+
+#taxiMenu .main .content .order tr {
+    margin: 1vh;
+}
+
+#taxiMenu .main .content .order .accept,
+#taxiMenu .main .content .order .call {
+    text-align: center;
+}
+
+#taxiMenu .main .content .order .name,
+#taxiMenu .main .content .order .distance {
+    text-align: right;
+}
+
+#taxiMenu .main .content .orders {
+    margin-top: 2vh;
+}
+
+#taxiMenu .main .content .orders .delete-order {
+    background: #b44;
+    border-radius: 2px;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.3vh 1vh;
+}
+
+#taxiMenu .main .content .orders .delete-order:hover {
+    color: #000;
+}
+
+#taxiMenu .main .content .orders .wrap-delete-order {
+    margin-bottom: 0.3vh;
+    text-align: right;
+}
+
+#taxiMenu .main .content .taxi_order {
+    font-size: 1.8vh;
+    width: 100%;
+}
+
+#taxiMenu .main .content .taxi_order p {
+    margin-bottom: 0.5vh;
+}
+
+#taxiMenu .main .content .taxi_order .info {
+    /*color: #aaa; */
+}
+
+#taxiMenu .main .content .taxi_order .state {
+    text-transform: uppercase;
+}
+
+#taxiMenu .main .menu {
+    background: #234;
+    color: #fff;
+    height: 100%;
+    width: 13vh;
+}
+
+#taxiMenu .main .menu .item {
+    border-radius: 2px;
+    font-weight: bold;
+    margin: auto;
+    padding: 0.5vh;
+    text-align: center;
+    width: 80%;
+}
+
+#taxiMenu .main .menu .item:hover {
+    color: #d90;
+}
+
+#taxiMenu .main .menu .item.selected {
+    background: #d90;
+    color: #234;
+}
+
+#taxiMenu .main .title, #taxiMenu .main .title-menu {
+    margin-bottom: 2vh;
+}
+
+#taxiMenu .stats {
+    font-size: 1.8vh;
+    margin: 1vh auto;
+    text-transform: uppercase;
+    width: 90%;
+}
+
+#taxiMenu .stats td {
+    padding-bottom: 1.5vh;
+}
+
+#taxiMenu .stats .icon {
+    background: #234;
+    border-radius: 2px;
+    height: 4vh;
+    width: 4vh;
+}
+
+#taxiMenu .stats .icon img {
+    height: 3vh;
+    margin: 0.5vh;
+    width: 3vh;
+}
+
+#taxiMenu .stats .orders, #taxiMenu .stats .pay {
+    font-size: 2.4vh;
+    font-weight: bold;
+    text-align: right;
+}
+
+#taxiMenu .title, #taxiMenu .title-menu {
+    background: #d09e3f;
+    color: #fff;
+    font-size: 1.6vh;
+    font-weight: bold;
+    padding: 1vh;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#taxiMenu .title-wrap {
+    height: 2vh;
+}
+
+#taxiMenu .welcome, #taxiMenu .auth, #taxiMenu .wait {
+    padding-top: 13vh;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#taxiMenu .welcome p, #taxiMenu .wait p {
+    font-size: 2vh;
+    margin: auto;
+    width: 80%;
+}
+
+#taxiMenu ::-webkit-scrollbar-thumb:hover {
+    border-color: #000;
+    background-color: #fb0;
+}

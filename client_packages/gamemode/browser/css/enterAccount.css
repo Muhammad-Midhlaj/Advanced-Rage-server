@@ -1,0 +1,123 @@
+#authAccount {
+    background: #111;
+    border-radius: 10px;
+    opacity: 0.95;
+    padding: 2vh 2vh 1vh 2vh;
+}
+
+#bgRegAccount {
+    background: url('../bg.jpg') 760px -100px;
+    border-radius: 10px;
+    opacity: 0.95;
+    position: absolute;
+    /*margin: 10vh auto;*/
+    width: 30vh;
+}
+
+#bgRecoveryAccount {
+    background: url('../bg.jpg') 760px -100px;
+    border-radius: 10px;
+    opacity: 0.95;
+    position: absolute;
+    /*margin: 10vh auto;*/
+    width: 30vh;
+}
+
+#bgAuthAccount {
+    background: url('../bg.jpg') 760px -100px;
+    border-radius: 10px;
+    opacity: 0.95;
+    position: absolute;
+    /*margin: 10vh auto;*/
+    width: 30vh;
+}
+
+#confirmEmail {
+    background: #111;
+    color: #fff;
+    opacity: 0.95;
+    padding: 1vh 2vh;
+    position: absolute;
+    width: 30vh;
+}
+
+#createCharacter {
+    bottom: 10vh;
+    display: flex;
+    left: 50vw;
+    position: absolute;
+    width: 15vh;
+}
+
+#createCharacter .left {
+    margin-right: 0.3vh;
+}
+
+#createCharacter .right {
+    margin-left: 0.3vh;
+}
+
+#enterAccount a {
+    text-decoration: underline;
+}
+
+#enterAccount a:hover {
+    color: #ddd;
+}
+
+#enterAccount input::placeholder {
+    color: #bbb;
+}
+
+#enterAccount h2 {
+    color: #ff0;
+    margin: 1vh 0;
+    text-align: center;
+}
+
+#enterAccount input[type="text"],
+#enterAccount input[type="password"] {
+    background: #444;
+    border: 1px #111 solid;
+    border-radius: 2px;
+    color: #fff;
+    margin-top: 0.6vh;
+    padding: 1vh;
+    width: 100%;
+}
+
+#enterAccount input[type="text"]:focus,
+#enterAccount input[type="password"]:focus {
+    outline-width: 0;
+    border: 1px #000 solid;
+}
+
+#enterAccount input[type="radio"] {}
+
+#enterAccount label {
+    margin: 1vh 0;
+}
+
+#enterAccount table {
+    color: #fff;
+    font-size: 1.4vh;
+    width: 100%;
+}
+
+#enterAccount tr {
+    margin-top: 1vh;
+}
+
+#regAccount {
+    background: #111;
+    border-radius: 10px;
+    opacity: 0.95;
+    padding: 2vh 2vh 1vh 2vh;
+}
+
+#recoveryAccount {
+    background: #111;
+    border-radius: 10px;
+    opacity: 0.95;
+    padding: 2vh 2vh 1vh 2vh;
+}

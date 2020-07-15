@@ -1,0 +1,468 @@
+@font-face {
+    font-family: NEWYORKSIXTY;
+    src: url(../fonts/Chalet/NEWYORKSIXTY.ttf);
+}
+@font-face {
+    font-family: LONDONSIXTY;
+    src: url(../fonts/Chalet/LONDONSIXTY.ttf);
+}
+.newyorksixty {
+    font-family: NEWYORKSIXTY;
+}
+.londonsixty {
+    font-family: LONDONSIXTY;
+}
+
+body {
+
+}
+body #medic-tablet .tablet-background {
+    background-image: url(../img/medicTablet/bg.png);
+    background-repeat: no-repeat;
+    width: 793px;
+    height: 518px;
+    /* width: 81.4vh;
+    height: 53.5vh; */
+    position: relative;
+}
+body #medic-tablet .tablet-background .imurfather {
+    position: absolute;
+    width: 700px;
+    height: 400px;
+    top: 69px;
+    left: 47px;
+}
+/* Header */
+body #medic-tablet .tablet-background .imurfather .header {
+
+}
+body #medic-tablet .tablet-background .imurfather .header .LSMC {
+    color: white;
+    text-align: right;
+    font-size: 30px;
+
+    margin-right: 20px;
+    text-transform: uppercase;
+}
+body #medic-tablet .tablet-background .imurfather .header .subtext {
+    color: #e2521e;
+    text-align: right;
+    font-size: 18px;
+
+    padding-bottom: 0px;
+    position: absolute;
+    right: 131px;
+    top: 30px;
+}
+body #medic-tablet .tablet-background .imurfather .header hr {
+    height: 7px;
+    border-style: solid;
+    color: #e2521e;
+    background-color: #e2521e;
+    position: relative;
+    margin-top: 26px;
+}
+body #medic-tablet .tablet-background .imurfather .header img {
+    position: absolute;
+    top: 17px;
+    left: 55px;
+}
+body #medic-tablet .tablet-background .imurfather .header .time {
+    color: white;
+    font-size: 18px;
+
+    position: absolute;
+    top: 35px;
+    left: 7px;
+}
+
+/* Body A */
+body #medic-tablet .tablet-background .imurfather .body {
+    left: 57px;
+    top: 130px;
+    position: absolute;
+}
+body #medic-tablet .tablet-background .imurfather .body .buttons {
+    float: left;
+    width: 50%;
+}
+body #medic-tablet .tablet-background .imurfather .body .buttons button,
+body #medic-tablet .tablet-background .imurfather .buttonGoodWay {
+    width: 260px;
+    height: 30px;
+
+    background: linear-gradient(#ec5924, #983917);
+
+    border-style: none;
+    border-radius: 2px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+
+    font-family: NEWYORKSIXTY;
+    color: white;
+    font-size: 16px;
+    transition-duration: 0.2s;
+
+    text-align: left;
+    padding-left: 17px;
+}
+body #medic-tablet .tablet-background .imurfather .body .buttons button:hover,
+body #medic-tablet .tablet-background .imurfather div .body .buttonsE button:hover,
+body #medic-tablet .tablet-background .imurfather .buttonGoodWay:hover,
+body #medic-tablet .tablet-background .imurfather .calls .calls_overflow .call .getcall:hover {
+    background: linear-gradient(#ffffff, #ffffff);
+    color: #2b2e5c;
+}
+
+body #medic-tablet .tablet-background .imurfather .body .text {
+    float: right;
+    width: 44%;
+    font-family: LONDONSIXTY;
+    color: white;
+    position: absolute;
+    right: 56px;
+    top: -3px;
+    text-align: justify;
+}
+body #medic-tablet .tablet-background .imurfather .body .exit button{
+    font-family: LONDONSIXTY;
+    color: white;
+    background: linear-gradient(#545ab2, #303364);
+    text-transform: uppercase;
+
+    width: 100px;
+    height: 30px;
+    border-radius: 2px;
+    border-style: none;
+
+    position: absolute;
+    right: 17px;
+    bottom: -64px;
+    font-size: 18px;
+}
+/* Body B */
+body #medic-tablet .tablet-background .imurfather .calls {
+    left: 2px;
+    top: 115px;
+    width: 25%;
+    position: absolute;
+
+    height: 70%;
+    overflow: auto;
+    float: left;
+}
+body #medic-tablet .tablet-background .imurfather .calls .calls_overflow .call{
+    margin-bottom: 9px;
+    background-color: #202245;
+    border-radius: 5px;
+
+    margin-right: 3px;
+    color: white;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+body #medic-tablet .tablet-background .imurfather .calls .calls_overflow .call .color {
+    color: #bb4826;
+    font-weight: 600 !important;
+}
+body #medic-tablet .tablet-background .imurfather .calls .calls_overflow .call .getcall {
+    border: none;
+    padding: 0;
+    width: 100%;
+    color: white;
+
+    position: inherit;
+    text-align: center;
+    background: linear-gradient(#ec5924, #983917);
+    border-radius: 0 0 5px 5px;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+
+    transition-duration: 0.2s;
+}
+body #medic-tablet .tablet-background .imurfather .map {
+    float: right;
+    /* background-image: url(../img/map.png); */
+    border-left: #1d1f3d;
+}
+body #medic-tablet .tablet-background .imurfather .map img{
+    border-left: 5px solid #e2521e;
+    position: absolute;
+    left: 178px;
+    top: 71px;
+    width: 517px;
+    height: 327px;
+}
+body #medic-tablet .tablet-background .imurfather .map .exit button{
+    font-family: LONDONSIXTY;
+    color: white;
+    background: linear-gradient(#545ab2, #303364);
+    text-transform: uppercase;
+
+    width: 100px;
+    height: 30px;
+    border-radius: 2px;
+    border-style: none;
+
+    position: absolute;
+    right: 17px;
+    bottom: 16px;
+    font-size: 18px;
+}
+/* Body C */
+body #medic-tablet .tablet-background .imurfather div.C {
+    height: 58%; 
+    top: 2em; 
+    position: relative; 
+    overflow: auto;
+}
+body #medic-tablet .tablet-background .imurfather table {
+    width: 90%;
+    /* top: 2em;
+    position: relative; */
+    margin: auto;
+    color: white;
+
+    text-align: left;
+    text-transform: uppercase;
+
+    font-family: LONDONSIXTY;
+}
+body #medic-tablet .tablet-background .imurfather table tr.header {
+    color: #e2521e;
+    font-size: 24px;
+}
+body #medic-tablet .tablet-background .imurfather table tr.header th {
+    font-weight: 400 !important;
+}
+body #medic-tablet .tablet-background .imurfather table tr.users {
+    font-size: 18px;
+}
+body #medic-tablet .tablet-background .imurfather table tr.users td{
+    border-bottom: 1px rgba(240, 240, 240, 0.1) solid;
+}
+body #medic-tablet .tablet-background .imurfather div .exit button {
+    font-family: LONDONSIXTY;
+    color: white;
+    background: linear-gradient(#545ab2, #303364);
+    text-transform: uppercase;
+
+    width: 100px;
+    height: 30px;
+    border-radius: 2px;
+    border-style: none;
+
+    /* position: absolute;
+    right: 17px;
+    bottom: 16px; */
+    font-size: 18px;
+}
+/* body #medic-tablet .tablet-background .imurfather div .exit .back {
+    position: absolute;
+    /* right: 17px; 
+    left: 16px;
+    bottom: 16px;
+} */
+body #medic-tablet .tablet-background .imurfather div .exit .exitbutton {
+    position: absolute;
+    right: 17px;
+    bottom: 16px;
+}
+/* Body D */
+body #medic-tablet .tablet-background .imurfather .info {
+    float: left;
+    font-family: LONDONSIXTY;
+    text-transform: uppercase;
+
+    left: 3.55em;
+    position: absolute;
+    top: 7.5em;
+}
+body #medic-tablet .tablet-background .imurfather .info .nameHeader,
+body #medic-tablet .tablet-background .imurfather .info .postHeader {
+    font-size: 24px;
+    color: #e2521e;
+}
+body #medic-tablet .tablet-background .imurfather .info .name,
+body #medic-tablet .tablet-background .imurfather .info .post{
+    color: white;
+    font-size: 18px;
+}
+body #medic-tablet .tablet-background .imurfather .image {
+    float: right;
+    /* left: 3.55em; */
+    right: 3.4em;
+    position: absolute;
+    top: 7.5em;
+}
+body #medic-tablet .tablet-background .imurfather div .exit button {
+    font-family: LONDONSIXTY;
+    color: white;
+    background: linear-gradient(#545ab2, #303364);
+    text-transform: uppercase;
+
+    width: 100px;
+    height: 30px;
+    border-radius: 2px;
+    border-style: none;
+
+    /* position: absolute;
+    right: 17px;
+    bottom: 16px; */
+    font-size: 18px;
+}
+body #medic-tablet .tablet-background .imurfather div .exit .back {
+    position: absolute;
+    /* right: 17px; */
+    left: 16px;
+    bottom: 16px;
+}
+body #medic-tablet .tablet-background .imurfather div .exit .exitbutton {
+    position: absolute;
+    right: 17px;
+    bottom: 16px;
+}
+/* Body E */
+body #medic-tablet .tablet-background .imurfather div .body .header {
+    font-family: LONDONSIXTY;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+}
+body #medic-tablet .tablet-background .imurfather div .body .buttonsE {
+    margin-top: 1em !important;
+    width: 50%;
+    display: grid;
+    /* text-align: center; */
+    margin: auto;
+}
+body #medic-tablet .tablet-background .imurfather div .body .buttonsE button{
+    width: 260px;
+    height: 30px;
+
+    background: linear-gradient(#ec5924, #983917);
+
+    border-style: none;
+    border-radius: 2px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+
+    font-family: NEWYORKSIXTY;
+    color: white;
+    font-size: 16px;
+    transition-duration: 0.2s;
+}
+body #medic-tablet .tablet-background .imurfather div .body .texthelp {
+    color: white;
+    font-family: LONDONSIXTY;
+    font-size: 16px;
+
+    width: 65%;
+    margin: auto;
+    text-align: justify;
+    margin-top: 0.5em;
+}
+/* Body F */
+
+body #medic-tablet .tablet-background .imurfather div .news {
+    position: relative;
+    top: 2em;
+}
+
+body #medic-tablet .tablet-background .imurfather div .news .header {
+    font-family: LONDONSIXTY;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+}
+body #medic-tablet .tablet-background .imurfather div .news .input {
+    margin-top: 1.5em;
+}
+body #medic-tablet .tablet-background .imurfather div .news .input textarea{
+    font-family: LONDONSIXTY;
+    margin: auto;
+    display: block;
+
+    width: 488px;
+    height: 150px;
+
+    background-color: transparent;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+
+    color: white;
+    font-size: 16px;
+
+    resize: none;
+    padding: 10px;
+}
+body #medic-tablet .tablet-background .imurfather div .news button.buttonGoodWay{
+    text-align: center;
+    margin: auto;
+    display: block;
+    margin-top: 2.6em;
+    font-size: 18px;
+}
+/* Scrollbar */
+body #medic-tablet .tablet-background .imurfather div::-webkit-scrollbar {
+    width: 10px;
+    background-color: #1d1f3d;
+}
+ 
+   
+/* Handle */
+body #medic-tablet .tablet-background .imurfather div::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 3px;
+}
+  
+
+/* All */
+body #medic-tablet .tablet-background .imurfather .body .buttons button:focus,
+body #medic-tablet .tablet-background .imurfather .body .exit button:focus,
+body #medic-tablet .tablet-background .imurfather .focus {
+    outline: 0;
+}
+body #medic-tablet .tablet-background .imurfather .buttons_nav .back,
+body #medic-tablet .tablet-background .imurfather .buttons_nav .exitbutton {
+    font-family: LONDONSIXTY;
+    color: white;
+    background: linear-gradient(#545ab2, #303364);
+    text-transform: uppercase;
+
+    width: 100px;
+    height: 30px;
+    border-radius: 2px;
+    border-style: none;
+
+    position: absolute;
+    right: 17px;
+    bottom: -64px;
+    font-size: 18px;
+
+    transition-duration: 0.2s;
+}
+body #medic-tablet .tablet-background .imurfather .buttons_nav .back:hover,
+body #medic-tablet .tablet-background .imurfather .buttons_nav .exitbutton:hover {
+    background: linear-gradient(#ffffff, #ffffff);
+    color: #2b2e5c;
+    font-weight: bold;
+}
+body #medic-tablet .tablet-background .imurfather .buttons_nav .back {
+    position: absolute;
+    /* right: 17px; */
+    left: 16px;
+    bottom: 16px;
+}
+body #medic-tablet .tablet-background .imurfather .buttons_nav .exitbutton {
+    position: absolute;
+    right: 17px;
+    bottom: 16px;
+}

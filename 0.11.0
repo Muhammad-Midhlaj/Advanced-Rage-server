@@ -1,0 +1,4 @@
++ prettier@1.18.2
+added 1 package from 1 contributor and audited 6697 packages in 8.138s
+found 23 vulnerabilities (12 low, 9 moderate, 2 high)
+  run `npm audit fix` to fix them, or `npm audit` for details

@@ -1,0 +1,68 @@
+.infoTable {
+    color: #fff;
+    font-family: 'Chalet-LondonNineteenSixty';
+    font-size: 2vh;
+    position: absolute;
+    text-transform: uppercase;
+    width: 44vh;
+}
+
+.infoTable table {
+    color: #fff;
+    font-size: 1.6vh;
+    width: 100%;
+}
+
+.infoTable .body {
+    height: 24vh;
+    position: relative;
+    width: 100%;
+}
+
+.infoTable .body td {
+    padding: 0.5vh 3vh;
+}
+
+.infoTable .content {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.infoTable .content table {
+    font-size: 1.4vh;
+    width: 100%;
+}
+
+.infoTable .content tr {
+    width: 100%;
+}
+
+.infoTable .filler {
+    background: #fff;
+    height: 100%;
+    width: 0%;
+}
+
+.infoTable .header {
+    background: #fff;
+    color: #000;
+    margin: 1vh 0;
+    padding: 0.4vh;
+    text-align: center;
+}
+
+.infoTable .opacity {
+    background: #000;
+    border-radius: 10px;
+    filter: alpha(opacity=80);
+    height: 100%;
+    opacity: 0.8;
+    position: absolute;
+    width: 100%;
+}
+
+.infoTable .progress {
+    height: 0.7vh;
+    width: 20vh;
+}

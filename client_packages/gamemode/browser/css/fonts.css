@@ -1,0 +1,104 @@
+@font-face {
+    font-family: Ubuntu;
+    src: local(Ubuntu), url("../fonts/Ubuntu/Ubuntu.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: local(Montserrat), url("../fonts/Montserrat/Montserrat.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Norwester;
+    src: local(Norwester), url("../fonts/Norwester/Norwester.otf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Numans;
+    src: local(Norwester), url("../fonts/Numans/Numans.otf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'OrbitronMedium';
+    src: url("../fonts/Orbitron_Medium/Orbitron_Medium.ttf");
+}
+
+@font-face {
+    font-family: 'AGAalenBold';
+    src: url("../fonts/PlayerMenu/AGAalenBold.ttf");
+}
+
+@font-face {
+    font-family: 'OpenSansSemiBold';
+    src: url("../fonts/PlayerMenu/OPENSANS-SEMIBOLD.ttf");
+}
+
+@font-face {
+    font-family: 'OpenSansBold';
+    src: url("../fonts/PlayerMenu/OPENSANS-BOLD.ttf");
+}
+
+@font-face {
+    font-family: 'OpenSansExtraBold';
+    src: url("../fonts/PlayerMenu/OPENSANS-EXTRABOLD.ttf");
+}
+
+@font-face {
+    font-family: 'Agencyb';
+    src: url("../fonts/PlayerMenu/AGENCYB.ttf");
+}
+
+@font-face {
+    font-family: 'Agencyr';
+    src: url("../fonts/PlayerMenu/AGENCYR.ttf");
+}
+
+@font-face {
+    font-family: 'Aqua Grotesque';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Aqua Grotesque'), url('../fonts/Aqua/aqua.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    font-style: normal;
+    font-weight: normal;
+    src: local('OpenSans-Regular'), url('../fonts/OpenSans/OpenSans-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    font-style: normal;
+    font-weight: 600;
+    src: local('OpenSans-Semibold'), url('../fonts/OpenSans/OpenSans-Semibold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    font-style: normal;
+    font-weight: bold;
+    src: local('OpenSans-Bold'), url('../fonts/OpenSans/OpenSans-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Chalet-LondonNineteenSixty';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Chalet-LondonNineteenSixty'), url('../fonts/Chalet/Chalet-LondonNineteenSixty.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Chalet-ParisNineteenSixty';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Chalet-LondonNineteenSixty'), url('../fonts/Chalet/Chalet-ParisNineteenSixty.otf') format('opentype');
+}

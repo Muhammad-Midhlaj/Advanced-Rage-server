@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+body {
+    margin: 0;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+body .center .menu {
+    width: 510px;
+    height: 180px;
+
+    /* background-color: black; */
+    /* background-color: #00000090; */
+    background-color: rgba(0, 0, 0, 0.70);
+    color: white;
+    /* opacity: 0.70; */
+
+    display: flex;
+}
+body .center .menu .prop {
+    width: 100%;
+}
+body .center .menu .prop .header {
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 44px;
+    font-size: 1.875em;
+
+    background-color: #0e8540;
+    
+    height: 44px;
+    font-weight: 600;
+
+    margin-top: 42px;
+}
+body .center .menu .prop .text {
+    text-align: center;
+
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+}
+
+body .center .button_base {
+    margin-top: 3px;
+
+    /* background-color: #00000090; */
+    background-color: rgba(0, 0, 0, 0.70);
+    /* background-color: black; */
+    color: white;
+    /* opacity: 0.70; */
+
+    width: 49%;
+    height: 51px;
+
+    transition: 0.3s;
+}
+
+body .center .button_base.button1 {
+    float: left;
+
+    line-height: 51px;
+    text-align: center;
+    font-size: 1.125em;
+    font-weight: 600;
+
+    border-left: 3px solid #0e8540;
+}
+body .center .button_base.button2 {
+    float: right;
+
+    line-height: 51px;
+    text-align: center;
+    font-size: 1.125em;
+    font-weight: 600;
+
+    border-left: 3px solid #ca0606;
+}
+body .center .button_base.button1:hover,
+body .center .button_base.button2:hover {
+    /* opacity: 0.80; */
+    /* background-color: #000000; */
+    background-color: rgba(0, 0, 0, 0.80);
+}
+/* */
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

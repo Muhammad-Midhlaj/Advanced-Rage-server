@@ -1,0 +1,11 @@
+
+{
+	"maxplayers" : 100,
+	"name" : "[Voice] Rage Multiplayer", 
+	"gamemode" : "roleplay", 
+	"stream-distance" : 500.0,
+	"announce" : false,
+	"csharp" : "disabled",
+	"port": 22005,
+	"voice-chat": true
+}

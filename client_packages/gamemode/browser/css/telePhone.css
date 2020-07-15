@@ -1,0 +1,533 @@
+@font-face {
+	font-family: NEWYORKSIXTY;
+	src: url(../fonts/Chalet/NEWYORKSIXTY.ttf);
+}
+
+@font-face {
+	font-family: LONDONSIXTY;
+	src: url(../fonts/Chalet/LONDONSIXTY.ttf);
+}
+
+@font-face {
+	font-family: AA_BEBESAN;
+	src: url(../fonts/TelePhone/AA_BEBESAN.ttf);
+}
+
+@font-face {
+	font-family: BNDeepBlue;
+	src: url(../fonts/TelePhone/BNDeepBlue.ttf);
+}
+
+@font-face {
+	font-family: ISOCPEUR;
+	src: url(../fonts/TelePhone/ISOCPEUR.ttf);
+}
+
+#uPhoneS .error {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: -webkit-linear-gradient(bottom left, rgba(143, 50, 50, 0.8), rgba(132, 61, 61, 0.9));
+	background: -o-linear-gradient(bottom left, rgba(143, 50, 50, 0.8), rgba(132, 61, 61, 0.9));
+	background: linear-gradient(to top right, rgba(143, 50, 50, 0.8), rgba(132, 61, 61, 0.9));
+	width: 100%;
+	height: 50px;
+	color: white;
+	padding-top: 12.5px;
+	position: absolute;
+	padding-left: 20px;
+	box-shadow: 0 0 100px #8f3232;
+	display: none;
+}
+
+#uPhoneS *:focus {
+	outline: none;
+}
+
+#uPhoneS .error span {
+	padding-left: 60px;
+}
+
+#uPhoneS .fa-exclamation-circle {
+	font-size: 2.5em;
+	position: absolute;
+	top: 5px;
+}
+
+#uPhoneS .fa-times {
+	font-size: 1.5em;
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	transition: 0.5s;
+}
+
+#uPhoneS .fa-times:hover {
+	color: rgba(255, 255, 251, 0.5);
+}
+
+#uPhoneS.uPhoneS {
+	font-family: NEWYORKSIXTY;
+	background-image: url(../img/telephone/bgBlue.png);
+	width: 210px;
+	height: 416px;
+	position: absolute;
+	right: 0;
+	margin: 0;
+	font-size: initial;
+	padding: 0;
+	overflow: hidden;
+	user-select: none;
+	/* bottom: 0; */
+	bottom: 0vh;
+	overflow: hidden;
+	animation-name: example;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+#uPhoneS.uPhoneS {
+	margin-right: 98px;
+}
+
+@keyframes example { 
+	from { 
+			bottom: -27em; 
+			transform: rotate(-15deg); 
+	} 
+	
+	to { 
+			bottom: -1.5vh; 
+			transform: rotate(0deg); 
+	} 
+}
+
+@keyframes example2 {
+	from {
+			bottom: 0vh;
+			transform: rotate(0deg);
+	}
+
+	to {
+			/* bottom: -30em; */
+			bottom: -90vh;
+			transform: rotate(-15deg);
+	}
+}
+
+#uPhoneS.Animate {
+	animation-name: example2 !important;
+	animation-duration: 2s !important;
+	animation-fill-mode: forwards !important;
+}
+
+#uPhoneS.uPhoneS .screen {
+	width: 186px;
+	height: 165px;
+	position: relative;
+	left: 1px;
+	top: 2.29em;
+	margin: auto;
+}
+
+#uPhoneS.uPhoneS .screen .header {
+	color: #242931;
+	position: relative;
+	left: 4px;
+	display: inline-flex;
+	font-size: 15px;
+}
+
+#uPhoneS.uPhoneS .screen .header .time {
+	left: 3px;
+	position: relative;
+}
+
+#uPhoneS.uPhoneS .screen .header .day {
+	/* margin-left: 40px; */
+	/* position: absolute; */
+	position: relative;
+	left: 7px;
+}
+
+#uPhoneS.uPhoneS .screen .inScreen {
+	top: 1em;
+	position: relative;
+}
+
+#uPhoneS.uPhoneS .screen .inScreen img {
+	margin: auto;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	display: -webkit-box;
+}
+
+#uPhoneS .control_next img {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	position: absolute;
+	right: 1em;
+	bottom: 4.8em;
+	width: 30px;
+}
+
+#uPhoneS .control_prev img {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	position: absolute;
+	right: 8.8em;
+	bottom: 4.8em;
+	width: 30px;
+	transform: rotate(175deg);
+}
+
+.contactsList,
+.messagesList,
+.options,
+.toolsList,
+.themeList,
+.outgoingList,
+.incomingList,
+.addContact,
+.changeContact,
+.outgoingMessageList,
+.incomingMessageList {
+	color: #242931;
+	position: relative;
+	top: -17.5px;
+	overflow: overlay;
+	height: 127.5px;
+	width: 182px;
+}
+
+.headerContacts,
+.headerTools {
+	font-family: AA_BEBESAN;
+	font-size: 24px;
+	text-align: center;
+	color: #242931;
+}
+
+.contact,
+.buttonInContent,
+.contactAdd {
+	width: 165px;
+	min-height: 31px;
+	border-radius: 2px;
+	border-width: 1px;
+	line-height: 31px;
+	margin-left: 8px;
+	border-color: #242c3a50;
+	border-style: solid;
+	transition: background-color 0.2s ease;
+}
+
+.contact:hover,
+.buttonInContent:hover,
+.contactAdd:hover {
+	background-color: #242c3a;
+	color: #f0f0f0;
+}
+
+.contact:not(:first-child),
+.buttonInContent:not(:first-child),
+.contactAdd:not(:first-child) {
+	margin-top: 2px;
+}
+
+.user,
+.textButtonInContent {
+	margin-left: 5px;
+}
+
+.settings,
+.messageSettings,
+.settingsTools,
+.settingsOutgoing,
+.settingsAction,
+.addContactSettings,
+.changeContactSettings,
+.settingsExitFromMessage,
+.settingsExitFromMessageOutgoing {
+	position: relative;
+	width: 186px;
+	height: 22.5px;
+	display: flex;
+	background-color: #222a3275;
+	bottom: 17.5px;
+	border-radius: 0px 0px 10px 10px;
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 20px;
+	left: -1;
+}
+
+.call {
+	color: #11a41c;
+	background: transparent;
+	border: none;
+	text-transform: uppercase;
+	position: relative;
+	left: 6em;
+	padding: 0;
+	font-family: NEWYORKSIXTY;
+}
+
+.back {
+	color: #a82d2d;
+	position: relative;
+	left: 8.5em;
+}
+
+#uPhoneS.uPhoneS .screen .inScreen .message textarea {
+	margin: auto;
+	display: block;
+	width: 184px;
+	height: 120px;
+	background-color: transparent;
+	border-style: solid;
+	border-color: transparent;
+	border-width: 1px;
+	color: #242931;
+	font-size: 16px;
+	resize: none;
+	padding: 0px;
+	top: -11px;
+	position: relative;
+}
+
+#uPhoneS.uPhoneS .screen .inScreen .message textarea:focus {
+	outline: 0;
+}
+
+#uPhoneS input {
+	width: 165px;
+	min-height: 31px;
+	border-radius: 2px;
+	border-width: 1px;
+	line-height: 31px;
+	margin-left: 8px;
+	border-color: #242c3a50;
+	border-style: solid;
+	background-color: transparent;
+	color: #242931;
+	transition: background-color 0.2s ease;
+	padding-left: 5px;
+	font-size: 1.1rem;
+}
+
+/* Scrollbar */
+
+.contactsList::-webkit-scrollbar,
+.messagesList::-webkit-scrollbar,
+.options::-webkit-scrollbar,
+.toolsList::-webkit-scrollbar,
+.themeList::-webkit-scrollbar,
+.outgoingList::-webkit-scrollbar,
+.incomingList::-webkit-scrollbar,
+.addContact::-webkit-scrollbar,
+.changeContact::-webkit-scrollbar,
+.outgoingMessageList::-webkit-scrollbar,
+.incomingMessageList::-webkit-scrollbar {
+	width: 4px;
+	background-color: #ffffff00;
+	border-radius: 1px;
+}
+
+
+/* Handle */
+
+.contactsList::-webkit-scrollbar-thumb,
+.messagesList::-webkit-scrollbar-thumb,
+.options::-webkit-scrollbar-thumb,
+.toolsList::-webkit-scrollbar-thumb,
+.themeList::-webkit-scrollbar-thumb,
+.outgoingList::-webkit-scrollbar-thumb,
+.incomingList::-webkit-scrollbar-thumb,
+.addContact::-webkit-scrollbar-thumb,
+.changeContact::-webkit-scrollbar-thumb,
+.outgoingMessageList::-webkit-scrollbar-thumb,
+.incomingMessageList::-webkit-scrollbar-thumb {
+	background: #242c3a;
+	border-radius: 1px;
+}
+
+#slider {
+	position: relative;
+	overflow: hidden;
+	/* margin: 20px auto 0 auto;
+	border-radius: 4px; */
+}
+
+#slider ul {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	height: 200px;
+	list-style: none;
+}
+
+#slider ul li {
+	position: relative;
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 186px;
+	height: 165px;
+	/* background: #ccc;
+	text-align: center;
+	line-height: 300px; */
+}
+
+#uPhoneS.uPhoneS .body {
+	margin-top: 50px;
+	margin-left: 10px;
+}
+
+.greenPhone {
+	color: #63be26;
+	font-size: 2.1em;
+	transform: rotate(210deg);
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 2.5px;
+}
+
+.redPhone {
+	color: #f02828;
+	font-size: 2.1em;
+	transform: rotate(240deg);
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 2.5px;
+}
+
+#buttonAccept:focus,
+#buttonUnaccept:focus,
+.buttonNumeral:focus {
+	outline: none;
+	background: linear-gradient(120deg, rgba(27, 29, 32, 1) 0%, rgba(27, 29, 32, 1) 50%, rgba(58, 59, 62, 1) 100%);
+	box-shadow: -1px -1px 5px black;
+}
+
+.buttonBrand {
+	width: 60px;
+	height: 30px;
+	background: linear-gradient(-10deg, rgba(27, 29, 32, 1) 0%, rgba(27, 29, 32, 1) 50%, rgba(58, 59, 62, 1) 100%);
+	border-radius: 10px;
+	border: 2px solid #1f2226;
+	box-shadow: 0px 0px 5px black;
+	/* background-color: rgb(27, 29, 32); */
+}
+
+.numeralButtons {
+	margin-top: 30px;
+}
+
+.letterInButton {
+	position: absolute;
+	font-size: 1rem;
+	left: 25px;
+	top: 5px;
+}
+
+.buttonNumeral {
+	border-radius: 0px;
+	color: #7e939b;
+	font-family: BNDeepBlue;
+	font-weight: 550;
+	font-size: 2rem;
+	text-shadow: 0 0 1px #c2f1fe;
+	position: relative;
+}
+
+.buttonNumberal:focus {
+	text-shadow: red 0 0 2px !important;
+}
+
+.numberalInButton {
+	position: relative;
+	top: -4px;
+	left: -15;
+}
+
+.iconUnderButton {
+	position: absolute;
+	left: 21px;
+	top: 40px;
+}
+
+.mainButtons .buttonBrand {
+	/*display: inline-block;*/
+}
+
+.buttonContent {
+	display: inline-block;
+	position: relative;
+}
+
+form {
+	display: inline-block;
+}
+
+@media screen and (max-width: 1920px) and (min-height: 1080px) {
+	.inScreen #slider {
+			width: 181px;
+			height: 165px;
+	}
+}
+
+@media screen and (max-width: 1600px) and (min-height: 900px) {
+	.inScreen #slider {
+			width: 170px;
+			height: 147px;
+	}
+}
+
+@media screen and (max-width: 1366px) and (min-height: 768px) {
+	.control_next {
+			left: 185px;
+			position: relative;
+			bottom: 36px;
+	}
+
+	/* .control_prev {
+			left: 147px;
+			position: relative;
+			bottom: 60px;
+	} */
+
+	/* #uPhoneS.uPhoneS .screen .header {
+			top: 10px;
+	} */
+}
+
+@media screen and (max-width: 1280px) and (min-height: 1024px) {
+	/* #uPhoneS.uPhoneS .screen .header {
+			top: 3px;
+	} */
+
+	/* .control_prev {
+			left: 180px;
+			position: relative;
+			bottom: 45px;
+	} */
+
+	/* .control_next {
+			left: 173px;
+			position: relative;
+			bottom: 45px;
+	} */
+}

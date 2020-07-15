@@ -1,0 +1,33 @@
+#interactionMenu {
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+#interactionMenu .icon {
+    background: #000a;
+    padding: 0.5vh;
+}
+
+#interactionMenu .icon img {
+    height: 3vh;
+    width: 3vh;
+}
+
+#interactionMenu .interaction_item {
+    background: #0007;
+    border-right: 2px solid #0007;
+    display: flex;
+    margin-bottom: 0.5vh;
+    width: 30vh;
+}
+
+#interactionMenu .interaction_item:hover {
+    background: linear-gradient(to right, #0007 -40%, #495a);
+    border-right: 2px solid #0d8;
+}
+
+#interactionMenu .text {
+    padding: 1.3vh 1vh;
+}

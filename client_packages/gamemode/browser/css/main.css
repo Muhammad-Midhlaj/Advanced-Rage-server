@@ -1,0 +1,139 @@
+body {
+    font-family: monospace, sans-serif;
+    font-size: 1.4vh;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    user-select: none;
+}
+
+input, textarea {
+    outline: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.btn-agree {
+    background: #196;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    margin-top: 2vh;
+    padding: 1vh;
+    font-size: 2vh;
+    font-weight: bold;
+    width: 100%;
+}
+
+.btn-agree:hover {
+    background: #174;
+}
+
+.btn-agree:focus {
+    outline-width: 0;
+}
+
+.btn-agree:active {
+    color: #000;
+}
+
+.btn-black {
+    background: #000;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    margin-top: 2vh;
+    padding: 1vh;
+    font-size: 2vh;
+    font-weight: bold;
+    width: 100%;
+}
+
+.btn-black:hover {
+    background: #333;
+}
+
+.btn-black:focus {
+    outline-width: 0;
+}
+
+.btn-black:active {
+    color: #000;
+}
+
+.btn-cancel {
+    background: #b44;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    margin-top: 2vh;
+    padding: 1vh;
+    font-size: 2vh;
+    font-weight: bold;
+    width: 100%;
+}
+
+.btn-cancel:hover {
+    background: #933;
+}
+
+.btn-cancel:focus {
+    outline-width: 0;
+}
+
+.btn-cancel:active {
+    color: #000;
+}
+
+.scroll {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.close {
+    background: #fff;
+    color: #000;
+    font-size: 1.4vh;
+    font-weight: bold;
+    padding: 0vh 0.5vh;
+    position: absolute;
+    right: 1vh;
+    text-transform: uppercase;
+    top: 0.7vh;
+}
+
+.close:hover {
+    background: #eee;
+}
+
+.red {
+    color: #b44;
+}
+
+.yellow {
+    color: #fb0;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-width: 1px 1px 1px 2px;
+    border-color: #222;
+    background-color: #222;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    border-width: 1px 1px 1px 2px;
+    border-color: #000;
+    background-color: #196;
+}
+
+::-webkit-scrollbar-track:hover {
+    border-left: solid 1px #222;
+    background-color: #222;
+}

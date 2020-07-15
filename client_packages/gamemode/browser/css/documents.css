@@ -1,0 +1,478 @@
+/* License */
+#documents .license {
+    background-image: url(../img/licenses/bg.png);
+    width: 640px;
+    height: 340px;
+    background-color: #00000000;
+}
+
+#documents .license .informations .driver {
+    margin-top: 4.15em;
+    margin-left: 8em;
+    width: 12em;
+}
+
+#documents .header {
+    color: white;
+    font-size: 0.875em;
+}
+
+#documents .list {
+    margin-top: 0.3em;
+    margin-left: 0.2em;
+}
+
+#documents .list div {
+    display: list-item;
+    color: #aaaaaa;
+    font-size: 0.688em;
+}
+
+#documents .license .informations .water-driver {
+    margin-top: 1.3em;
+    margin-left: 8em;
+    width: 12em;
+}
+
+#documents .license .informations .weapons {
+    margin-top: 1.09em;
+    margin-left: 8em;
+    width: 12em;
+}
+
+#documents .license .informations .fishing {
+    position: absolute;
+    margin-top: 0.3em;
+    margin-left: 8em;
+    width: 12em;
+}
+
+#documents .license .informations .fly {
+    margin-top: -13.4em;
+    margin-left: 27em;
+    width: 12em;
+}
+
+#documents .license .informations .business {
+    margin-top: 1.25em;
+    margin-left: 27em;
+    width: 12em;
+}
+
+#documents .license .informations .hunting {
+    margin-top: 1.1em;
+    margin-left: 27em;
+    width: 12em;
+}
+
+#documents .active {
+    color: #2b3c63 !important;
+}
+
+#documents .license .next_page {
+    position: absolute;
+    right: 7em;
+    bottom: 3em;
+    font-size: 0.875em;
+    font-weight: bold;
+    font-style: italic;
+    color: #2b3c63 !important;
+}
+
+/* */
+#documents .license .blocks_father {
+    position: absolute;
+    bottom: 1.9em;
+    display: inline-flex;
+}
+
+#documents .license .blocks_father .blocks {
+    width: 62px;
+    height: 46px;
+    background-color: #364f89;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+#documents .license #coloring {
+    fill: #2b3c63;
+    transition: 0.3s;
+}
+
+#documents .license .blocks_father .blocks:hover,
+#documents .license .blocks_father .blocks:hover #coloring {
+    background-color: #2b3c63;
+    fill: white;
+}
+
+#documents .license .blocks_father .blocks.selected {
+    background-color: #2b3c63;
+    height: 41px;
+    border-bottom: 5px solid white;
+}
+
+#documents .license .blocks_father .blocks .center_in_select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#documents .license .blocks_father .blocks .center_in_select svg {
+    position: absolute;
+    top: 0.6em;
+}
+
+#documents .license .blocks_father .blocks .center_in_select svg #coloring {
+    fill: white;
+}
+
+#documents .license .blocks_father .blocks .center_without_select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#documents .license .blocks_father .blocks .center_without_select svg {
+    position: absolute;
+    top: 1em;
+}
+
+/* Пасспорт */
+#documents .passport {
+    background-image: url(../img/passport/bg.png);
+    width: 640px;
+    height: 340px;
+    background-color: #00000000;
+}
+
+#documents .passport .information {
+    margin-left: 10.5em;
+    margin-top: 4.4em;
+    line-height: 1.5em;
+}
+
+#documents .passport .information div {
+    color: #828282;
+}
+
+#documents .passport .information div .bold {
+    font-weight: bold;
+    display: inline-block;
+    color: #535353;
+}
+
+#documents .passport .id {
+    font-weight: bold;
+    color: #219453;
+    margin-left: 40em;
+    margin-top: -10.5em;
+}
+
+#documents .passport .blocks_father {
+    position: absolute;
+    bottom: 1.9em;
+    display: inline-flex;
+}
+
+#documents .passport .blocks_father .blocks {
+    width: 62px;
+    height: 46px;
+    background-color: #219453;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+#documents .passport #coloring {
+    fill: #2b6344;
+    transition: 0.3s;
+}
+
+#documents .passport .blocks_father .blocks:hover,
+#documents .passport .blocks_father .blocks:hover #coloring {
+    background-color: #2b6344;
+    fill: white;
+}
+
+#documents .passport .blocks_father .blocks.selected {
+    background-color: #2b6344;
+    height: 41px;
+    border-bottom: 5px solid white;
+}
+
+#documents .passport .blocks_father .blocks .center_in_select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#documents .passport .blocks_father .blocks .center_in_select svg {
+    position: absolute;
+    top: 0.6em;
+}
+
+#documents .passport .blocks_father .blocks .center_in_select svg #coloring {
+    fill: white;
+}
+
+#documents .passport .blocks_father .blocks .center_without_select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#documents .passport .blocks_father .blocks .center_without_select svg {
+    position: absolute;
+    top: 1em;
+}
+
+#documents .weapon {
+    background-image: url(../img/weapon/bg.png);
+    width: 640px;
+    height: 340px;
+    background-color: #00000000;
+}
+
+#documents .weapon .informations .pistol {
+    margin-top: 5.2em;
+    margin-left: 5.5em;
+    width: 17em;
+}
+
+#documents .weapon .informations .submachine-pistol,
+#documents .weapon .informations .shotgun,
+#documents .weapon .informations .assault-rifle {
+    margin-top: 0.56em;
+    margin-left: 5.5em;
+    width: 17em;
+}
+
+#documents .weapon .informations .sniper-rifle {
+    margin-top: -9.69em;
+    margin-left: 25.1em;
+    width: 17em;
+}
+
+#documents .weapon .informations .light-machine-gun,
+#documents .weapon .informations .heavy-gun {
+    margin-top: 0.6em;
+    margin-left: 25.1em;
+    width: 17em;
+}
+
+/* Блоки */
+#documents .level {
+    display: flex;
+}
+
+#documents .level .block_skill {
+    background-color: #cfcfcf;
+    width: 15px;
+    height: 9px;
+    margin-right: 8px;
+}
+
+#documents .level .block_skill.active {
+    background-color: #494949;
+}
+
+/* Блоки перемищения */
+#documents .weapon .blocks_father {
+    position: absolute;
+    bottom: 1.9em;
+    display: inline-flex;
+}
+
+#documents .weapon .blocks_father .blocks {
+    width: 62px;
+    height: 46px;
+    background-color: #802323;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+#documents .weapon #coloring {
+    fill: #571717;
+    transition: 0.3s;
+}
+
+#documents .weapon .blocks_father .blocks:hover,
+#documents .weapon .blocks_father .blocks:hover #coloring {
+    background-color: #571717;
+    fill: white;
+}
+
+#documents .weapon .blocks_father .blocks.selected {
+    background-color: #571717;
+    height: 41px;
+    border-bottom: 5px solid white;
+}
+
+#documents .weapon .blocks_father .blocks .center_in_select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#documents .weapon .blocks_father .blocks .center_in_select svg {
+    position: absolute;
+    top: 0.6em;
+}
+
+#documents .weapon .blocks_father .blocks .center_in_select svg #coloring {
+    fill: white;
+}
+
+#documents .weapon .blocks_father .blocks .center_without_select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#documents .weapon .blocks_father .blocks .center_without_select svg {
+    position: absolute;
+    top: 1em;
+}
+
+/* Трудовая книжка */
+#documents .work {
+    background-image: url(../img/work/bg.png);
+    width: 640px;
+    height: 340px;
+    background-color: #00000000;
+    font-weight: 400;
+}
+
+#documents .work .table {
+    margin: auto;
+    display: table;
+    margin-top: 3em;
+}
+
+#documents .work .table table {
+    border-collapse: collapse;
+    font-size: 1em;
+    width: 35em;
+}
+
+#documents .work .table table tr th {
+    background-color: #148475;
+    color: white;
+    font-weight: 400;
+}
+
+#documents .work .table table tr td {
+    text-align: center !important;
+}
+
+#documents .work .table table, #documents .work .table table tr th, #documents .work .table table tr td {
+    border: 1px solid #148475;
+    text-align: center;
+}
+
+#documents table tr td:first-child::after {
+    content: "";
+    display: inline-block;
+    vertical-align: top;
+    min-height: 20px;
+}
+
+#documents .work .blocks_father {
+    position: absolute;
+    bottom: 1.9em;
+    display: inline-flex;
+}
+
+#documents .work .blocks_father .blocks {
+    width: 62px;
+    height: 46px;
+    background-color: #148475;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+#documents .work #coloring {
+    fill: #146258;
+    transition: 0.3s;
+}
+
+#documents .work .blocks_father .blocks:hover,
+#documents .work .blocks_father .blocks:hover #coloring {
+    background-color: #146258;
+    fill: white;
+}
+
+#documents .work .blocks_father .blocks.selected {
+    background-color: #146258;
+    height: 41px;
+    border-bottom: 5px solid white;
+}
+
+#documents .work .blocks_father .blocks .center_in_select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#documents .work .blocks_father .blocks .center_in_select svg {
+    position: absolute;
+    top: 0.7em;
+    width: 1.7em;
+}
+
+#documents .work .blocks_father .blocks .center_in_select svg #coloring {
+    fill: white;
+}
+
+#documents .work .blocks_father .blocks .center_without_select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#documents .work .blocks_father .blocks .center_without_select svg {
+    position: absolute;
+    top: 0.8em;
+    width: 1.7em;
+    height: 1em;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i,700');
+
+#passport {}
+
+/* All */
+#documents {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+}
+
+#documents .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#documents .user_svg {
+    width: 18px !important;
+    height: 22px !important;
+}
+
+#documents .license_svg {
+    width: 75px !important;
+    height: 22px !important;
+}
+
+#documents .weapon_svg {
+    width: 22px !important;
+    height: 22px !important;
+}
+
+#documents .work_svg {
+    width: 20px !important;
+    height: 22px !important;
+}

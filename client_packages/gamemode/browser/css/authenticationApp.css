@@ -1,0 +1,647 @@
+#authenticationApp {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#authenticationApp .authentication {
+    font-family: 'OpenSans';
+    position: relative;
+    max-width: 900px;
+    max-height: 600px;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#authenticationApp .welcome {
+    color: #fff;
+    font-family: 'Aqua Grotesque';
+    font-weight: 100;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    max-width: 900px;
+    max-height: 600px;
+    height: 100%;
+}
+
+@font-face {
+    font-family: ParisNineteenSixty;
+    src: url(../fonts/Chalet-ParisNineteenSixty.otf);
+}
+
+#alphaTest {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#alphaTest .box {
+    border-radius: 0.462962962962963vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 64.44444444444444vh;
+    height: 40.09259259259259vh;
+
+    font-family: ParisNineteenSixty;
+    color: white;
+}
+#alphaTest .box h1 {
+    font-size: 1.666666666666667vh;
+    padding-top: 2.222222222222222vh;
+    margin-left: 2.592592592592593vh;
+}
+#alphaTest .box h2 {
+    font-size: 1.296296296296296vh;
+    font-weight: bold;
+    margin-left: 2.592592592592593vh;
+    margin-right: 2.592592592592593vh;
+}
+#alphaTest .box p {
+    font-size: 1.296296296296296vh;
+    margin-left: 2.592592592592593vh;
+    margin-right: 2.592592592592593vh;
+}
+#alphaTest .box p.bold {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 3vh;
+}
+
+#authenticationApp .welcome h1 {
+    font-size: 48px;
+    font-weight: 100;
+    letter-spacing: 13px;
+    margin-top: -9px;
+}
+
+#authenticationApp .welcome h2 {
+    font-size: 24px;
+    font-weight: 100;
+    letter-spacing: 3px;
+    margin-top: -35px;
+}
+
+#authenticationApp .welcome h3 {
+    font-family: 'OpenSans';
+    font-size: 13px;
+    font-weight: 100;
+    margin-top: -55px;
+}
+
+@keyframes left-hide {
+    from {
+        -webkit-transform: translateX(0%);
+        opacity: 1;
+    }
+
+    to {
+        -webkit-transform: translateX(-500%);
+        opacity: 0;
+    }
+}
+
+@keyframes right-hide {
+    from {
+        -webkit-transform: translateX(0%);
+        opacity: 1;
+    }
+
+    to {
+        -webkit-transform: translateX(500%);
+        opacity: 0;
+    }
+}
+
+#authenticationApp .hide-welcome .left-background-box {
+    animation: left-hide 2.0s alternate;
+}
+
+#authenticationApp .hide-welcome .right-background-box {
+    animation: right-hide 2.0s alternate;
+}
+
+#authenticationApp .logo {
+    padding-top: 40px;
+}
+
+#authenticationApp .left-background-box {
+    width: 260px;
+    height: 520px;
+    background: url(../img/authentication/left-background.png);
+    position: absolute;
+    border-radius: 10px;
+    animation: right-to-left 1.6s alternate;
+    left: 180px;
+    top: 60px;
+    z-index: -1;
+}
+
+#authenticationApp .right-background-box {
+    width: 260px;
+    height: 520px;
+    background: url(../img/authentication/right-background.png);
+    position: absolute;
+    border-radius: 10px;
+    animation: left-to-right 1.6s alternate;
+    right: 180px;
+    z-index: -1;
+}
+
+#authenticationApp .left-block {
+    width: 400px;
+    height: 600px;
+    color: #fff;
+    background: #00b615 url(../img/authentication/background.png);
+    border-radius: 10px;
+    font-family: 'Aqua Grotesque';
+    font-weight: 100;
+    text-align: center;
+    text-transform: uppercase;
+    float: left;
+}
+
+#authenticationApp .left-block img {
+    margin-top: -50px;
+}
+
+#authenticationApp .left-block h1 {
+    font-size: 48px;
+    font-weight: 100;
+    letter-spacing: 20px;
+    margin-top: -9px;
+}
+
+#authenticationApp .left-block h2 {
+    font-size: 24px;
+    font-weight: 100;
+    letter-spacing: 3px;
+    margin-top: -35px;
+}
+
+#authenticationApp .left-block h3 {
+    font-family: 'OpenSans';
+    font-size: 13px;
+    font-weight: 100;
+    letter-spacing: 0px;
+    margin-top: -55px;
+}
+
+#authenticationApp .left-block>.description {
+    padding-left: 28px;
+    padding-right: 28px;
+    text-align: justify;
+}
+
+#authenticationApp .left-block>.description a {
+    font-family: 'OpenSans';
+    font-size: 13px;
+    letter-spacing: 0px;
+    text-align: center;
+    text-transform: none;
+}
+
+#authenticationApp .right-block {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 500px;
+    height: 570px;
+    background: #fff;
+    float: right;
+}
+
+#authenticationApp .block {
+    margin-top: 35px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#authenticationApp .block a {
+    color: #3aa33c;
+    /*font-size: 14px;*/
+    font-weight: bold;
+    text-align: center;
+}
+
+#authenticationApp .google-description a {
+    font-size: 11px;
+}
+
+#authenticationApp .login {
+    text-align: center;
+}
+
+#authenticationApp .login input {
+    width: 100%;
+    border: 0;
+    color: #4c4c4c;
+    font-weight: bold;
+    border-bottom: 1px solid #c7cccd;
+    text-align: center;
+    padding-bottom: 7px;
+    padding-top: 30px;
+}
+
+#authenticationApp .login input::placeholder {
+    font-weight: 100;
+    color: #c7cccd;
+}
+
+#authenticationApp .registration {
+    text-align: center;
+}
+
+#authenticationApp .registration input {
+    transition: 0.7s;
+    width: 100%;
+    border: 0;
+    color: #4c4c4c;
+    font-weight: bold;
+    border-bottom: 1px solid #c7cccd;
+    text-align: center;
+    padding-bottom: 7px;
+    padding-top: 27px;
+}
+
+#authenticationApp .login input:valid {
+    transition: 0.7s;
+    border-bottom: 1px solid #00b716;
+}
+
+#authenticationApp .login input:valid>.fast-enter a {
+    transition: 0.7s;
+    border-bottom: 1px solid #00b716;
+}
+
+#authenticationApp .registration input:valid {
+    transition: 0.7s;
+    text-align: center;
+    border-bottom: 1px solid #00b716;
+}
+
+#authenticationApp .enter-real-info input {
+    text-align: left;
+}
+
+#authenticationApp .enter-real-info input:valid {
+    text-align: left;
+}
+
+#authenticationApp .registration input::placeholder {
+    font-weight: 100;
+    color: #c7cccd;
+}
+
+#authenticationApp .center-textalign {
+    text-align: center;
+}
+
+#authenticationApp .center-textalign::placeholder {
+    text-align: center;
+}
+
+#authenticationApp .sex-selector {
+    padding-top: 20px;
+}
+
+#authenticationApp .sex-block {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 14px;
+    color: #8c8c8c;
+}
+
+#authenticationApp .sex-block:hover {
+    color: #4a4a4a;
+}
+
+#authenticationApp .sex-block-active {
+    color: #3aa33c;
+    font-weight: bold;
+}
+
+#authenticationApp .sex-block-active:hover {
+    color: #3aa33c;
+}
+
+#authenticationApp .enter-info {
+    padding-top: 100px;
+}
+
+#authenticationApp .registration>.enter-info {
+    padding-top: 15px;
+}
+
+#authenticationApp .registration>.enter-info a {
+    font-size: 13px;
+    text-transform: uppercase;
+    position: absolute;
+}
+
+#authenticationApp .button {
+    transition: 0.2s;
+    position: relative;
+    background: #00b716;
+    border-radius: 17.5px;
+    width: 190px;
+    height: 28px;
+    padding-top: 8px;
+    margin: 26px 0 26px 0;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+#authenticationApp .recovery-result>.button {
+    position: absolute;
+    bottom: 50px;
+}
+
+#authenticationApp .button:hover {
+    transition: 0.2s;
+    background: #007d0f;
+}
+
+#authenticationApp .button a {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+#authenticationApp .cant-enter a {
+    font-size: 12px;
+    font-weight: 100;
+    color: #969696;
+}
+
+#authenticationApp .cant-enter a:hover {
+    color: #727575;
+}
+
+#authenticationApp .fast-enter {
+    padding-top: 15px;
+}
+
+#authenticationApp .fast-enter a {
+    font-weight: 100;
+    font-size: 13px;
+    color: #c7cccd;
+    padding-right: 5px;
+}
+
+#authenticationApp .switch {
+    position: absolute;
+    display: inline-block;
+    width: 36px;
+    height: 16px;
+    margin-top: 3px;
+}
+
+#authenticationApp .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#authenticationApp .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+#authenticationApp .slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 3px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+}
+
+#authenticationApp input:checked+.slider {
+    background-color: #3aa33c;
+}
+
+#authenticationApp input:focus+.slider {
+    box-shadow: 0 0 1px #3aa33c;
+}
+
+#authenticationApp input:checked+.slider:before {
+    transform: translateX(19px);
+}
+
+#authenticationApp .slider.round {
+    border-radius: 34px;
+}
+
+#authenticationApp .slider.round:before {
+    border-radius: 50%;
+}
+
+#authenticationApp .select {
+    display: inline-flex;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 10px;
+}
+
+#authenticationApp .select-block {
+    width: 115px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #c9c9c9;
+}
+
+#authenticationApp .select-block a {
+    color: #c9c9c9;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+#authenticationApp .select-block-active {
+    border-bottom: 2px solid #3aa33c;
+}
+
+#authenticationApp .select-block-active a {
+    color: #3aa33c;
+}
+
+#authenticationApp .recovery, .recovery-result, .google, .pincode, .confirmEmail {
+    text-align: center;
+    position: relative;
+    height: 500px;
+}
+
+#authenticationApp .box-header a {
+    font-size: 18px;
+    color: #3aa33c;
+}
+
+#authenticationApp .recovery input {
+    text-align: center;
+    width: 100%;
+    border: 0;
+    color: #313131;
+    border-bottom: 2px solid #c7cccd;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+#authenticationApp .recovery .button {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+#authenticationApp .recovery input::placeholder {
+    color: #c7cccd;
+}
+
+#authenticationApp .result-info {
+    padding-top: 155px;
+}
+
+#authenticationApp .result-info a {
+    font-size: 17px;
+    font-weight: bold;
+    color: #b1b4b5;
+}
+
+#authenticationApp .centred-img {
+    position: absolute;
+    margin-top: -65px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#authenticationApp .send-button {
+    transition: 0.2s;
+    width: 177px;
+    height: 29px;
+    border-radius: 17.5px;
+    background: #c7cccd;
+    padding-top: 7px;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#authenticationApp .recovery input:valid+#authenticationApp .send-button {
+    background: #02cc1a;
+}
+
+#authenticationApp .send-button a {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 100;
+}
+
+#authenticationApp .send-button:hover {
+    transition: 0.2s;
+    background: #02cc1a;
+}
+
+#authenticationApp .send-description {
+    text-align: justify;
+}
+
+#authenticationApp .send-description a {
+    font-size: 13px;
+    color: #737474;
+}
+
+#authenticationApp .input-description a {
+    font-size: 13px;
+    color: #737474;
+}
+
+#authenticationApp .exit-button {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 56px;
+    bottom: 20px;
+}
+
+#authenticationApp .exit-button a {
+    font-size: 13px;
+    color: #777777;
+}
+
+#authenticationApp .exit-button a:hover {
+    color: #1f1e1e;
+}
+
+#authenticationApp .google-description {
+    padding-top: 20px;
+    text-align: justify;
+}
+
+#authenticationApp .google-description a {
+    font-size: 13px;
+    color: #737474;
+}
+
+#authenticationApp .google .button {
+    margin-top: 11px;
+}
+
+#authenticationApp .google input {
+    width: 265px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid #c7cccd;
+    text-align: center;
+    color: #313131;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#authenticationApp .google input::placeholder {
+    color: #c7cccd;
+    font-weight: 100;
+}
+
+#authenticationApp .error-text {
+    padding-top: 10px;
+}
+
+#authenticationApp .error-text a {
+    font-size: 13px;
+    color: #ff0000;
+}
+
+#authenticationApp .pincode input, .confirmEmail input {
+    width: 265px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid #c7cccd;
+    text-align: center;
+    color: #313131;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#authenticationApp .pincode input::placeholder, .confirmEmail input::placeholder {
+    color: #c7cccd;
+    font-weight: 100;
+}
+
+#authenticationApp .pincode .button, .confirmEmail input::placeholder {
+    margin-top: 11px;
+}

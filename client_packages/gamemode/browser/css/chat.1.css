@@ -1,0 +1,61 @@
+#chat {
+    color: #fff;
+    font-size: 2vh;
+    font-family: Montserrat;
+    font-weight: bold;
+    position: absolute;
+    right: 4vh;
+    text-shadow: 0 0 2px black;
+    top: 20vh;
+    width: 60vh;
+}
+
+#chat hr {
+    opacity: 0.2;
+    border-color: #aaa;
+    width: 60%;
+    margin: 0 0 0 auto;
+}
+
+#chat input[type="text"] {
+    background: #000;
+    border: none;
+    color: #fff;
+    height: 3vh;
+    padding: 1vh;
+    position: absolute;
+    right: 0;
+    width: 83%;
+}
+
+#chat input[type="text"]:focus {
+    outline: none;
+}
+
+#chat .chat-bottom {
+    margin-top: 2vh;
+}
+
+#chat .chat-content {
+    height: 40vh;
+    overflow-y: hidden;
+    text-align: right;
+    text-shadow: 1px 1px #000;
+}
+
+#chat .chat-content div {
+    padding: 0.5vh;
+    word-break: break-word;
+}
+
+#chat .tag {
+    background: #000;
+    border-bottom: 1px solid #196;
+    color: #aaa;
+    font-size: 1.5vh;
+    padding: 0.6vh 0;
+    position: absolute;
+    left: 1.5vh;
+    text-align: center;
+    width: 9vh;
+}

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+@font-face {
+    font-family: "Chalet-ParisNineteenSixty";
+    src: url(../fonts/Chalet/Chalet-LondonNineteenSixty.woff);
+}
+body #policePassport {
+    background-image: url(../img/policePassport/bg.png);
+    background-repeat: no-repeat;
+    width: 653px;
+    height: 422px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    left: 47%;
+    position: absolute;
+    top: 26%;
+}
+body #policePassport .text {
+    width: 40%;
+    position: relative;
+    left: 2.5em;
+    top: 7.5em;
+    font-size: 15px;
+}
+body #policePassport .text bold {
+    font-weight: 600;
+}
+body #policePassport .id {
+    font-family: "Chalet-ParisNineteenSixty";
+    text-align: center;
+    position: relative;
+    left: 6em;
+    top: 7.5em;
+    font-size: 30px;
+    color: #f0f0f0;
+    font-weight: bolder;
+}
+/* @font-face {
+    font-family: "LONDONSIXTY.ttf";
+    src: url(../fonts/Chalet/LONDONSIXTY.ttf);
+}
+body #fbiPassport {
+    background-image: url(../img/policePassport/bg.png);
+    width: 417px;
+    height: 565px;
+
+    font-family: "LONDONSIXTY.ttf";
+}
+body #fbiPassport .name {
+    position: relative;
+    left: 6em;
+    top: 10.6em;
+    text-align: center;
+}
+body #fbiPassport .id {
+    position: relative;
+    top: 10.5em;
+    left: 2.7em;
+}
+body #fbiPassport .name,
+body #fbiPassport .id {
+    font-size: 18px;
+    color: #1c1c1c;
+} */

@@ -1,0 +1,731 @@
+#vehProp {
+    opacity: 1;
+    width: 50vh;
+    height: 50vh;
+    min-width: 300px;
+    min-height: 300px;
+    /*background-color: #ccc;*/
+    position: absolute;
+    bottom: 7%;
+    right: 0;
+}
+
+#vehProp #speedometer {
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+    width: 60%;
+    height: 60%;
+}
+
+#vehProp #speedometer img {
+    position: absolute;
+    width: 94%;
+    margin: 3%;
+}
+
+#vehProp #speedometer svg {
+    position: absolute;
+    height: 100%;
+}
+
+#vehProp #speedometer .speedometer-circuit {
+    margin: 5% 0 0 5%;
+    height: 80%;
+}
+
+#vehProp #speedometer .speedometer-circuit path {
+    fill: none;
+    stroke: #656565;
+    stroke-miterlimit: 10;
+    stroke-width: 3px;
+}
+
+#vehProp #speedometer .speedometer-mainstep {
+    margin: 5% 0 0 5.7%;
+    height: 78%;
+}
+
+#vehProp #speedometer .speedometer-mainstep path {
+    fill: #656565;
+}
+
+#vehProp #speedometer .speedometer-step {
+    margin: 5.4% 0 0 5.4%;
+    height: 74%;
+}
+
+#vehProp #speedometer .speedometer-step path {
+    fill: #505050;
+}
+
+#vehProp .on .speedometer-step path {
+    animation: speedometerToWhite .6s;
+    animation-fill-mode: forwards;
+}
+
+#vehProp .on .speedometer-circuit path {
+    animation: circuit .8s;
+    animation-fill-mode: forwards;
+}
+
+#vehProp .on .speedometer-circuit {
+    filter: drop-shadow(0 0 4px #77cbf2);
+}
+
+#vehProp .on .speedometer-mainstep {
+    filter: drop-shadow(0 0 8px #77cbf2);
+}
+
+#vehProp .on .speedometer-mainstep path {
+    animation: step .6s;
+    animation-fill-mode: forwards;
+}
+
+#vehProp #speedometer .speedometer-bar {
+    height: 100%;
+    width: 100%;
+}
+
+#vehProp #speedometer circle {
+    /*opacity: 0.5;*/
+    r: 46.3%;
+    cx: 49.6%;
+    cy: 51.6%;
+    fill: rgba(0, 0, 0, 0);
+    stroke: #eee;
+    stroke-width: 4%;
+    stroke-dasharray: 130% 290%;
+    transform-origin: 50% 50.6%;
+    transform: rotate(131deg);
+}
+
+#vehProp #speedometer .frame {
+    left: 50%;
+    margin-left: -20%;
+    margin-top: 35%;
+    height: 20%;
+    fill: none;
+    stroke: #656565;
+    stroke-miterlimit: 10;
+    stroke-width: 3px;
+}
+
+#vehProp .on .frame {
+    filter: drop-shadow(0 0 4px #77cbf2);
+}
+
+#vehProp .on .frame rect {
+    animation: circuit .6s;
+    animation-fill-mode: forwards;
+}
+
+#vehProp #velocity {
+    /*opacity: 0.5;*/
+    position: absolute;
+    text-align: center;
+    height: 19%;
+    width: 36%;
+    font-family: "Norwester";
+    right: 33%;
+    bottom: 46%;
+    color: #656565;
+}
+
+#vehProp .on #velocity {
+    animation: speedometerToWhite .6s;
+    animation-fill-mode: forwards;
+}
+
+#vehProp #mileage {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    /*opacity: 0.5;*/
+    position: absolute;
+    text-align: center;
+    height: 7%;
+    width: 29%;
+    font-family: "Numans";
+    right: 36%;
+    bottom: 35%;
+    color: #656565;
+    overflow: hidden;
+}
+
+#vehProp .on #mileage {
+    animation: speedometerToWhite .6s;
+    animation-fill-mode: forwards;
+}
+
+#vehProp #mileage0 {
+    font-weight: bold;
+    color: #2b2b2b;
+    /*#b00;*/
+}
+
+#vehProp .on #mileage0 {
+    animation: mileageToRed .6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes mileageToRed {
+    100% {
+        color: #b00;
+    }
+}
+
+#vehProp #max-velocity {
+    position: absolute;
+    height: 16%;
+    width: 16%;
+    right: 24%;
+    bottom: 24%;
+}
+
+#vehProp #max-velocity text {
+    fill: #656565;
+    font-size: 10pt;
+    /*stroke: red;*/
+    font-family: "Norwester";
+}
+
+#vehProp .on #max-velocity text {
+    fill: #c40808;
+}
+
+#vehProp #max-velocity .on {
+    filter: drop-shadow(0 0 5px red);
+}
+
+#vehProp #max-velocity .on text {
+    fill: red;
+}
+
+#vehProp #fuel {
+    position: absolute;
+    height: 10%;
+    width: 10%;
+    bottom: 13%;
+    right: 35%;
+}
+
+#vehProp #fuel img {
+    /*opacity: 0.5;*/
+    position: absolute;
+    height: 100%;
+}
+
+/*#vehProp #fuelAmount {
+	position: absolute;
+	font-family: "Norwester";
+	top: 12%;
+	left: 22%;
+	height: 24%;
+	width: 33%;
+	color: white;
+}*/
+#vehProp #fuelRed {
+    opacity: 0.7;
+    filter: grayscale(1);
+    clip-path: inset(0 0 50% 0);
+}
+
+#vehProp .on #fuelRed {
+    opacity: 1;
+    filter: grayscale(0);
+}
+
+#vehProp #fuelWhite {
+    clip-path: inset(50% 0 0 0);
+}
+
+#vehProp .turnSignal {
+    height: 6%;
+    width: 7%;
+    position: absolute;
+    bottom: 12%;
+}
+
+#vehProp .turnSignal svg {
+    height: 50%;
+}
+
+#vehProp .turnSignal path {
+    fill: rgba(200, 200, 200, 0.6);
+    stroke: rgba(200, 200, 200, 0.6);
+    stroke-width: 0.1px;
+}
+
+#vehProp .turnSignal .green-on path {
+    fill: #1fd345;
+}
+
+#vehProp .turnSignal .off path {
+    fill: #fff;
+}
+
+#vehProp #leftTurnSignal {
+    right: 44.5%;
+}
+
+#vehProp #rightTurnSignal {
+    right: 27%;
+}
+
+#vehProp #rpm {
+    position: absolute;
+    bottom: 12%;
+    right: 65%;
+    width: 29%;
+    height: 29%;
+}
+
+#vehProp .rpm-circuit {
+    position: absolute;
+    top: 4%;
+    left: -3%;
+    height: 98%;
+    width: 97%;
+    overflow: visible;
+}
+
+#vehProp .rpm-circuit path {
+    fill: none;
+    stroke: #656565;
+    stroke-miterlimit: 10;
+    stroke-width: 3px;
+}
+
+#vehProp .on .rpm-circuit {
+    filter: drop-shadow(0 0 4px #77cbf2);
+}
+
+#vehProp .on .rpm-circuit path {
+    /*stroke: #77cbf2;*/
+    animation: circuit 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes circuit {
+    100% {
+        stroke: #77cbf2;
+    }
+}
+
+@keyframes step {
+    100% {
+        fill: #77cbf2;
+        stroke: #77cbf2;
+    }
+}
+
+#vehProp .rpm-step {
+    position: absolute;
+    top: 12%;
+    left: -3%;
+    height: 86%;
+    width: 70%;
+}
+
+#vehProp .rpm-step path {
+    fill: #656565;
+    stroke: #656565;
+    stroke-miterlimit: 10;
+}
+
+#vehProp .on .rpm-step {
+    filter: drop-shadow(0 0 4px #77cbf2);
+}
+
+#vehProp .on .rpm-step path {
+    /*fill: #77cbf2;
+	stroke: #77cbf2;*/
+    animation: step .6s;
+    animation-fill-mode: forwards;
+    stroke-miterlimit: 10;
+}
+
+#vehProp #rpm .rpm-bar {
+    position: absolute;
+    top: -2%;
+    left: -12%;
+    height: 110%;
+    width: 110%;
+}
+
+#vehProp #rpm .rpm-bar circle {
+    /*opacity: 0.5;*/
+    r: 83.6%;
+    cx: 11.5%;
+    cy: 11.5%;
+    fill: rgba(0, 0, 0, 0);
+    stroke: #eee;
+    stroke-width: 7%;
+    stroke-dasharray: 100% 400%;
+    transform-origin: 50% 50%;
+    transform: rotate(180deg);
+}
+
+#vehProp .rpm-scale div {
+    position: absolute;
+    height: 12%;
+    font-family: "Norwester";
+    color: #656565;
+}
+
+#vehProp .on .rpm-scale div {
+    animation: speedometerToWhite .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes speedometerToWhite {
+    100% {
+        fill: #fff;
+        color: #fff;
+    }
+}
+
+#vehProp #rpm-scale0 {
+    top: 88%;
+    left: 11%;
+}
+
+#vehProp #rpm-scale1 {
+    top: 67%;
+    left: 16%;
+}
+
+#vehProp #rpm-scale2 {
+    top: 47%;
+    left: 26%;
+}
+
+#vehProp #rpm-scale3 {
+    top: 31%;
+    left: 43%;
+}
+
+#vehProp #rpm-scale4 {
+    top: 23%;
+    left: 60%;
+}
+
+#vehProp #speedText {
+    position: absolute;
+    height: 9%;
+    font-family: "OrbitronMedium";
+    color: #656565;
+    top: 26%;
+    left: 40%;
+}
+
+#vehProp .on #speedText {
+    animation: speedometerToWhite .6s;
+    animation-fill-mode: forwards;
+}
+
+#vehProp .velocity-scale div {
+    position: absolute;
+    height: 8%;
+    font-family: "Norwester";
+    color: #656565;
+}
+
+#vehProp .on .velocity-scale div {
+    animation: speedometerToWhite .6s;
+    animation-fill-mode: forwards;
+}
+
+#vehProp #velocity-scale0 {
+    top: 70%;
+    left: 27%;
+}
+
+#vehProp #velocity-scale1 {
+    top: 57%;
+    left: 16%;
+}
+
+#vehProp #velocity-scale2 {
+    top: 41%;
+    left: 14%
+}
+
+#vehProp #velocity-scale3 {
+    top: 26%;
+    left: 20%
+}
+
+#vehProp #velocity-scale4 {
+    top: 12%;
+    left: 45%;
+}
+
+#vehProp #velocity-scale5 {
+    top: 17%;
+    left: 60%;
+}
+
+#vehProp #velocity-scale6 {
+    top: 17%;
+    left: 30%;
+}
+
+#vehProp #velocity-scale7 {
+    top: 26%;
+    left: 70%;
+}
+
+#vehProp #velocity-scale8 {
+    top: 41%;
+    left: 74%;
+}
+
+#vehProp #velocity-scale9 {
+    top: 57%;
+    left: 72%;
+}
+
+#vehProp #gear {
+    /*opacity: 0.5;*/
+    position: absolute;
+    text-align: center;
+    height: 40%;
+    width: 36%;
+    font-family: "Norwester";
+    right: 22%;
+    bottom: 20%;
+    color: #656565;
+    ;
+}
+
+#vehProp .on #gear {
+    animation: speedometerToWhite .5s;
+    animation-fill-mode: forwards;
+}
+
+#vehProp #rpmText {
+    position: absolute;
+    height: 14%;
+    font-family: "OrbitronMedium";
+    color: #656565;
+    ;
+    top: 83%;
+    left: 46%;
+}
+
+#vehProp .on #rpmText {
+    animation: speedometerToWhite .5s;
+    animation-fill-mode: forwards;
+}
+
+#vehProp #emergency {
+    position: absolute;
+    bottom: 13%;
+    right: 6%;
+    width: 10%;
+    height: 10%;
+}
+
+#vehProp #emergency svg {
+    stroke-width: 0.01;
+    height: 80%;
+    opacity: 0.7;
+    filter: grayscale(1);
+}
+
+#vehProp #emergency .off {
+    opacity: 1;
+    filter: grayscale(0);
+}
+
+#vehProp #emergency .cls-1 {
+    fill: #c40808;
+}
+
+#vehProp #emergency .on {
+    opacity: 1;
+    filter: grayscale(0);
+    filter: drop-shadow(0 0 6px #ff4b27);
+}
+
+#vehProp #emergency .on .cls-1 {
+    fill: #ff4b27;
+}
+
+#vehProp #emergency .cls-2 {
+    fill: none;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+}
+
+#vehProp .indicators {
+    position: absolute;
+    display: grid;
+    bottom: 0;
+    height: 10%;
+}
+
+/*#vehProp .indicators svg {
+	margin-top: 26%;
+	height: 40%;
+}*/
+#vehProp .indicators img {
+    position: absolute;
+    height: 100%;
+}
+
+#vehProp #indicators-left {
+    grid-template-columns: 1fr 1fr 1fr;
+    right: 61%;
+    width: 25%;
+    bottom: 0.4%;
+}
+
+#vehProp #indicators-right {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    right: 25%;
+    width: 30%;
+}
+
+#vehProp .indicators .cls-1 {
+    fill: none;
+    stroke: rgba(200, 200, 200, 0.6);
+    stroke-miterlimit: 10;
+    stroke-width: 1px;
+}
+
+#vehProp .cls-2 {
+    fill: rgba(200, 200, 200, 0.6);
+}
+
+#vehProp .red-on {
+    filter: drop-shadow(0 0 1px #ff0000);
+}
+
+#vehProp .red-on .cls-1 {
+    stroke: #ff0000;
+}
+
+#vehProp .red-on .cls-2 {
+    fill: #ff0000;
+}
+
+#vehProp .yellow-on {
+    filter: drop-shadow(0 0 3px #ffc600);
+}
+
+#vehProp .yellow-on .cls-1 {
+    stroke: #ffc600;
+}
+
+#vehProp .yellow-on .cls-2 {
+    fill: #ffc600;
+}
+
+#vehProp .blue-on {
+    filter: drop-shadow(0 0 3px #1f6fd3);
+}
+
+#vehProp .blue-on .cls-1 {
+    stroke: #1f6fd3;
+}
+
+#vehProp .blue-on .cls-2 {
+    fill: #1f6fd3;
+}
+
+#vehProp .green-on {
+    filter: drop-shadow(0 0 2px #1fd345);
+}
+
+#vehProp .green-on .cls-1 {
+    stroke: #1fd345;
+}
+
+#vehProp .green-on .cls-2 {
+    fill: #1fd345;
+}
+
+#vehProp .off .cls-1 {
+    stroke: #ffffff;
+}
+
+#vehProp .off .cls-2 {
+    fill: #ffffff;
+}
+
+#vehProp #indicator-engine {
+    margin-left: 15%;
+    margin-top: 12%;
+    height: 36%;
+}
+
+#vehProp #indicator-oil {
+    margin-top: 14%;
+    height: 29%;
+}
+
+#vehProp #indicator-battery {
+    margin-top: 13%;
+    height: 34%;
+}
+
+#vehProp #indicator-battery rect {
+    stroke-width: 1.2px;
+}
+
+#vehProp #indicator-battery .cls-3 {
+    stroke-width: 0.9px;
+}
+
+#vehProp #indicator-doors {
+    margin-left: -13%;
+    height: 42%;
+}
+
+#vehProp #indicator-doors path {
+    stroke-width: 0.01;
+}
+
+#vehProp #indicator-high-beam {
+    margin-top: 14%;
+    height: 44%;
+}
+
+#vehProp #indicator-high-beam .cls-1 {
+    fill: none;
+}
+
+#vehProp #indicator-parking-light {
+    margin-top: 11%;
+    height: 40%;
+    overflow: visible;
+}
+
+#vehProp #indicator-parking-light path {
+    stroke-width: 1.2px;
+}
+
+#vehProp #indicator-low-beam {
+    margin-left: 23%;
+    margin-top: 11%;
+    height: 43%;
+    overflow: visible;
+}
+
+#vehProp #indicator-low-beam path {
+    stroke-width: 1.2px;
+}
+
+#vehProp #indicator-safety-belt {
+    height: 40%;
+    margin-left: 25%;
+    overflow: visible;
+}
+
+#vehProp #indicator-safety-belt path {
+    /*fill: #1fd345;*/
+    stroke-width: 1px;
+}

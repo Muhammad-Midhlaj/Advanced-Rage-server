@@ -1,0 +1,316 @@
+#houseMenu {
+    font-family: "Open Sans";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#houseMenu .house-header, #houseMenu .house-menu-header {
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    text-transform: uppercase;
+    width: 800px;
+    height: 40px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#houseMenu .house-bordergreen-color {
+    border-top: 5px solid #06ca5a;
+}
+
+#houseMenu .house-borderred-color {
+    border-top: 5px solid #ca0606;
+}
+
+#houseMenu .house-header a, #houseMenu .house-menu-header a {
+    position: relative;
+    top: 7px;
+}
+
+#houseMenu .house-green-color {
+    color: #06ca5a;
+}
+
+#houseMenu .house-red-color {
+    color: #ca0606;
+}
+
+#houseMenu .house-body {
+    position: relative;
+    background: rgba(0, 0, 0, 0.6);
+    width: 800px;
+    height: 400px;
+    top: 5px;
+}
+
+#houseMenu .house-stats {
+    position: relative;
+    top: 10px;
+}
+
+#houseMenu .left-block {
+    padding: 10px 18px;
+    font-weight: 600;
+}
+
+#houseMenu .left-block a {
+    /*color: #06ca5a;*/
+    font-size: 18px;
+    text-transform: none;
+    font-weight: 600;
+    position: relative;
+    top: 20px;
+}
+
+#houseMenu .left-block span:first-child {
+    font-family: "Open Sans";
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 18px;
+    top: 1px;
+}
+
+#houseMenu .left-block .white-color {
+    color: #fff;
+    font-weight: normal;
+}
+
+#houseMenu .green-color {
+    color: #06ca5a;
+    font-weight: 600;
+}
+
+#houseMenu .left-bottom-block {
+    font-family: 'OpenSans';
+    position: absolute;
+    padding: 10px 18px;
+    bottom: 0px;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#houseMenu .buy-button {
+    transition: 0.6s;
+    width: 250px;
+    height: 42px;
+    background: #06ca5a;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+#houseMenu .buy-button:hover {
+    transition: 0.6s;
+    background: #1fa056;
+}
+
+#houseMenu .buy-button a {
+    position: relative;
+    top: 9px;
+}
+
+#houseMenu .right-block {
+    right: 0;
+    top: 0;
+    position: absolute;
+    padding: 10px 10px;
+}
+
+#houseMenu .right-block .button {
+    position: relative;
+    right: -6px;
+    margin-top: 5px;
+    background: rgba(255, 255, 255, 0.9);
+    width: 370px;
+    height: 42px;
+    font-size: 16px;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+#houseMenu .right-block .button a {
+    position: relative;
+    left: 85px;
+    top: 9px;
+}
+
+#houseMenu .right-block .button img {
+    position: absolute;
+    left: 35px;
+    padding-top: 6px;
+}
+
+#houseMenu .right-block .button:hover {
+    background: rgba(255, 255, 255, 1.0);
+}
+
+#houseMenu .right-block .button span {
+    transition: 0.25s;
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: #ffffff00;
+    z-index: 0;
+    left: 0px;
+    transform: translateX(0px);
+}
+
+#houseMenu .right-block .disabled-button:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+#houseMenu .right-block .disabled-button {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+#houseMenu .right-block .disabled-button span {
+    display: none;
+}
+
+#houseMenu .house-unowned .button:hover span {
+    transition: 0.25s;
+    background: #06ca5a;
+    transform: translateX(-7px);
+}
+
+#houseMenu .house-owned .button:hover span {
+    transition: 0.25s;
+    background: #ca0606;
+    transform: translateX(-7px);
+}
+
+#houseMenu .house-plan {
+    text-align: center;
+}
+
+#houseMenu .house-plan img {
+    padding-top: 15px;
+}
+
+#houseMenu .house-plan .backbutton {
+    transition: 0.6s;
+    width: 220px;
+    height: 36px;
+    background: #12ae52;
+    color: #fff;
+    right: 11px;
+    bottom: 11px;
+    position: absolute;
+    text-align: center;
+}
+
+#houseMenu .house-plan .backbutton a {
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    top: 6px;
+}
+
+#houseMenu .house-plan .backbutton:hover {
+    transition: 0.6s;
+    background: #06ca5a;
+}
+
+#houseMenu .house-menu {
+    padding: 10px;
+}
+
+#houseMenu .house-menu-border {
+    position: absolute;
+    border-right: 2px solid #06ca5a;
+}
+
+#houseMenu .house-modern {
+    width: 180px;
+    position: absolute;
+    left: calc(252px + 26px);
+    text-align: center;
+}
+
+#houseMenu .house-control {
+    width: 300px;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+}
+
+#houseMenu .house-modern a, #houseMenu .house-control a {
+    color: #fff;
+    font-size: 18px;
+    font-family: 'OpenSans';
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#houseMenu .house-control .button {
+    margin-top: 5px;
+    background: rgba(255, 255, 255, 0.9);
+    width: 300px;
+    height: 42px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+#houseMenu .house-control .button a {
+    position: relative;
+    left: 60px;
+    top: 9px;
+    font-size: 15px;
+    color: #000;
+}
+
+#houseMenu .house-control .button img {
+    position: absolute;
+    left: 20px;
+    padding-top: 9px;
+}
+
+#houseMenu .house-control .button:hover {
+    background: rgba(255, 255, 255, 1.0);
+}
+
+#houseMenu .house-control-buttons {
+    top: 35px;
+    position: absolute;
+}
+
+#houseMenu .house-modern-buttons {
+    top: 40px;
+    position: absolute;
+}
+
+#houseMenu .big-button {
+    width: 180px;
+    height: 89px;
+    background: rgba(255, 255, 255, 0.9);
+    margin-bottom: 5px;
+}
+
+#houseMenu .big-button:hover {
+    background: rgba(255, 255, 255, 1.0);
+}
+
+#houseMenu .big-button a {
+    position: relative;
+    top: 5px;
+    color: #000;
+}
+
+#houseMenu .big-button img {
+    position: relative;
+    top: 6px;
+}
+
+#houseMenu .big-button-disabled {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+#houseMenu .big-button-disabled:hover {
+    background: rgba(255, 255, 255, 0.7);
+}

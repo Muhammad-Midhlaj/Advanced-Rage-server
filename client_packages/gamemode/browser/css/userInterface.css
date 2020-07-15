@@ -1,0 +1,102 @@
+#userinterface {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#userInterface .serverLogo {
+    opacity: 0.45;
+    position: absolute;
+    display: grid;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Aqua Grotesque';
+    border: 0px;
+    line-height: 1.2;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#userInterface .serverLogo img {
+    margin: 0 auto;
+    width: 55px;
+}
+
+#userInterface .serverLogo a {
+    position: relative;
+    top: 7px;
+}
+
+#userInterface .serverInfo {
+    /* font-family: 'Chalet-LondonNineteenSixty';
+    font-size: 13px;
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    width: 14vw;
+    padding-left: 3px;
+    bottom: -15px;
+    bottom: 1px;
+    opacity: 0.9;
+    text-transform: uppercase;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 1.0); */
+    font-family: 'Chalet-LondonNineteenSixty';
+    font-size: 1.2037037037vh;
+    position: absolute;
+    bottom: -1.388888888888889vh;
+    left: -0.5vh;
+    color: white;
+    text-align: center;
+    width: 26vh;
+    opacity: 0.9;
+    text-transform: uppercase;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 1.0);
+}
+#userInterface .serverInfo a:first-child,
+#userInterface .serverInfo a:nth-child(2) {
+    margin-right: 2vh;
+}
+/* #userInterface .serverInfo a:first-child {
+    position: absolute;
+    left: 0;
+}
+
+#userInterface .serverInfo a:last-child {
+    position: absolute;
+    right: 3px;
+} */
+
+#userInterface .serverIndicator {
+    position: absolute;
+    display: grid;
+    bottom: 0;
+    left: 26.66666666666667vh;
+    width: 1.666666666666667vh;
+}
+
+#userInterface .helpText {
+    font-family: 'Chalet-LondonNineteenSixty';
+    font-size: 15px;
+    color: #fff;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    line-height: 21px;
+    width: auto;
+    height: auto;
+    right: 0;
+    top: 0;
+    padding: 10px 18px 14px 18px;
+}
+
+#userInterface .helpText span {
+    border-radius: 2px;
+    margin: 0px 3px 0px 3px;
+}
+
+#userInterface .helpText .button {
+    padding: 1px 5px 2px 5px;
+    color: #000;
+    background: #fff;
+}

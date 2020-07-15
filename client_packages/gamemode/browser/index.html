@@ -1,0 +1,2047 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/checkbox.css" />
+    <link rel="stylesheet" type="text/css" href="css/safeZone.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/userInterface.css" />
+    <link rel="stylesheet" type="text/css" href="css/authenticationApp.css" />
+    <link rel="stylesheet" type="text/css" href="css/editCharacter.css" />
+    <link rel="stylesheet" type="text/css" href="css/characterInfo.css" />
+    <link rel="stylesheet" type="text/css" href="css/playersOnline.css" />
+    <link rel="stylesheet" type="text/css" href="css/bizLogs.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/console.css" />
+    <!--<link rel="stylesheet" type="text/css" href="css/chat.css" />-->
+    <link rel="stylesheet" type="text/css" href="css/chatLeft.css" />
+    <link rel="stylesheet" type="text/css" href="css/chatRight.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/selectMenu.css" />
+    <link rel="stylesheet" type="text/css" href="css/selectorCharacters.css" />
+    <link rel="stylesheet" type="text/css" href="css/infoTable.css" />
+    <link rel="stylesheet" type="text/css" href="css/modal.css" />
+    <link rel="stylesheet" type="text/css" href="css/prompt.css" />
+    <link rel="stylesheet" type="text/css" href="css/choiceMenu.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/vehProp.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/inventory.css" />
+    <link rel="stylesheet" type="text/css" href="css/trade.css" />
+    <link rel="stylesheet" type="text/css" href="css/interactionMenu.css" />
+    <link rel="stylesheet" type="text/css" href="css/customization.css" />
+    <link rel="stylesheet" type="text/css" href="css/taxiMenu.css" />
+    <link rel="stylesheet" type="text/css" href="css/documents.css" />
+    <link rel="stylesheet" type="text/css" href="css/houseMenu.css" />
+    <link rel="stylesheet" type="text/css" href="css/policePassport.css" />
+    <link rel="stylesheet" type="text/css" href="css/fbiPassport.css" />
+    <link rel="stylesheet" type="text/css" href="css/armyDocs.css" />
+    <link rel="stylesheet" type="text/css" href="css/telePhone.css" />
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/browser.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/windows.js"></script>
+    <script src="js/houseMenu.js"></script>
+    <script src="js/selectMenu.js"></script>
+    <script src="js/infoTable.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/prompt.js"></script>
+    <script src="js/choiceMenu.js"></script>
+
+    <script src="js/console.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/hudcontrol.js"></script>
+
+    <script src="js/vehProp.js"></script>
+    <script src="js/playersOnline.js"></script>
+    <script src="js/bizLogs.js"></script>
+    <script src="js/voice.js"></script>
+    <script src="js/inventory.js"></script>
+    <script src="js/trade.js"></script>
+    <script src="js/userInterface.js"></script>
+    <script src="js/interactionMenu.js"></script>
+    <script src="js/enterAccount.js"></script>
+
+    <!-- <script src="js/customization.js"></script> -->
+    <script src="js/taxiMenu.js"></script>
+    <script src="js/documents.js"></script>
+    <script src="js/armyDocs.js"></script>
+    <script src="js/bigmap.js"></script>
+    <script src="js/telePhone.js"></script>
+
+    <style>
+        #borwser {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="safezone">
+        <div id="userInterface" v-show="render">
+            <div class="serverLogo">
+                <img src="img/userInterface/logo.svg">
+                <a>UNTAMED Hero</a>
+            </div>
+
+            <div class="serverIndicator">
+                <img src="img/userInterface/Microphone.svg" id="micro_control" style="margin-bottom: 0.35vw; opacity: 0.3;">
+                <img src="img/userInterface/Phone.svg" style="opacity: 0.3;">
+            </div>
+
+            <div class="helpText" style="display: none;">
+                <a>
+                    Hello everyone, you probably think it's<br>
+                    Is?This is a tip for GTA 5 UNTAMED Hero<br>
+                    Play. That's right. <span class="button">F</span> It will look!
+                </a>
+            </div>
+
+        </div>
+
+        <div id="chat" v-bind:class="[leftChat ? leftChatClass : rightChatClass]" v-bind:style="[chatStatus ? {'display': 'block'} : {'display': 'none'}]">
+            <div class="chat-content scroll">
+                <!-- Filling from chat.js -->
+            </div>
+            <div class="chat-bottom" style="display: none">
+                <div class="tag"><a>[say]</a></div>
+                <input type="text" placeholder="Message" />
+            </div>
+        </div>
+    </div>
+    <div id="uPhoneS" class="uPhoneS Animate" style="display: none">
+        <input type="text" style="display:none;" id="reciepent">
+        <input type="text" style="display:none;" id="pass_id">
+        <div class="screen">
+            <div class="header">
+                <img src="./img/telephone/connection.png" style="width: 20px; height: 11px;position: relative;top: 4px;">
+                <div class="time">12:55</div>
+                <div class="day"></div>
+                <img src="./img/telephone/battery.png" style="width: 22px;height: 11px;position: relative;top: 4px;left: 78px;">
+            </div>
+            <div class="inScreen">
+                <div id="slider">
+                    <ul>
+                        <li><img draggable="false" tabindex="-1" id="messages" src="./img/telephone/messages.png"></li>
+                        <li><img draggable="false" tabindex="-1" id="contacts" src="./img/telephone/contacts.png"></li>
+                        <li><img draggable="false" tabindex="-1" id="tools" src="./img/telephone/tools.png"></li>
+                    </ul>
+                    <a href="#" class="control_next"><img draggable="false" tabindex="-1" id="arrowOne" src="./img/telephone/arrow.svg"></a>
+                    <a href="#" class="control_prev"><img draggable="false" tabindex="-1" id="arrowTwo" src="./img/telephone/arrow.svg"></a>
+                </div>
+                <div class="contactsList">
+                    <div class="headerContacts">Contact list</div>
+                    <div class="contactAdd" id="addContact">
+                        <div class="textButtonInContent" id="contacted">+ Add contact</div>
+                    </div>
+                </div>
+                <div class="messagesList">
+                    <div class="headerContacts">Select list</div>
+                    <div class="buttonInContent" id="incomingButton">
+                        <div class="textButtonInContent" id="incoming">Incoming</div>
+                    </div>
+                    <div class="buttonInContent" id="outgoingButton">
+                        <div class="textButtonInContent" id="outgoing">Outgoing</div>
+                    </div>
+                </div>
+                <div class="incomingList">
+                    <div class="headerContacts">Incoming</div>
+                </div>
+                <div class="outgoingList">
+                    <div class="headerContacts">Outgoing</div>
+                </div>
+                <div class="outgoingMessageList"></div>
+                <div class="incomingMessageList"></div>
+                <div class="toolsList">
+                    <div class="headerContacts">Choose action</div>
+                    <div class="buttonInContent">
+                        <div class="textButtonInContent" id="pathToTheme">Theme</div>
+                    </div>
+                    <div class="buttonInContent">
+                        <div class="textButtonInContent" id="pathToAudio">Sound</div>
+                    </div>
+                </div>
+                <div class="themeList">
+                    <div class="headerContacts">Select theme</div>
+                    <div class="buttonInContent">
+                        <div class="textButtonInContent" id="ThemeOne">Blue</div>
+                    </div>
+                    <div class="buttonInContent">
+                        <div class="textButtonInContent" id="ThemeTwo">Pink</div>
+                    </div>
+                </div>
+                <div class="options">
+                    <div class="headerContacts">Actions</div>
+                    <div class="buttonInContent">
+                        <div class="textButtonInContent" id="toCall">Call</div>
+                    </div>
+                    <div class="buttonInContent">
+                        <div id="pathToSendMessage" class="textButtonInContent" style="font-size: 15px;">Write
+                            Message</div>
+                    </div>
+                    <div class="buttonInContent">
+                        <div id="pathToChange" class="textButtonInContent" style="font-size: 15px;">Change</div>
+                    </div>
+                    <div class="buttonInContent">
+                        <div id="pathToDelete" class="textButtonInContent" style="font-size: 15px;">Remove</div>
+                    </div>
+                </div>
+                <div class="addContact">
+                    <div class="headerContacts">Create contact</div>
+                    <form id="formContact">
+                        <input type="text" tabindex="-1" id="nameOfContact" maxlength="32" placeholder="Name">
+                        <input type="text" tabindex="-1" id="numberOfContact" style="margin-top:2.5px;" pattern="[0-9]" maxlength="8" placeholder="Number">
+                    </form>
+                </div>
+
+                <div class="changeContact">
+                    <div class="headerContacts">Edit contact</div>
+                    <form id="formChangeContact">
+                        <input type="text" tabindex="-1" id="changeNameOfContact" pattern="[A-Za-zА-Яа-яЁё]" maxlength="32" placeholder="Name">
+                        <input type="text" tabindex="-1" id="changeNumberOfContact" style="margin-top:2.5px;" pattern="[0-9]" maxlength="8" placeholder="Number">
+
+                    </form>
+                </div>
+                <div class="addContactSettings">
+                    <div class="call" id="readyAddContact">Select</div>
+                    <div class="back" id="backAddContact">back</div>
+                </div>
+
+                <div class="changeContactSettings">
+                    <div class="call" id="readyChangeContact">Select</div>
+                    <div class="back" id="backChangeContact">back</div>
+                </div>
+                <div class="settingsExitFromMessage">
+                    <div class="call" id="selectExitFromMessage">Select</div>
+                    <div class="back" id="backExitFromMessage">back</div>
+                </div>
+                <div class="settingsExitFromMessageOutgoing">
+                    <div class="call" id="selectExitFromMessageOutgoing">Select</div>
+                    <div class="back" id="backExitFromMessageOutgoing">back</div>
+                </div>
+                <div class="settings">
+                    <div class="call" id="selectList">Select</div>
+                    <div class="back" id="backList">back</div>
+                </div>
+                <div class="settingsOutgoing">
+                    <div class="call" id="selectOutgoing">Select</div>
+                    <div class="back" id="backOutgoing">back</div>
+                </div>
+                <div class="settingsAction">
+                    <div class="call" id="selectAction">Select</div>
+                    <div class="back" id="backAction">back</div>
+                </div>
+                <div class="settingsTools">
+                    <div class="call" id="selectTools">Select</div>
+                    <div class="back" id="backTools">back</div>
+                </div>
+                <div class="message">
+                    <textarea maxlength="120" id="textMessage"></textarea>
+                    <div class="messageSettings" style="bottom:10px;">
+                        <div class="call" id="selectMessage">Select</div>
+                        <div class="back" id="backMessage">back</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input type="text" style="display:none;" id="reciepent">
+        <input type="text" style="display:none;" id="pass_id">
+    </div>
+    <div id="container"></div>
+    <div id="fbiPassport" style="display: none">
+        <div id="fbiPassport_name" class="name"></div>
+        <div id="fbiPassport_id" class="id"></div>
+    </div>
+    <script src="js/fbiPassport.js"></script>
+
+    <div id="interactionMenu" style="display: ">
+        <!-- Filling from interactionMenu.js -->
+    </div>
+
+    <div id="inventory" style="display: none">
+        <div class="block left-block scroll">
+            <div class="container" style="display: none">
+                <p class="header">
+                    <span class="type">"Trunk"</span> <span class="name">Infernus</span>
+                </p>
+                <div class="items" data-type="boot">
+                    <div class="column">
+                        <!-- <div class="item" style="background-image: url('img/items/7.png'); height: 6vh; width: 6vh"></div> -->
+                    </div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+
+                </div>
+            </div>
+            <div class="container" style="display: none">
+                <p class="header">
+                    <span class="type">"Cabinet"</span> <span class="name">House No123</span>
+                </p>
+                <div class="items">
+                    <div class="column">
+                        <!-- <div class="item" style="background-image: url('img/items/7.png'); height: 6vh; width: 6vh"></div> -->
+                    </div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                </div>
+            </div>
+        </div>
+        <div style="float:left">
+            <div class="block main">
+                <p class="header">Inventory <span class="playerName">Cubix uHRP</span></p>
+                <div id="head-items" class="items">
+                    <div class="column" data-index="0" style="background-image: url('img/inventory/1-off.png')"></div>
+                    <div class="column" data-index="5" style="width: 9vh; background-image: url('img/inventory/6-off.png'); background-size: 5vh"></div>
+                    <div class="column" data-index="9" style="background-image: url('img/inventory/10-off.png')"></div>
+                </div>
+                <div id="top-items" class="items">
+                    <div class="column" data-index="1" style="background-image: url('img/inventory/2-off.png')"></div>
+                    <div class="column center" data-index="6" style="background-image: url('img/inventory/7-off.png'); background-size: 6vh"></div>
+                    <div class="column" data-index="10" style="background-image: url('img/inventory/11-off.png'); background-size: 2vh"></div>
+                    <div class="column" data-index="2" style="background-image: url('img/inventory/3-off.png')"></div>
+                    <div class="column" data-index="11" style="background-image: url('img/inventory/12-off.png')"></div>
+                </div>
+                <div id="legs-items" class="items">
+                    <div class="column" data-index="3" style="background-image: url('img/inventory/4-off.png')"></div>
+                    <div class="column center" data-index="7" style="background-image: url('img/inventory/8-off.png'); background-size: 4vh"></div>
+                    <div class="column" data-index="12" style="background-image: url('img/inventory/13-off.png')"></div>
+                    <div class="column" data-index="4" style="background-image: url('img/inventory/5-off.png')"></div>
+                    <div class="column" data-index="13" style="background-image: url('img/inventory/14-off.png'); background-size: 3.5vh"></div>
+                </div>
+                <div id="feet-items" class="items">
+                    <div class="info">
+                        <p>Cash</p>
+                        <p class="money">0$</p>
+                        <p>VISA/Bank</p>
+                        <p class="bank">0$</p>
+                    </div>
+                    <div class="column" style="width: 9vh; background-image: url('img/inventory/9-off.png'); background-size: 6vh" data-index="8"></div>
+                    <div class="info">
+                        <div class="health progress"><img src="img/inventory/health.png" /></div>
+                        <div class="satiety progress"><img src="img/inventory/eat.png" /></div>
+                        <div class="thirst progress"><img src="img/inventory/water.png" style="margin-right: 0.2vh;" /></div>
+                    </div>
+                </div>
+                <div class="bottom_info">
+                    Total weight: <span class="weight">0</span> of <span class="maxWeight">30</span> Kg
+                </div>
+            </div>
+            <div class="hands">
+                <p class="header">In hands: <span class="hands_name">No problem</span></p>
+                <img class="left-hand" src="img/hand.png" />
+                <img class="right-hand" src="img/hand.png" />
+            </div>
+        </div>
+        <div class="block right-block scroll">
+            <div class="container" style="display: none">
+                <p class="header">
+                    <span class="type">"Jacket"</span> <span class="name">Rockstar Games</span>
+                </p>
+                <div class="items">
+                    <div class="column">
+                        <!-- <div class="item" style="background-image: url('img/items/7.png'); height: 6vh; width: 6vh"></div> -->
+                    </div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+
+                </div>
+            </div>
+            <div class="container" style="display: none">
+                <p class="header">
+                    <span class="type">"Jacket"</span> <span class="name">Rockstar Games</span>
+                </p>
+                <div class="items">
+                    <div class="column">
+                        <!-- <div class="item" style="background-image: url('img/items/7.png'); height: 6vh; width: 6vh"></div> -->
+                    </div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+
+                </div>
+            </div>
+            <div class="container" style="display: none">
+                <p class="header">
+                    <span class="type">"Jacket"</span> <span class="name">Rockstar Games</span>
+                </p>
+                <div class="items">
+                    <div class="column">
+                        <!-- <div class="item" style="background-image: url('img/items/7.png'); height: 6vh; width: 6vh"></div> -->
+                    </div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                </div>
+            </div>
+        </div>
+        <div class="inventory_menu" style="display: none">
+            <div class="menu-item">Item 1</div>
+            <div class="menu-item">Item 2</div>
+            <div class="menu-item">Item 3</div>
+            <div class="menu-item">Item 4</div>
+        </div>
+        <div class="item_name" style="display: none">Name</div>
+    </div>
+
+    <div id="trade" style="display: none">
+        <span class="close">x</span>
+        <div class="trade_items">
+            <div class="table">
+                <div>
+                    <p class="header playerName">Cubix uHRP</p>
+                    <div class="items myItems" data-rows="4" data-cols="5">
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                    </div>
+                </div>
+                <div>
+                    <p class="header traderName">UNTAMED Hero</p>
+                    <div class="items recipientItems" data-rows="4" data-cols="5">
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="btn-agree accept" onclick="acceptTrade()">Accept</button>
+            <p class="chat-header">Chat</p>
+            <button class="btn-cancel acceptTrader" disabled>Not ready</button>
+        </div>
+        <div class="trade_chat" style="display: none">
+            <div class="messages scroll">
+                <div class="message bg">UNTAMED Hero: Test, Test, Test.</div>
+                <div class="message">UNTAMED Hero: Test, Test, Test.</div>
+                <div class="message bg">UNTAMED Hero: Test, Test, Test.</div>
+                <div class="message bg">UNTAMED Hero: Test, Test, Test.</div>
+                <div class="message">UNTAMED Hero: Test, Test, Test.</div>
+                <div class="message bg">UNTAMED Hero: Test, Test, Test.</div>
+            </div>
+            <input type="text" class="text" placeholder="Message" />
+        </div>
+    </div>
+    <div id="authenticationApp">
+        <div class="authentication">
+            <div class="welcome" style="display: none">
+
+                <div class="left-background-box"></div>
+                <div class="right-background-box"></div>
+
+                <div class="logo">
+                    <img src="img/authentication/logo.png">
+                    <h3>Welcome</h3>
+                    <h1>UNTAMED</h1>
+                    <h2>Hero</h2>
+                </div>
+            </div>
+
+            <div id="alphaTest" style="display: none">
+                <div class="box">
+                    <h1>Welcome to UNTAMED Hero. </h1>
+                    <p>We are officially announcing the long-awaited opening of the project and moving into the open alpha test stage.
+                        Currently, the server begins its full operation in normal mode. </p>
+                    <p>The UNTAMED Hero team officially declares to all players that none of the registered accounts will be removed after the project is released from the early stages of open alpha and beta Tests.
+                        All player accounts will remain and will always be available. </p>
+                    <p>Have time to pick up yours and catch the most interesting in the early stages of the project, because every day you will be waiting for new competitors, ready to pick up the most delicious.</p>
+                    <p class="bold">Best regards, uHRP Team</p>
+                </div>
+            </div>
+
+            <div class="authentication" style="display: none">
+                <div class="left-block">
+                    <img src="img/authentication/logo.png">
+                    <h3>Welcome to</h3>
+                    <h1>UNTAMED</h1>
+                    <h2>Hero RP</h2>
+
+                    <div class="description"><a>We are a Role Play community and a project in GTA 5, based on the RAGE Multiplayer platform, which allows us to add different fashions in the form of custom cars, scripts and trainers to the gameplay, as opposed to the usual GTA 5 Online</a></div>
+                </div>
+
+                <div class="right-block">
+                    <div class="block">
+
+                        <div class="select">
+                            <div v-on:click="setSelector(0)" class="select-block"><a>Entrance</a></div>
+                            <div v-on:click="setSelector(1)" class="select-block"><a>Sign up</a></div>
+                        </div>
+
+                        <div class="login" style="display: none">
+                            <div class="enter-info">
+                                <input type="text" name="email" class="loginOrEmail" placeholder="Mail or login" required="required" spellcheck="false">
+                                <input type="password" name="email" class="password" placeholder="Password" required="required" spellcheck="false">
+                            </div>
+
+                            <div class="fast-enter">
+                                <a>Fast entry:</a>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+
+                            <div class="button" onclick="authAccountHandler()"><a>Log in</a></div>
+                            <div class="cant-enter" v-on:click="showRecoveryScreen()"><a>Can't get in?</a></div>
+                        </div>
+
+                        <div class="registration" style="display: none">
+                            <div class="enter-info">
+
+                                <!--<div class="enter-real-info">
+                                        <a>Name</a>
+                                        <input type="text" class="name" placeholder="Введите ваше имя" style="width: 49%" required="required" spellcheck="false">
+
+                                        <a>Фамилия</a>
+                                        <input type="text" class="surname" placeholder="Введите вашу фамилию" style="width: 49%" required="required" spellcheck="false">
+                                    </div>
+
+                                    <div class="sex-selector">
+                                        <span class="sex-block" v-on:click="setSex(1)">Мужской</span>
+                                        <span class="sex-block" v-on:click="setSex(0)">Женский</span>
+                                    </div>
+
+                                    <input class="center-textalign country" type="text" placeholder="Укажите вашу страну" required="required" spellcheck="false">
+                                    <input class="center-textalign city" type="text" placeholder="Укажите ваш город" required="required" spellcheck="false">-->
+                                <input class="center-textalign login" type="text" placeholder="Login" required="required" spellcheck="false">
+                                <input class="center-textalign email" type="text" placeholder="Email" required="required" spellcheck="false">
+                                <input class="center-textalign password" type="password" placeholder="Password" required="required" spellcheck="false">
+                                <input class="center-textalign password2" type="password" placeholder="Confirm your password" required="required" spellcheck="false">
+                                <input class="center-textalign promocode" type="text" placeholder="Promo code (Optional)" required="required" spellcheck="false">
+                            </div>
+                            <div class="button" onclick="regAccountHandler(-1)"><a>Register</a></div>
+                        </div>
+
+                        <div class="recovery" style="display: none">
+
+                            <div class="box-header"><a>Restoring access<br>via email</a></div>
+
+                            <input type="text" class="loginOrEmail" required="required" spellcheck="false">
+                            <input type="text" class="code" placeholder="Code" style="display: none" required="required" spellcheck="false">
+                            <input type="text" class="password" placeholder="Password" style="display: none" required="required" spellcheck="false">
+                            <input type="text" class="password2" placeholder="Confirm your password" style="display: none" required="required" spellcheck="false">
+
+                            <div class="input-description"><a>Enter your email address<br>to which your account was registered.</a></div>
+                            <div class="send-button" onclick="recoveryAccountHandler()"><a>Send</a></div>
+                            <div class="send-description">
+                                <a>On this page, you'll be able to send an email to your email - which is tied to your gaming account on the GTA V UNTAMED Hero Role Play server. Once sent, you'll receive a break-in instruction
+                                </a>
+                            </div>
+
+                            <div class="exit-button">
+                                <img class="centred-img" src="img/authentication/gmail.png">
+                                <a v-on:click="hideRecoveryScreen()">Exit</a>
+                            </div>
+                        </div>
+
+                        <div class="recovery-result" style="display: none">
+
+                            <div class="box-header"><a>Restoring access<br>Via email</a></div>
+
+                            <div class="result-info">
+                                <img class="centred-img" v-bind:src=result_icon>
+                                <a>{{ result_text }}</a>
+                            </div>
+
+                            <div class="button" v-on:click="hideRecoveryResultScreen()">
+                                <a>{{ result_button }}</a>
+                            </div>
+                        </div>
+
+                        <div class="google" style="display: none">
+
+                            <div class="box-header"><a>Enter the code to complete the procedure<br>authorization</a></div>
+
+                            <input type="text" maxlength="6" name="googlecode" placeholder="Code из Authenticator">
+                            <div class="fast-enter">
+                                <a>Remember IP address:</a>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+
+                            <div class="error-text"><a>"Code" Need to be filled</a></div>
+                            <div class="button"><a>Continue</a></div>
+
+                            <div class="google-description">
+                                <a>
+                                    Google Authenticator is a two-step authentication app with Google's Time-based One-Time Password Algorithm (TOTP) and Google's HMAC-based One-time Password Algorithm (HOTP). The service implements algorithms
+                                    RFC 6238 and RFC 4226. Authenticator introduces a 6- or 8-digit one-off digital password that the user must provide in addition to the username and password to log into the service
+                                    Google or other services.
+                                </a>
+                            </div>
+
+                            <div class="exit-button" v-on:click="hideGoogleAuthScreen()">
+                                <img class="centred-img" src="img/authentication/gauth.png">
+                                <a>Exit</a>
+                            </div>
+                        </div>
+
+                        <div class="pincode" style="display: none">
+
+                            <div class="box-header"><a>Enter the pin for authorization on the server</a></div>
+
+                            <input type="text" maxlength="6" name="googlecode" placeholder="Enter the PIN">
+
+                            <div class="error-text"><a>Wrong PIN</a></div>
+                            <div class="button"><a>Continue</a></div>
+
+                            <div class="google-description">
+                                <a>
+                                    Your account has additional protection in the form of a PIN. If the IP address in the last session does not match the IP address in the current session, then the system, as additional security, will request
+                                    Pin code.
+                                </a>
+                            </div>
+
+                            <div class="exit-button" v-on:click="hideGoogleAuthScreen()">
+                                <img class="centred-img" src="img/authentication/pauth.png">
+                                <a>Exit</a>
+                            </div>
+                        </div>
+
+                        <div class="confirmEmail" style="display: none">
+
+                            <div class="box-header"><a>Mail confirmation</a></div>
+
+                            <input type="text" maxlength="6" class="code" placeholder="Enter the code">
+
+                            <div class="error-text"><a></a></div>
+                            <div class="button confirm-btn"><a>Confirm</a></div>
+                            <div class="button" onclick="regAccountHandler()"><a>Later</a></div>
+
+                            <div class="google-description">
+                                <a>
+                                    A confirmation code has been sent to your mail.
+                                </a>
+                            </div>
+
+                            <!--<div class="exit-button" v-on:click="hideGoogleAuthScreen()">
+                                    <img class="centred-img" src="img/authentication/pauth.png">
+                                    <a>Exit</a>
+                                </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/authenticationApp.js"></script>
+    <div id="selectorCharacters" style="display: none">
+
+        <div class="user-info">
+            <div class="left-part">
+                <a>Romania #1</a>
+                <a>Welcome to</a>
+                <a>UNTAMED Hero RP</a>
+            </div>
+            <div class="right-part">
+                <a>Balance</a>
+                <a><span class="donate">999999</span><img src="img/selectorCharacter/VC_ico.png"></a>
+                <div class="donate-button"><a>Buy more</a></div>
+            </div>
+        </div>
+
+        <div class="user-blocks">
+            <div class="user-block busy">
+                <div class="user-block-header active-slot"></div>
+
+                <div class="user-block-info">
+                    <div class="creation-date"><a>Top up Creation Date<br><span class="regDate">01.01.2019</span></a></div>
+                    <div class="user-avatar"><img src="img/selectorCharacter/character-pic.png"></div>
+                    <div class="hour-count"><a>Hours in the game<br><span class="hours">136</span> hours</a></div>
+                    <p class="playerName">Cubix uHRP</p>
+                </div>
+
+                <div class="info-block"><a>Level</a>
+                    <div class="info-block-background"><a class="level">12</a></div>
+                </div>
+                <div class="info-block"><a>Experience</a>
+                    <div class="info-block-background"><a class="exp">32/48</a></div>
+                </div>
+                <div class="info-block"><a>Faction</a>
+                    <div class="info-block-background"><a class="faction">The Familiez</a></div>
+                </div>
+                <div class="info-block"><a>Cash</a>
+                    <div class="info-block-background"><a class="money">67.502$</a></div>
+                </div>
+                <div class="info-block"><a>VISA/Bank</a>
+                    <div class="info-block-background"><a class="bank">5.421.655$</a></div>
+                </div>
+
+                <div class="slot-button slot-button-green auth-btn"><a>Select a character</a></div>
+                <div class="delete-button">
+                    <img src="img/selectorCharacter/delete.png">
+                    <a>Remove character</a>
+                </div>
+            </div>
+
+            <div class="user-block free" style="display: none">
+                <!-- Free slot -->
+                <div class="user-block-header free-slot"></div>
+
+                <div class="slot-descr">
+                    When you create a new character, all your accounts will be shared or not shared we don't know yet.<br>
+                    But, the bottom line is that there will be information about the new character on this account.<br>
+                    Try to create a normal character, not a freak, because we will punish you for it.<br>
+                    We wish you a nice game on UNTAMED Hero RP.
+                </div>
+
+                <div class="slot-free">
+                    <div class="slot-free-header"><a>Free slot</a></div>
+                    <div class="slot-icon"><img src="img/selectorCharacter/plus-icon.png"></div>
+
+                    <div class="buttons-list">
+                        <div class="slot-button" onclick="mp.trigger(`events.callRemote`, `initNewCharacter`)"><a>Create a new one</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-block achievements">
+                <!-- Can unlock slot -->
+
+                <div class="user-block-header lock-slot"></div>
+
+                <div class="slot-descr">
+                    When you create a new character, all your accounts will be shared or not shared we don't know yet.<br>
+                    But, the bottom line is that there will be information about the new character on this account.<br>
+                    Try to create a normal character, not a freak, because we will punish you for it.<br>
+                    We wish you a nice game on UNTAMED Hero.
+                </div>
+
+                <div class="slot-free">
+                    <div class="slot-free-header"><a>Not unlocked<br>Slot 2</a></div>
+                    <div class="slot-icon"><img src="img/selectorCharacter/plus-icon.png"></div>
+
+                    <div class="buttons-list">
+                        <div class="slot-button open-btn"><a>Open for Achievements</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-block donate-slot">
+                <!-- Donate slot -->
+                <div class="user-block-header lock-slot"></div>
+
+                <div class="slot-descr">
+                    Do you want to have 3 characters?
+                    Then unlock 3 slots, this slot you will have forever on this account.
+                    Also for you attached additional bonuses when activated.
+                </div>
+
+                <div class="slot-free">
+                    <div class="slot-free-header"><a>Not unlocked<br>Slot 3</a></div>
+                    <div class="slot-icon"><img src="img/selectorCharacter/lock-icon.png"></div>
+
+                    <div class="buttons-list">
+                        <div class="slot-button slot-button-yellow">
+                            <div class="vcicon open-btn"><a>Unlock for 1,500 <img src="img/selectorCharacter/VC_ico.png"></div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="selectMenu" style="display: none">
+        <img class="union-img" src="img/customization/header.png">
+        <div class="header">
+            <table>
+                <tr>
+                    <td class="name">Header</td>
+                    <td align="right" class="count">1 / 19</td>
+                </tr>
+            </table>
+        </div>
+        <div class="family-preview" style="display: none">
+            <img src="img/customization/parent/female_0.png">
+            <img src="img/customization/parent/male_0.png">
+        </div>
+        <div class="body">
+            <div class="opacity">
+            </div>
+            <div class="content">
+                <table class="items">
+                    <!-- Filling from selectMenu.js -->
+                </table>
+            </div>
+        </div>
+        <div class="hand-navigation">
+            <img src="img/customization/navigation.png">
+            <img src="img/customization/navigation.png">
+        </div>
+        <div class="promptHelp">
+            <span class="text">Test Test Test...</span>
+            <img src="img/customization/info-icon-white.png">
+        </div>
+    </div>
+    <div class="infoTable" style="display: none">
+        <div class="body">
+            <div class="opacity">
+            </div>
+            <div class="content">
+                <p class="header">Header</p>
+                <table class="items">
+                    <!-- Filling from infoTable.js -->
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="modal" style="display: none">
+        <div class="body">
+            <div class="opacity">
+            </div>
+            <div class="content">
+                <span class="close" onclick="modalAPI.hide()">x</span>
+                <p class="header">New character</p>
+                <div class="text">
+                    To complete the creation of the character is the last step.<br />
+                    Think of a name in the "Name Surname" format.<br />
+
+
+                    <br /><br />
+
+                    <span>Enter the name:</span>
+                    <input type="text" placeholder="Character name" />
+                    <br /><br />
+                    <center><button>Create</button></center>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="prompt" id="prompt" style="display: none">
+        <div class="header"></div>
+        <div class="text"></div>
+    </div>
+    <div class="choiceMenu" style="display: none">
+        <div class="center">
+            <div class="menu">
+                <div class="prop">
+                    <div class="header">Offer</div>
+                    <div class="text">Do you want to start a taxi driver?</div>
+                </div>
+            </div>
+            <a class="button_base agree">Accept</a>
+            <a class="button_base cancel">Close</a>
+        </div>
+    </div>
+
+    <div class="characterInfo" style="display: none">
+        <div class="body">
+            <div class="opacity">
+            </div>
+            <div class="content">
+                <p class="header">О Character</p>
+                <table class="items">
+                    <!-- Dublicate of infoTables['character_info'] -->
+                    <tr>
+                        <td>Name</td>
+                        <td align="right">-</td>
+                    </tr>
+                    <tr>
+                        <td>Transport</td>
+                        <td align="right">-</td>
+                    </tr>
+                    <tr>
+                        <td>Residence</td>
+                        <td align="right">-</td>
+                    </tr>
+                    <tr>
+                        <td>Business</td>
+                        <td align="right">-</td>
+                    </tr>
+                    <tr>
+                        <td>Organization</td>
+                        <td align="right">-</td>
+                    </tr>
+                    <tr>
+                        <td>Work</td>
+                        <td align="right">-</td>
+                    </tr>
+                    <tr>
+                        <td>Marital status</td>
+                        <td align="right">-</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="playersOnline" style="display: none">
+        <div class="body">
+            <div class="opacity">
+            </div>
+            <div class="content scroll">
+                <table>
+                    <thead>
+                        <td>ID</td>
+                        <td>Name</td>
+                        <td>Experience</td>
+                        <td>Ping</td>
+                    </thead>
+                    <tbody>
+                        <!-- Filling from playersOnline.js -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="bizLogs" style="display: none">
+        <div class="body">
+            <div class="opacity">
+            </div>
+            <div class="content scroll">
+                <span class="close" onclick="hideWindow('.bizLogs')">x</span>
+                <table>
+                    <thead>
+                        <td>Name</td>
+                        <td>Price</td>
+                        <td>Product</td>
+                        <td>Check</td>
+                        <td>Date</td>
+                    </thead>
+                    <tbody>
+                        <!-- Filling from playersOnline.js -->
+                        <tr>
+                            <td>UNTAMED Hero bought "Vodka"</td>
+                            <td>100$</td>
+                            <td>1111</td>
+                            <td>9999</td>
+                            <td>02.12.18 1:37</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <center>
+                    <button class="btn-agree" onclick="bizLogsPrev()">Back</button>
+                    <button class="btn-agree" onclick="bizLogsNext()">Next</button>
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <div class="customizationMenu" style="display: none">
+        <div class="menu-header">
+            <img src="img/customization/header.png">
+            <h3>
+                <span><a>Heritage</a></span>
+                <span class="right">{{ selectedItem + 1 }} / {{ maxItem }}</span>
+            </h3>
+        </div>
+        <div class="family-preview">
+            <img src="img/customization/parent/female_0.png">
+            <img src="img/customization/parent/male_0.png">
+        </div>
+
+        <ul class="character-settings"></ul>
+
+        <div class="hand-navigation">
+            <img v-on:click="navigationTo(0)" src="img/customization/navigation.png">
+            <img v-on:click="navigationTo(1)" src="img/customization/navigation.png">
+        </div>
+
+        <div class="help-text">
+            <a>Change the look.</a>
+            <img src="img/customization/info-icon.png">
+        </div>
+
+        <div class="additional-settings">
+            <div class="contrast-slider">
+                <p>
+                    Saturation
+                    <a>0%</a>
+                    <a>100%</a>
+                </p>
+
+                <div class="contrast-slider-progres"></div>
+                <div class="contrast-slider-progres"></div>
+            </div>
+
+            <div class="color-selector">
+
+                <div class="color-selector_">
+                    <p>
+                        Color ({{ selectedColor + 1 }} of {{ maxColor }})
+                        <a v-on:click="colorsTo(0)">
+                            <</a> <a v-on:click="colorsTo(1)">>
+                        </a>
+                    </p>
+
+                    <div class="color-selector-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="taxiMenu" style="display: none">
+        <div class="header">Downtown Cab Company</div>
+        <div class="body">
+            <div class="title-wrap" style="display: ">
+                <div class="title" style="display: none">Taxi driver</div>
+            </div>
+            <div class="welcome" style="display: ">
+                <p>Log in into the company system?</p>
+                <button class="auth-btn" onclick="authTaxi()">Entrance</button>
+            </div>
+            <div class="auth" style="display: none">
+                <input class="login" type="text" placeholder="Login" readonly />
+                <input class="password" type="password" placeholder="Password" readonly /><br />
+                <button class="auth-btn">Log in</button>
+            </div>
+            <div class="wait" style="display: none">
+                <p>Please wait...</p>
+            </div>
+            <div class="main" style="display: none">
+                <div class="menu">
+                    <div class="title-menu">Menu</div>
+                    <div class="item selected" data-modal="stats">Statistics</div>
+                    <div class="item" data-modal="taxi_order">My orders</div>
+                    <div class="item" data-modal="free_orders">Free</div>
+                </div>
+                <div class="content">
+                    <table class="stats" style="display: ">
+                        <tr>
+                            <td>
+                                <div class="icon i-orders"><img src="img/ok.png" /></div>
+                            </td>
+                            <td>Executed for today</td>
+                            <td class="orders">492</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="icon i-dollar"><img src="img/dollar.png" /></div>
+                            </td>
+                            <td>Today's income</td>
+                            <td class="pay">9K</td>
+                        </tr>
+                    </table>
+                    <div class="taxi_order" style="display: none">
+                        <hr />
+                        <h1>My orders</h1>
+                        <p><b class="state">Выполняется</b> ЗАКАЗ №<b class="orderId">113</b></p>
+                        <br /><br />
+
+                        <div class="info">
+                            <b>Client:</b>
+                            <p class="name">Rock Star</p>
+                            <b>District, street:</b>
+                            <p class="street">East Galileo Ave</p>
+                            <b>Distance:</b>
+                            <p class="distance">121547.0 M</p>
+                            <b>Amount of travel:</b>
+                            <p class="price">5112$</p>
+                            <b>Travel time:</b>
+                            <p class="time">4:53:31</p>
+                        </div>
+                    </div>
+                    <div class="free_orders" style="display: none">
+                        <hr />
+                        <h1>Free</h1>
+                        <b>Orders</b>
+
+                        <div class="orders scroll" style="height: 28vh">
+                            <p class="wrap-delete-order"><span class="delete-order">Remove order</span></p>
+                            <table class="order">
+                                <tr>
+                                    <td>Customer name</td>
+                                    <td class="name">UNTAMED Hero</td>
+                                </tr>
+                                <tr>
+                                    <td>Distance</td>
+                                    <td class="distance">1500.0m</td>
+                                </tr>
+                                <tr>
+                                    <td class="accept"><button>Accept</button></td>
+                                    <td class="call"><button>Call</button></td>
+                                </tr>
+                            </table>
+
+                            <p class="wrap-delete-order"><span class="delete-order">Remove order</span></p>
+                            <table class="order">
+                                <tr>
+                                    <td>Customer name</td>
+                                    <td class="name">UNTAMED Hero</td>
+                                </tr>
+                                <tr>
+                                    <td>Distance</td>
+                                    <td class="distance">1500.0m</td>
+                                </tr>
+                                <tr>
+                                    <td class="accept"><button>Accept</button></td>
+                                    <td class="call"><button>Call</button></td>
+                                </tr>
+                            </table>
+
+                            <p class="wrap-delete-order"><span class="delete-order">Remove order</span></p>
+                            <table class="order">
+                                <tr>
+                                    <td>Customer name</td>
+                                    <td class="name">UNTAMED Hero</td>
+                                </tr>
+                                <tr>
+                                    <td>Distance</td>
+                                    <td class="distance">1500.0m</td>
+                                </tr>
+                                <tr>
+                                    <td class="accept"><button>Accept</button></td>
+                                    <td class="call"><button>Call</button></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="documents" style="display: none">
+        <div id="passport" class="passport center" style="display: none">
+            <div class="information">
+                <div>
+                    Name:
+                    <div class="bold fName">Ilya</div>
+                </div>
+                <div>
+                    Surname:
+                    <div class="bold sName">Gilfanov</div>
+                </div>
+                <div>
+                    Gender:
+                    <div class="bold sex">Male</div>
+                </div>
+                <div>
+                    Age:
+                    <div class="bold age">25 Years</div>
+                </div>
+                <div>
+                    Law-abiding:
+                    <div class="bold law">100</div>
+                </div>
+                <div>
+                    Marital status:
+                    <div class="bold relationship">Married to Alina Gilfanova</div>
+                </div>
+                <div>
+                    Accommodation:
+                    <div class="bold house">House 756, no. 337</div>
+                </div>
+            </div>
+            <div class="id">000001</div>
+            <div class="blocks_father">
+                <div id="passport_button" class="blocks selected">
+                    <div class="center_in_select">
+                        <?xml version="1.0" encoding="iso-8859-1"?>
+                        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+                            class="user_svg" viewBox="0 0 369.722 369.722" style="enable-background:new 0 0 369.722 369.722;" xml:space="preserve" width="512px" height="512px">
+                            <g>
+                                <path id="coloring" d="M184.864,186.139c42.307,0,76.623-41.669,76.623-93.069C261.488,41.669,250.21,0,184.864,0 c-65.359,0-76.629,41.669-76.629,93.07C108.236,144.47,142.55,186.139,184.864,186.139z" fill="#FFFFFF" />
+                                <path id="coloring" d="M40.14,317.366C40.128,314.23,40.114,316.48,40.14,317.366L40.14,317.366z" fill="#FFFFFF" />
+                                <path id="coloring" d="M329.575,319.816C329.614,318.957,329.589,313.86,329.575,319.816L329.575,319.816z" fill="#FFFFFF" />
+                                <path id="coloring" d="M329.421,313.605c-1.432-89.54-13.113-115.053-102.611-131.203l-41.945,70.711l-41.969-70.711 C54.398,198.376,41.982,223.51,40.351,310.698c-0.125,7.118-0.184,7.495-0.211,6.668c0.006,1.547,0.014,4.413,0.014,9.403 c0,0,21.307,42.953,144.711,42.953c123.396,0,144.707-42.953,144.707-42.953c0-3.207,0.002-5.441,0.004-6.953 C329.554,320.326,329.509,319.334,329.421,313.605z"
+                                    fill="#FFFFFF" />
+                            </g>
+                        </svg> </div>
+                </div>
+                <div id="licenses_button" class="blocks licenses_button">
+                    <div class="center_without_select">
+                        <?xml version="1.0" encoding="iso-8859-1"?> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" class="license_svg" viewBox="0 0 50.25 50.25" style="enable-background:new 0 0 50.25 50.25;"
+                            xml:space="preserve" width="512px" height="512px">
+                            <g>
+                                <path id="coloring" d="M48.25,10H2c-1.105,0-2,0.895-2,2v26.25c0,1.105,0.895,2,2,2h46.25c1.105,0,2-0.895,2-2V12 C50.25,10.895,49.355,10,48.25,10z M23.5,15h19.75c1.105,0,2,0.672,2,1.5s-0.895,1.5-2,1.5H23.5c-1.105,0-2-0.672-2-1.5 S22.395,15,23.5,15z M16.75,34.25H6c-1.105,0-2-0.616-2-1.375S4.895,31.5,6,31.5h10.75c1.105,0,2,0.616,2,1.375 S17.855,34.25,16.75,34.25z M18.75,27c0,1.105-0.895,2-2,2H6c-1.105,0-2-0.895-2-2V16.25c0-1.105,0.895-2,2-2h10.75 c1.105,0,2,0.895,2,2V27z M23.5,22h19.75c1.105,0,2,0.672,2,1.5s-0.895,1.5-2,1.5H23.5c-1.105,0-2-0.672-2-1.5S22.395,22,23.5,22z M43.5,31.75H23.75c-1.105,0-2-0.672-2-1.5s0.895-1.5,2-1.5H43.5c1.105,0,2,0.672,2,1.5S44.605,31.75,43.5,31.75z"
+                                    fill="#FFFFFF" />
+                            </g>
+                        </svg> </div>
+                </div>
+                <div id="weapon_button" class="blocks weapon_button">
+                    <div class="center_without_select">
+                        <?xml version="1.0" encoding="iso-8859-1"?> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" class="weapon_svg" viewBox="0 0 525.153 525.153" style="enable-background:new 0 0 525.153 525.153;"
+                            xml:space="preserve" width="512px" height="512px">
+                            <g>
+                                <path id="coloring" d="M262.576,167.108c-52.756,0-95.468,42.712-95.468,95.468s42.712,95.468,95.468,95.468s95.468-42.712,95.468-95.468 S315.332,167.108,262.576,167.108z M475.963,238.682C465.001,139.144,385.987,60.13,286.449,49.189V0h-47.745v49.189 C139.165,60.13,60.152,139.144,49.167,238.682H0v47.789h49.189c10.984,99.538,89.998,178.552,189.536,189.493v49.189h47.745 v-49.189c99.538-10.941,178.552-89.954,189.514-189.493h49.167v-47.789C525.153,238.682,475.963,238.682,475.963,238.682z M262.576,429.684c-92.383,0-167.108-74.725-167.108-167.108S170.193,95.468,262.576,95.468s167.108,74.725,167.108,167.108 S354.959,429.684,262.576,429.684z"
+                                    fill="#FFFFFF" />
+                            </g>
+                        </svg> </div>
+                </div>
+                <div id="work_button" class="blocks work_button">
+                    <div class="center_without_select"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" class="work_svg" viewBox="0 0 455 455" style="enable-background:new 0 0 455 455;"
+                            xml:space="preserve" width="512px" height="512px">
+                            <g>
+                                <polygon id="coloring" points="55,98.788 19.723,98.788 19.723,128.788 55,128.788 55,212.5 15,212.5 15,242.5 55,242.5 55,326.212 15,326.212 15,356.212 55,356.212 55,455 125,455 125,0 55,0 " fill="#FFFFFF" />
+                                <path id="coloring" d="M155,0v455h285V0H155z M297.5,135.862c24.377,0,44.138,19.761,44.138,44.138s-19.761,44.138-44.138,44.138 S253.362,204.377,253.362,180S273.123,135.862,297.5,135.862z M217.5,319.138c0-44.183,35.817-80,80-80s80,35.817,80,80H217.5z"
+                                    fill="#FFFFFF" />
+                            </g>
+                        </svg> </div>
+                </div>
+            </div>
+        </div>
+        <div id="licenses" class="license center" style="display: none;">
+            <div class="informations">
+                <div class="driver">
+                    <div class="header">Driver</div>
+                    <div class="list">
+                        <div class="active">Car license</div>
+                        <div class="active">Motor vehicle license</div>
+                    </div>
+                </div>
+                <div class="water-driver">
+                    <div class="header">Water transport</div>
+                    <div class="list">
+                        <div class="active">Boat license</div>
+                        <div class="">Yacht license</div>
+                    </div>
+                </div>
+                <div class="weapons">
+                    <div class="header">On guns</div>
+                    <div class="list">
+                        <div class="active">Easy</div>
+                        <div class="">Average</div>
+                        <div class="">Heavy</div>
+                    </div>
+                </div>
+                <div class="fishing" style="display: none;">
+                    <div class="header">Fishing</div>
+                    <div class="list">
+                        <div class="active">In small volumes - up to 1 ton</div>
+                        <div class="">In average volumes - up to 5 tons</div>
+                        <div class="">In large volumes - up to 10 tons</div>
+                    </div>
+                </div>
+                <div class="fly">
+                    <div class="header">Pilot</div>
+                    <div class="list">
+                        <div class="">Helicopter license</div>
+                        <div class="active">Aircraft license</div>
+                    </div>
+                </div>
+                <div class="business">
+                    <div class="header">On business</div>
+                    <div class="list">
+                        <div class="">Small business</div>
+                        <div class="active">Average business</div>
+                    </div>
+                </div>
+                <div class="hunting">
+                    <div class="header">On the hunt</div>
+                    <div class="list">
+                        <div class="active">Package No1</div>
+                        <div class="">Package No2</div>
+                        <div class="">Package No3</div>
+                    </div>
+                </div>
+            </div>
+            <div id="licenses_text" class="next_page">
+                Expand the page...
+            </div>
+            <div class="blocks_father">
+                <div id="passport_button" class="blocks passport_button">
+                    <div class="center_without_select">
+                        <?xml version="1.0" encoding="iso-8859-1"?>
+                        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+                            class="user_svg" viewBox="0 0 369.722 369.722" style="enable-background:new 0 0 369.722 369.722;" xml:space="preserve" width="512px" height="512px">
+                            <g>
+                                <path id="coloring" d="M184.864,186.139c42.307,0,76.623-41.669,76.623-93.069C261.488,41.669,250.21,0,184.864,0 c-65.359,0-76.629,41.669-76.629,93.07C108.236,144.47,142.55,186.139,184.864,186.139z" fill="#FFFFFF" />
+                                <path id="coloring" d="M40.14,317.366C40.128,314.23,40.114,316.48,40.14,317.366L40.14,317.366z" fill="#FFFFFF" />
+                                <path id="coloring" d="M329.575,319.816C329.614,318.957,329.589,313.86,329.575,319.816L329.575,319.816z" fill="#FFFFFF" />
+                                <path id="coloring" d="M329.421,313.605c-1.432-89.54-13.113-115.053-102.611-131.203l-41.945,70.711l-41.969-70.711 C54.398,198.376,41.982,223.51,40.351,310.698c-0.125,7.118-0.184,7.495-0.211,6.668c0.006,1.547,0.014,4.413,0.014,9.403 c0,0,21.307,42.953,144.711,42.953c123.396,0,144.707-42.953,144.707-42.953c0-3.207,0.002-5.441,0.004-6.953 C329.554,320.326,329.509,319.334,329.421,313.605z"
+                                    fill="#FFFFFF" />
+                            </g>
+                        </svg> </div>
+                </div>
+                <div id="licenses_button" class="blocks selected">
+                    <div class="center_in_select">
+                        <?xml version="1.0" encoding="iso-8859-1"?> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" class="license_svg" viewBox="0 0 50.25 50.25" style="enable-background:new 0 0 50.25 50.25;"
+                            xml:space="preserve" width="512px" height="512px">
+                            <g>
+                                <path id="coloring" d="M48.25,10H2c-1.105,0-2,0.895-2,2v26.25c0,1.105,0.895,2,2,2h46.25c1.105,0,2-0.895,2-2V12 C50.25,10.895,49.355,10,48.25,10z M23.5,15h19.75c1.105,0,2,0.672,2,1.5s-0.895,1.5-2,1.5H23.5c-1.105,0-2-0.672-2-1.5 S22.395,15,23.5,15z M16.75,34.25H6c-1.105,0-2-0.616-2-1.375S4.895,31.5,6,31.5h10.75c1.105,0,2,0.616,2,1.375 S17.855,34.25,16.75,34.25z M18.75,27c0,1.105-0.895,2-2,2H6c-1.105,0-2-0.895-2-2V16.25c0-1.105,0.895-2,2-2h10.75 c1.105,0,2,0.895,2,2V27z M23.5,22h19.75c1.105,0,2,0.672,2,1.5s-0.895,1.5-2,1.5H23.5c-1.105,0-2-0.672-2-1.5S22.395,22,23.5,22z M43.5,31.75H23.75c-1.105,0-2-0.672-2-1.5s0.895-1.5,2-1.5H43.5c1.105,0,2,0.672,2,1.5S44.605,31.75,43.5,31.75z"
+                                    fill="#FFFFFF" />
+                            </g>
+                        </svg> </div>
+                </div>
+                <div id="weapon_button" class="blocks weapon_button">
+                    <div class="center_without_select">
+                        <?xml version="1.0" encoding="iso-8859-1"?> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" class="weapon_svg" viewBox="0 0 525.153 525.153" style="enable-background:new 0 0 525.153 525.153;"
+                            xml:space="preserve" width="512px" height="512px">
+                            <g>
+                                <path id="coloring" d="M262.576,167.108c-52.756,0-95.468,42.712-95.468,95.468s42.712,95.468,95.468,95.468s95.468-42.712,95.468-95.468 S315.332,167.108,262.576,167.108z M475.963,238.682C465.001,139.144,385.987,60.13,286.449,49.189V0h-47.745v49.189 C139.165,60.13,60.152,139.144,49.167,238.682H0v47.789h49.189c10.984,99.538,89.998,178.552,189.536,189.493v49.189h47.745 v-49.189c99.538-10.941,178.552-89.954,189.514-189.493h49.167v-47.789C525.153,238.682,475.963,238.682,475.963,238.682z M262.576,429.684c-92.383,0-167.108-74.725-167.108-167.108S170.193,95.468,262.576,95.468s167.108,74.725,167.108,167.108 S354.959,429.684,262.576,429.684z"
+                                    fill="#FFFFFF" />
+                            </g>
+                        </svg> </div>
+                </div>
+                <div id="work_button" class="blocks work_button">
+                    <div class="center_without_select"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" class="work_svg" viewBox="0 0 455 455" style="enable-background:new 0 0 455 455;"
+                            xml:space="preserve" width="512px" height="512px">
+                            <g>
+                                <polygon id="coloring" points="55,98.788 19.723,98.788 19.723,128.788 55,128.788 55,212.5 15,212.5 15,242.5 55,242.5 55,326.212 15,326.212 15,356.212 55,356.212 55,455 125,455 125,0 55,0 " fill="#FFFFFF" />
+                                <path id="coloring" d="M155,0v455h285V0H155z M297.5,135.862c24.377,0,44.138,19.761,44.138,44.138s-19.761,44.138-44.138,44.138 S253.362,204.377,253.362,180S273.123,135.862,297.5,135.862z M217.5,319.138c0-44.183,35.817-80,80-80s80,35.817,80,80H217.5z"
+                                    fill="#FFFFFF" />
+                            </g>
+                        </svg> </div>
+                </div>
+            </div>
+        </div>
+        <div id="weapon" class="weapon center" style="display: none;">
+            <div class="informations">
+                <div class="pistol">
+                    <div class="">Pistol</div>
+                    <div class="level">
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                    </div>
+                </div>
+                <div class="submachine-pistol">
+                    <div class="">Submachine pistol</div>
+                    <div class="level">
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill"></div>
+                        <div class="block_skill"></div>
+                        <div class="block_skill"></div>
+                    </div>
+                </div>
+                <div class="shotgun">
+                    <div class="">Shotgun</div>
+                    <div class="level">
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill"></div>
+                        <div class="block_skill"></div>
+                        <div class="block_skill"></div>
+                        <div class="block_skill"></div>
+                        <div class="block_skill"></div>
+                    </div>
+                </div>
+                <div class="assault-rifle">
+                    <div class="">Assault rifle</div>
+                    <div class="level">
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill"></div>
+                        <div class="block_skill"></div>
+                        <div class="block_skill"></div>
+                        <div class="block_skill"></div>
+                        <div class="block_skill"></div>
+                        <div class="block_skill"></div>
+                        <div class="block_skill"></div>
+                    </div>
+                </div>
+                <div class="sniper-rifle">
+                    <div class="">Sniper rifle</div>
+                    <div class="level">
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill"></div>
+                        <div class="block_skill"></div>
+                        <div class="block_skill"></div>
+                    </div>
+                </div>
+                <div class="light-machine-gun">
+                    <div class="">Light machine gun</div>
+                    <div class="level">
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill"></div>
+                        <div class="block_skill"></div>
+                        <div class="block_skill"></div>
+                    </div>
+                </div>
+                <div class="heavy-gun">
+                    <div class="">Heavy gun</div>
+                    <div class="level">
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill active"></div>
+                        <div class="block_skill"></div>
+                        <div class="block_skill"></div>
+                        <div class="block_skill"></div>
+                    </div>
+                </div>
+                <div class="blocks_father">
+                    <div id="passport_button" class="blocks passport_button">
+                        <div class="center_without_select">
+                            <?xml version="1.0" encoding="iso-8859-1"?>
+                            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+                                class="user_svg" viewBox="0 0 369.722 369.722" style="enable-background:new 0 0 369.722 369.722;" xml:space="preserve" width="512px" height="512px">
+                                <g>
+                                    <path id="coloring" d="M184.864,186.139c42.307,0,76.623-41.669,76.623-93.069C261.488,41.669,250.21,0,184.864,0 c-65.359,0-76.629,41.669-76.629,93.07C108.236,144.47,142.55,186.139,184.864,186.139z" fill="#FFFFFF" />
+                                    <path id="coloring" d="M40.14,317.366C40.128,314.23,40.114,316.48,40.14,317.366L40.14,317.366z" fill="#FFFFFF" />
+                                    <path id="coloring" d="M329.575,319.816C329.614,318.957,329.589,313.86,329.575,319.816L329.575,319.816z" fill="#FFFFFF" />
+                                    <path id="coloring" d="M329.421,313.605c-1.432-89.54-13.113-115.053-102.611-131.203l-41.945,70.711l-41.969-70.711 C54.398,198.376,41.982,223.51,40.351,310.698c-0.125,7.118-0.184,7.495-0.211,6.668c0.006,1.547,0.014,4.413,0.014,9.403 c0,0,21.307,42.953,144.711,42.953c123.396,0,144.707-42.953,144.707-42.953c0-3.207,0.002-5.441,0.004-6.953 C329.554,320.326,329.509,319.334,329.421,313.605z"
+                                        fill="#FFFFFF" />
+                                </g>
+                            </svg> </div>
+                    </div>
+                    <div id="licenses_button" class="blocks licenses_button">
+                        <div class="center_without_select">
+                            <?xml version="1.0" encoding="iso-8859-1"?> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" class="license_svg" viewBox="0 0 50.25 50.25" style="enable-background:new 0 0 50.25 50.25;"
+                                xml:space="preserve" width="512px" height="512px">
+                                <g>
+                                    <path id="coloring" d="M48.25,10H2c-1.105,0-2,0.895-2,2v26.25c0,1.105,0.895,2,2,2h46.25c1.105,0,2-0.895,2-2V12 C50.25,10.895,49.355,10,48.25,10z M23.5,15h19.75c1.105,0,2,0.672,2,1.5s-0.895,1.5-2,1.5H23.5c-1.105,0-2-0.672-2-1.5 S22.395,15,23.5,15z M16.75,34.25H6c-1.105,0-2-0.616-2-1.375S4.895,31.5,6,31.5h10.75c1.105,0,2,0.616,2,1.375 S17.855,34.25,16.75,34.25z M18.75,27c0,1.105-0.895,2-2,2H6c-1.105,0-2-0.895-2-2V16.25c0-1.105,0.895-2,2-2h10.75 c1.105,0,2,0.895,2,2V27z M23.5,22h19.75c1.105,0,2,0.672,2,1.5s-0.895,1.5-2,1.5H23.5c-1.105,0-2-0.672-2-1.5S22.395,22,23.5,22z M43.5,31.75H23.75c-1.105,0-2-0.672-2-1.5s0.895-1.5,2-1.5H43.5c1.105,0,2,0.672,2,1.5S44.605,31.75,43.5,31.75z"
+                                        fill="#FFFFFF" />
+                                </g>
+                            </svg> </div>
+                    </div>
+                    <div id="weapon_button" class="blocks selected">
+                        <div class="center_in_select">
+                            <?xml version="1.0" encoding="iso-8859-1"?> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" class="weapon_svg" viewBox="0 0 525.153 525.153"
+                                style="enable-background:new 0 0 525.153 525.153;" xml:space="preserve" width="512px" height="512px">
+                                <g>
+                                    <path id="coloring" d="M262.576,167.108c-52.756,0-95.468,42.712-95.468,95.468s42.712,95.468,95.468,95.468s95.468-42.712,95.468-95.468 S315.332,167.108,262.576,167.108z M475.963,238.682C465.001,139.144,385.987,60.13,286.449,49.189V0h-47.745v49.189 C139.165,60.13,60.152,139.144,49.167,238.682H0v47.789h49.189c10.984,99.538,89.998,178.552,189.536,189.493v49.189h47.745 v-49.189c99.538-10.941,178.552-89.954,189.514-189.493h49.167v-47.789C525.153,238.682,475.963,238.682,475.963,238.682z M262.576,429.684c-92.383,0-167.108-74.725-167.108-167.108S170.193,95.468,262.576,95.468s167.108,74.725,167.108,167.108 S354.959,429.684,262.576,429.684z"
+                                        fill="#FFFFFF" />
+                                </g>
+                            </svg> </div>
+                    </div>
+                    <div id="work_button" class="blocks work_button">
+                        <div class="center_without_select"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" class="work_svg" viewBox="0 0 455 455" style="enable-background:new 0 0 455 455;"
+                                xml:space="preserve" width="512px" height="512px">
+                                <g>
+                                    <polygon id="coloring" points="55,98.788 19.723,98.788 19.723,128.788 55,128.788 55,212.5 15,212.5 15,242.5 55,242.5 55,326.212 15,326.212 15,356.212 55,356.212 55,455 125,455 125,0 55,0 " fill="#FFFFFF" />
+                                    <path id="coloring" d="M155,0v455h285V0H155z M297.5,135.862c24.377,0,44.138,19.761,44.138,44.138s-19.761,44.138-44.138,44.138 S253.362,204.377,253.362,180S273.123,135.862,297.5,135.862z M217.5,319.138c0-44.183,35.817-80,80-80s80,35.817,80,80H217.5z"
+                                        fill="#FFFFFF" />
+                                </g>
+                            </svg> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="work" class="work center" style="display: none">
+            <div class="table">
+                <table>
+                    <tr>
+                        <th>Date of the establishment:</th>
+                        <th>Organization</th>
+                        <th>Post</th>
+                        <th>Date of increase</th>
+                    </tr>
+                    <tr>
+                        <td>19.11.2018</td>
+                        <td>Weazel News</td>
+                        <td>Intern</td>
+                        <td>19.11.2018</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Weazel News</td>
+                        <td>Editor</td>
+                        <td>12.12.2018</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Weazel News</td>
+                        <td></td>
+                        <td>Fired 13.12.2018</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="blocks_father">
+                <div id="passport_button" class="blocks passport_button">
+                    <div class="center_without_select">
+                        <?xml version="1.0" encoding="iso-8859-1"?>
+                        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+                            class="user_svg" viewBox="0 0 369.722 369.722" style="enable-background:new 0 0 369.722 369.722;" xml:space="preserve" width="512px" height="512px">
+                            <g>
+                                <path id="coloring" d="M184.864,186.139c42.307,0,76.623-41.669,76.623-93.069C261.488,41.669,250.21,0,184.864,0 c-65.359,0-76.629,41.669-76.629,93.07C108.236,144.47,142.55,186.139,184.864,186.139z" fill="#FFFFFF" />
+                                <path id="coloring" d="M40.14,317.366C40.128,314.23,40.114,316.48,40.14,317.366L40.14,317.366z" fill="#FFFFFF" />
+                                <path id="coloring" d="M329.575,319.816C329.614,318.957,329.589,313.86,329.575,319.816L329.575,319.816z" fill="#FFFFFF" />
+                                <path id="coloring" d="M329.421,313.605c-1.432-89.54-13.113-115.053-102.611-131.203l-41.945,70.711l-41.969-70.711 C54.398,198.376,41.982,223.51,40.351,310.698c-0.125,7.118-0.184,7.495-0.211,6.668c0.006,1.547,0.014,4.413,0.014,9.403 c0,0,21.307,42.953,144.711,42.953c123.396,0,144.707-42.953,144.707-42.953c0-3.207,0.002-5.441,0.004-6.953 C329.554,320.326,329.509,319.334,329.421,313.605z"
+                                    fill="#FFFFFF" />
+                            </g>
+                        </svg> </div>
+                </div>
+                <div id="licenses_button" class="blocks licenses_button">
+                    <div class="center_without_select">
+                        <?xml version="1.0" encoding="iso-8859-1"?> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" class="license_svg" viewBox="0 0 50.25 50.25" style="enable-background:new 0 0 50.25 50.25;"
+                            xml:space="preserve" width="512px" height="512px">
+                            <g>
+                                <path id="coloring" d="M48.25,10H2c-1.105,0-2,0.895-2,2v26.25c0,1.105,0.895,2,2,2h46.25c1.105,0,2-0.895,2-2V12 C50.25,10.895,49.355,10,48.25,10z M23.5,15h19.75c1.105,0,2,0.672,2,1.5s-0.895,1.5-2,1.5H23.5c-1.105,0-2-0.672-2-1.5 S22.395,15,23.5,15z M16.75,34.25H6c-1.105,0-2-0.616-2-1.375S4.895,31.5,6,31.5h10.75c1.105,0,2,0.616,2,1.375 S17.855,34.25,16.75,34.25z M18.75,27c0,1.105-0.895,2-2,2H6c-1.105,0-2-0.895-2-2V16.25c0-1.105,0.895-2,2-2h10.75 c1.105,0,2,0.895,2,2V27z M23.5,22h19.75c1.105,0,2,0.672,2,1.5s-0.895,1.5-2,1.5H23.5c-1.105,0-2-0.672-2-1.5S22.395,22,23.5,22z M43.5,31.75H23.75c-1.105,0-2-0.672-2-1.5s0.895-1.5,2-1.5H43.5c1.105,0,2,0.672,2,1.5S44.605,31.75,43.5,31.75z"
+                                    fill="#FFFFFF" />
+                            </g>
+                        </svg> </div>
+                </div>
+                <div id="weapon_button" class="blocks weapon_button">
+                    <div class="center_without_select">
+                        <?xml version="1.0" encoding="iso-8859-1"?> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" class="weapon_svg" viewBox="0 0 525.153 525.153" style="enable-background:new 0 0 525.153 525.153;"
+                            xml:space="preserve" width="512px" height="512px">
+                            <g>
+                                <path id="coloring" d="M262.576,167.108c-52.756,0-95.468,42.712-95.468,95.468s42.712,95.468,95.468,95.468s95.468-42.712,95.468-95.468 S315.332,167.108,262.576,167.108z M475.963,238.682C465.001,139.144,385.987,60.13,286.449,49.189V0h-47.745v49.189 C139.165,60.13,60.152,139.144,49.167,238.682H0v47.789h49.189c10.984,99.538,89.998,178.552,189.536,189.493v49.189h47.745 v-49.189c99.538-10.941,178.552-89.954,189.514-189.493h49.167v-47.789C525.153,238.682,475.963,238.682,475.963,238.682z M262.576,429.684c-92.383,0-167.108-74.725-167.108-167.108S170.193,95.468,262.576,95.468s167.108,74.725,167.108,167.108 S354.959,429.684,262.576,429.684z"
+                                    fill="#FFFFFF" />
+                            </g>
+                        </svg> </div>
+                </div>
+                <div id="work_button" class="blocks selected">
+                    <div class="center_in_select"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" class="work_svg" viewBox="0 0 455 455" style="enable-background:new 0 0 455 455;"
+                            xml:space="preserve" width="512px" height="512px">
+                            <g>
+                                <polygon id="coloring" points="55,98.788 19.723,98.788 19.723,128.788 55,128.788 55,212.5 15,212.5 15,242.5 55,242.5 55,326.212 15,326.212 15,356.212 55,356.212 55,455 125,455 125,0 55,0 " fill="#FFFFFF" />
+                                <path id="coloring" d="M155,0v455h285V0H155z M297.5,135.862c24.377,0,44.138,19.761,44.138,44.138s-19.761,44.138-44.138,44.138 S253.362,204.377,253.362,180S273.123,135.862,297.5,135.862z M217.5,319.138c0-44.183,35.817-80,80-80s80,35.817,80,80H217.5z"
+                                    fill="#FFFFFF" />
+                            </g>
+                        </svg> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="console" style="display: none">
+        <div class="console-content scroll">
+            <div class="log">
+                <p>Welcome to the console (<u>beta v1.0</u>) server administration uHRP!<br />
+                    help - list of teams<br />
+                    help level - list of teams by level<br />
+                    help name - team description<br />
+                    ~ - Open/Close console<br />
+                    ENTER - fast console closure after input
+                </p>
+            </div>
+        </div>
+        <div class="console-admin">
+            <div class="admin-open">Admin<span class="count"></span></div>
+            <div class="selector" style="display: none">
+                <span class="select-chat">Chat<span class="count"></span></span>
+                <span class="select-report active">Report<span class="count"></span></span>
+                <!-- <span class="select-anticheat">Анти-чит<span class="count"></span></span> -->
+            </div>
+            <div class="console-chat" style="display: none">
+                <div class="chat-content scroll">
+                    <!-- <div class="chat"><p>[10 lvl] UNTAMED Hero [999]: Hello, World!</p></div> -->
+                </div>
+                <div class="chat-bottom">
+                    <input type="text" placeholder="message..." />
+                </div>
+            </div>
+            <div class="console-report" style="display: none">
+                <div class="report-list">
+                    <input type="text" placeholder="nickname" readonly/>
+                    <div class="content scroll">
+                        <div class="empty">You can relax</div>
+                        <!-- <div class="report claim">
+                            <div class="name">Artem Slydnev [999]</div>
+                            <div class="title">Я туплю как всегда.</div>
+                        </div>
+                        <div class="report help">
+                            <div class="name">Dima Surkov</div>
+                            <div class="title">Не пишется ТЗ.</div>
+                        </div>
+                        <div class="report claim my">
+                            <div class="name">Misha Franzese [1]</div>
+                            <div class="title">Не могу потратить деньги.</div>
+                        </div>
+                        <div class="report help busy">
+                            <div class="name">Egor Rostovsky</div>
+                            <div class="title">Не Testится телефон.</div>
+                        </div> -->
+                    </div>
+                    <div class="report_menu" style="display: none">
+                        <div class="menu-item">Item 1</div>
+                        <div class="menu-item">Item 2</div>
+                        <div class="menu-item">Item 3</div>
+                        <div class="menu-item">Item 4</div>
+                    </div>
+                </div>
+                <div class="report-dialog">
+                    <div class="selector">
+                        <span class="select-all active">All</span>
+                        <span class="select-claim">Complaints</span>
+                        <span class="select-help">Questions</span>
+                        <span class="select-my">My</span>
+                        <span class="select-busy">Held</span>
+                    </div>
+                    <div class="dialog-messages scroll">
+                        <div class="empty">Open the ticket</div>
+                        <!-- <div class="dialog-message">
+                            <div class="text">
+                                Помогите заспавнить кар. После релога пропали деньги. Хотя я ничего и не делал.
+                            </div>
+                            <div class="date">UNTAMED Hero | 02:08</div>
+                        </div>
+                        <div class="dialog-message my">
+                            <div class="text">
+                                Привет.
+                            </div>
+                            <div class="date">Alex Cortez | 02:08</div>
+                        </div> -->
+                    </div>
+                    <input type="text" placeholder="message" />
+                </div>
+            </div>
+        </div>
+        <div class="console-bottom">
+            <input type="text" placeholder="type command..." />
+        </div>
+    </div>
+
+    <div id="houseMenu" style="display: none">
+        <!--v-show="render"-->
+        <div class="house-header" v-bind:class="[houseOwner ? 'house-borderred-color' : 'house-bordergreen-color']" style="display: none"><a>House No{{ houseId }} <span v-bind:class="[houseOwner ? 'house-red-color' : 'house-green-color']">[{{ houseStatus }}]</span></a></div>
+        <div class="house-menu-header house-bordergreen-color" style="display: none"><a>Home control panel {{ houseId }}</a></div>
+
+        <div class="house-body">
+            <div class="house-info" style="display: none">
+                <div class="left-block" v-bind:class="[houseOwner ? 'house-red-color' : 'house-green-color']">
+                    <span>Basic information</span><br>
+
+                    <a>Address: <a class="white-color">{{ houseAddress }}</a></a><br>
+                    <a>Home class: <a class="white-color">{{ houseClass }}</a></a><br>
+                    <a>Area: <a class="white-color">{{ houseSquare }} sq.</a></a><br>
+                    <a>Number of rooms: <a class="white-color">{{ houseRooms }} rooms.</a></a><br>
+                    <a>Garage: <a class="white-color">{{ houseGarage }}</a></a><br>
+                    <div v-if="houseGaragePlace === 0">
+                        <a>Missing</a><br>
+                    </div>
+                    <div v-else-if="houseGaragePlace !== 0">
+                        <a>Garage capacity: <a class="white-color">{{ houseGaragePlace }}</a></a><br>
+                    </div>
+                    <a>Rent: <a class="white-color">150$ weekly.</a></a><br>
+
+                    <span v-if="houseOwner">
+                        <a>State. Price: <a class="white-color">{{ housePrice }}$</a></a><br>
+                        <a>Homeowner: <a class="white-color">{{ houseOwner }}</a></a><br>
+                    </span>
+                </div>
+
+                <div class="left-bottom-block" v-if="!houseOwner">
+                    <a>Price:<a class="green-color">{{ housePrice }}$</a></a>
+                    <div class="buy-button" v-on:click="buyHouse"><a>Buy house</a></div>
+                </div>
+
+                <div class="right-block" v-bind:class="[houseOwner ? 'house-owned' : 'house-unowned']">
+                    <img class="img-class" src="img/houseMenu/classes/A.jpg">
+
+                    <div v-if="!houseOwner" style="top: 13px;position: relative;">
+                        <div class="button" v-on:click="inspectHouse"><img src="img/houseMenu/interior-icon.png"><a>See the interior of the house</a><span></span></div>
+                        <div class="button"><img src="img/houseMenu/garage-icon.png"><a>View the garage of the house</a><span></span></div>
+                        <div class="button" v-on:click="showHousePlan"><img src="img/houseMenu/plan-icon.png"><a>Interior layout</a><span></span></div>
+                        <div class="button" v-on:click="exitMenu"><img src="img/houseMenu/exit-icon.png"><a>Exit</a><span></span></div>
+                    </div>
+                    <div v-if="houseOwner" style="top: 13px;position: relative;">
+                        <div class="button" v-on:click="enterHouse"><img src="img/houseMenu/lock-icon.png"><a>Lock house[{{ houseLock }}]</a><span></span></div>
+                        <div class="button" v-on:click="showHousePlan"><img src="img/houseMenu/plan-icon.png"><a>Interior layout</a><span></span></div>
+                        <div class="button disabled-button"><img src="img/houseMenu/arent.png"><a>Rent [Soon]</a><span></span></div>
+                        <div class="button" v-on:click="exitMenu"><img src="img/houseMenu/exit-icon.png"><a>Exit</a><span></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="house-plan" style="display: none">
+                <div class="left-block">
+                    <span>Interior layout</span><br>
+                    <img src="img/houseMenu/house-plan.png">
+                    <div class="backbutton" v-on:click="backToMenu"><a>Back to the menu at home</a></div>
+                </div>
+            </div>
+
+            <div class="house-menu" style="display: none">
+                <img src="img/houseMenu/house-menu-image.png" class="house-menu-border">
+                <div class="house-modern">
+                    <a>Modernization</a>
+
+                    <div class="house-modern-buttons">
+                        <div class="big-button"><a>Alarm</a><img src="img/houseMenu/siren.png"></div>
+                        <div class="big-button"><a>Security</a><img src="img/houseMenu/lock.png"></div>
+                        <div class="big-button big-button-disabled"><a>Camera</a><img src="img/houseMenu/camera.png"></div>
+                    </div>
+                </div>
+                <div class="house-control">
+                    <a>House management</a>
+
+                    <div class="house-control-buttons">
+                        <div class="button" v-on:click="lockUnlockHouse"><img v-bind:src="lockIcon"><a>{{ houseLockAction }} door of the house</a></div>
+                        <div class="button" v-on:click="invitePlayer"><img src="img/houseMenu/invite.png"><a>Invite a player</a></div>
+                        <div class="button" v-on:click="enterGarage"><img src="img/houseMenu/garage-icon.png"><a>Enter the garage</a></div>
+                        <div class="button" v-on:click="sellHouseToGov"><img src="img/houseMenu/sell.png"><a>Sell the house to the state</a></div>
+                        <div class="button" v-on:click="sellHouseToPlayer"><img src="img/houseMenu/sell-player.png"><a>Sell the house to the player</a></div>
+                        <div class="button"><img src="img/houseMenu/nalogs.png"><a>Daily taxes</a></div>
+                        <div class="button" v-on:click="exitMenu"><img src="img/houseMenu/exit-icon.png"><a>Exit</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script async src="js/build.js" type="text/javascript"></script>
+
+    <div id="policePassport" style="display: none">
+        <div class="text">
+            Name: <bold id="policePassport_name"></bold><br>
+            Surname: <bold id="policePassport_name2"></bold><br>
+            Gender: <bold id="policePassport_sex"></bold><br>
+            Age: <bold id="policePassport_years"></bold><br>
+            Title: <bold id="policePassport_rank"></bold><br>
+            Plot: <bold id="policePassport_area"></bold><br>
+        </div>
+        <div class="id" id="policePassport_id"></div>
+    </div>
+    <script src="js/policePassport.js"></script>
+
+    <div id="documentArmy" class="" style="display: none;">
+        <div class="status">
+            <div id="armyDocs_active" class="active" style="display:">Active</div>
+            <div id="armyDocs_retired" class="retired" style="display: none">Retired</div>
+        </div>
+        <div class="info">
+            <div id="armyDocs_name" class="name"></div>
+            <div id="armyDocs_date" class="date"></div>
+            <div id="armyDocs_rank" class="rank"></div>
+            <div id="armyDocs_id" class="id"></div>
+        </div>
+    </div>
+
+    <div id="fbiPassport" style="display: none">
+        <div id="fbiPassport_name" class="name"></div>
+        <div id="fbiPassport_id" class="id"></div>
+    </div>
+    <script src="js/fbiPassport.js"></script>
+</body>
+
+</html>

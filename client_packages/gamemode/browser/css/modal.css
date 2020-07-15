@@ -1,0 +1,85 @@
+.modal {
+    color: #fff;
+    font-family: 'Chalet-LondonNineteenSixty';
+    font-size: 2vh;
+    position: absolute;
+    width: 40vh;
+}
+
+.modal button {
+    background: #fff;
+    border: 1px #fff solid;
+    border-radius: 2px;
+    color: #000;
+    font-size: 1.4vh;
+    font-weight: bold;
+    padding: 1vh;
+    text-transform: uppercase;
+}
+
+.modal button:active {
+    color: #fff;
+}
+
+.modal button:focus {
+    outline-width: 0;
+}
+
+.modal button:hover {
+    background: #eee;
+    border: 1px #eee solid;
+}
+
+.modal input[type="text"] {
+    background: #222a;
+    border: 2px #aaa solid;
+    color: #fff;
+    font-size: 1.4vh;
+    margin-top: 0.6vh;
+    padding: 1vh;
+    height: 4vh;
+    width: 100%;
+}
+
+.modal input[type="text"]:focus {
+    outline-width: 0;
+    border: 2px #fff solid;
+}
+
+.modal .body {
+    height: 29vh;
+    position: relative;
+    width: 100%;
+}
+
+.modal .content {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.modal .header {
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+    margin-top: 3vh;
+    padding: 0.4vh;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.modal .opacity {
+    background: #000;
+    border-radius: 5px;
+    filter: alpha(opacity=80);
+    height: 100%;
+    opacity: 0.8;
+    position: absolute;
+    width: 100%;
+}
+
+.modal .text {
+    font-size: 1.4vh;
+    line-height: 2.5vh;
+    padding: 0 1vh;
+}

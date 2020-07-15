@@ -1,0 +1,68 @@
+@font-face {
+    font-family: LONDONSIXTY;
+    src: url(../fonts/Chalet/Chalet-LondonNineteenSixty.woff);
+}
+
+
+#prompt {
+    font-family: LONDONSIXTY;
+    color: white;
+    width: 420px;
+    margin-top: 20px;
+    padding-left: 20px;
+    position: absolute;
+}
+
+#prompt .header {
+    height: 41px;
+    background-color: #0b8d43;
+    line-height: 41px;
+    padding-left: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    background-image: -moz-linear-gradient(180deg, rgb(17, 130, 65) 0%, rgb(0, 163, 70) 100%);
+    background-image: -webkit-linear-gradient(180deg, rgb(17, 130, 65) 0%, rgb(0, 163, 70) 100%);
+    background-image: -ms-linear-gradient(180deg, rgb(17, 130, 65) 0%, rgb(0, 163, 70) 100%);
+    /* position: absolute;
+    left: 11px;
+    top: 107px;
+    width: 420px;
+    height: 41px;
+    z-index: 3; */
+}
+
+#prompt .text {
+    height: 42px;
+    /* background-color: #00000075; */
+    line-height: 42px;
+    padding-left: 16px;
+
+
+    background-color: rgba(0, 0, 0, 0.7);
+    /* opacity: 0.749;
+    position: absolute;
+    left: 11px;
+    top: 148px;
+    width: 420px;
+    height: 42px;
+    z-index: 4; */
+
+}
+
+#prompt span {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin: 0px 4px;
+    background: transparent;
+    /* box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.5); */
+    border-width: 2px;
+    border-style: solid;
+    border-color: #b7b7b8;
+    /* font: 18px/48px LONDONSIXTY; */
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    line-height: 28px;
+}

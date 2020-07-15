@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "LONDONSIXTY.ttf";
+    src: url(../fonts/Chalet/LONDONSIXTY.ttf);
+}
+body #fbiPassport {
+    background-image: url(../img/fbiPassport/bg.png);
+    width: 417px;
+    height: 565px;
+
+    font-family: "LONDONSIXTY.ttf";
+
+    position: absolute;
+    right: 9%;
+    top: 24%;
+}
+body #fbiPassport .name {
+    position: relative;
+    /* left: 0em; */
+    top: 11.6em;
+    text-align: center;
+}
+body #fbiPassport .id {
+    font-size: 18px;
+    color: white !important;
+    font-weight: bold;
+
+    position: relative;
+    top: 27em;
+    left: 15.7em;
+}
+body #fbiPassport .name,
+body #fbiPassport .id {
+    font-size: 18px;
+    color: #1c1c1c;
+}

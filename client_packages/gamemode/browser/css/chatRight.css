@@ -1,0 +1,81 @@
+.chatRight {
+    color: #fff;
+    font-size: 2vh;
+    font-family: 'Chalet-LondonNineteenSixty';
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    top: 30vh;
+    width: 60vh;
+}
+
+/*.chatRight hr {
+	opacity: 0.2;
+	border-color: #aaa;
+	width: 60%;
+	margin: 0 0 0 auto;
+}*/
+.chatRight input[type="text"] {
+    position: absolute;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    border: none;
+    color: #fff;
+    height: 30px;
+    padding: 1vh;
+    width: 424px;
+    border-radius: 0px 3px 3px 0px;
+}
+
+.chatRight input[type="text"]:focus {
+    outline: none;
+}
+
+.chatRight .chat-bottom {
+    margin-top: 2vh;
+    display: inline-flex;
+}
+
+.chatRight .chat-content {
+    transition: 1s;
+    height: calc(25 * 9px);
+    overflow-y: hidden;
+    text-align: left;
+    font-size: 16px;
+}
+
+.chatRight .chat-content div {
+    padding: 3px;
+    word-break: break-word;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.9);
+    text-align: right;
+}
+
+.chatRight .tag {
+    position: absolute;
+    right: 424px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 4px 0px 0px 4px;
+    color: #aaa;
+    font-size: 13px;
+    /* width: 85px; */
+    width: 105px;
+    /* text-align: right; */
+    text-align: center;
+    text-transform: uppercase;
+    height: 30px;
+}
+
+.chatRight .tag a {
+    position: relative;
+    top: 7px;
+    padding-left: 7px;
+}
+
+.chatRight .tag a:after {
+    content: ':';
+}
+
+.chatRight .userId {
+    font-family: 'Chalet-ParisNineteenSixty';
+}

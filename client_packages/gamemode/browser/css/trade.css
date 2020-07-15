@@ -1,0 +1,182 @@
+#trade {
+    background: #010101;
+    color: #fff;
+    font-family: Montserrat;
+    opacity: 0.9;
+    position: absolute;
+    right: 10vh;
+    text-transform: uppercase;
+    top: 20vh;
+    width: 41vh;
+}
+
+#trade p {
+    color: #fff;
+}
+
+#trade .block {
+    height: 35vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#trade .buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#trade .buttons button {
+    padding: 0.5vh;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+#trade .buttons .chat-header {
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+    margin: 0;
+    padding: 1vh 0;
+    text-align: center;
+}
+
+#trade .items {
+    display: grid;
+    height: 20vh;
+    grid-gap: 1px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    opacity: 0.9;
+    margin: 1vh auto;
+    margin-top: 0.5vh;
+}
+
+#trade .items .column {
+    background: #222;
+    /*border-bottom: 1px solid #5c5c5d;
+      border-right: 1px solid #5c5c5d;*/
+    display: flex;
+}
+
+#trade .items .filled {
+    background: #000;
+}
+
+#trade .items .item {
+    height: 3vh;
+    width: 3vh;
+}
+
+#trade .container .header {
+    background: #000;
+    margin: 0;
+    padding: 1vh;
+    text-align: center;
+}
+
+#trade .container .header .name {
+    color: #06ca5a;
+}
+
+#trade .header {
+    margin: 0 1vh;
+}
+
+#trade .item {
+    background-image: url("../img/items/1.png");
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 4vh;
+    margin: auto;
+    width: 4vh;
+}
+
+#trade .item_name {
+    background: #000;
+    border-right: 2px solid #196;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.5vh;
+    position: absolute;
+}
+
+#trade .myItems {}
+
+#trade .recipientItems {}
+
+#trade .trade_chat {
+    background: #000;
+    padding: 1vh 0;
+}
+
+#trade .trade_chat input[type="text"] {
+    background: #222;
+    border: none;
+    color: #fff;
+    padding: 0.5vh;
+    margin: 0 2%;
+    width: 96%;
+}
+
+#trade .trade_chat input[type="text"]:focus {
+    outline: none;
+}
+
+#trade .trade_chat input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+#trade .trade_chat .bg {
+    background: #111;
+}
+
+#trade .trade_chat .message {
+    font-weight: bold;
+    padding: 2% 3%;
+    text-transform: none;
+    word-break: break-word;
+}
+
+#trade .trade_chat .messages {
+    height: 10vh;
+    margin-bottom: 1vh;
+}
+
+#trade .trade_items {
+    border-top: 1px solid #333;
+    padding-bottom: 1vh;
+}
+
+#trade .trade_items .table {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    margin: auto;
+    width: 90%;
+}
+
+#trade .trade_items .column {}
+
+#trade .trade_items .header {
+    font-size: 1.4vh;
+    font-weight: bold;
+    padding: 0.5vh;
+    text-align: center;
+}
+
+#trade .trade_items .items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    margin: auto;
+    width: 15vh;
+    height: 9vh;
+}
+
+#trade ::-webkit-scrollbar-thumb {
+    border-width: 1px 1px 1px 2px;
+    border-color: #196;
+    background-color: #196;
+}

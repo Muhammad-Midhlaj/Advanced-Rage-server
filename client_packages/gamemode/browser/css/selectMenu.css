@@ -1,0 +1,155 @@
+.selectMenu {
+    color: #fff;
+    font-family: 'Chalet-LondonNineteenSixty';
+    font-size: 2vh;
+    position: absolute;
+    width: 40vh;
+}
+
+.selectMenu input[type="text"] {
+    background: none;
+    border: none;
+    color: #fff;
+    font-family: 'Chalet-LondonNineteenSixty';
+    font-size: 1.5vh;
+    text-align: right;
+}
+
+.selectMenu table {
+    color: #fff;
+    font-size: 1.6vh;
+    width: 100%;
+}
+
+.selectMenu .body {
+    height: 24vh;
+    position: relative;
+    width: 100%;
+}
+
+.selectMenu .body td {
+    padding: 1vh 1vh;
+}
+
+.selectMenu .color-td {
+    display: flex;
+    position: absolute;
+    right: 0vh;
+}
+
+.selectMenu .color-td div {
+    background: #000;
+    border-radius: 4px;
+    height: 2vh;
+    margin: 0 0.5vh;
+    width: 2vh;
+}
+
+.selectMenu .content {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.selectMenu .content table {
+    height: 100%;
+    width: 100%;
+}
+
+.selectMenu .content tr {
+    height: 4vh;
+    width: 100%;
+}
+
+.selectMenu .hand-navigation {
+    height: 4vh;
+    position: relative;
+    background: #0007;
+    margin-top: 0.2vh;
+}
+
+.selectMenu .hand-navigation img {
+    height: 1.56vh;
+    left: 50%;
+    position: absolute;
+    padding: 3px;
+    transform: translateX(-50%) rotate(0deg);
+}
+
+.selectMenu .hand-navigation img:last-child {
+    transform: translateX(-50%) rotate(-180deg);
+    margin-top: 1.6vh;
+}
+
+.selectMenu .header {
+    background: #000;
+    padding: 1vh 1vh;
+}
+
+.selectMenu .family-preview {
+    background: url(../img/customization/family-background.png);
+    height: 228px;
+    margin-bottom: 0.4vh;
+    position: relative;
+}
+
+.selectMenu .family-preview img {
+    position: absolute;
+    height: 228px;
+    bottom: 0;
+}
+
+.selectMenu .family-preview img:first-child {
+    /*Mother*/
+    height: 208px;
+    padding-left: 20px;
+    z-index: 1;
+}
+
+.selectMenu .family-preview img:last-child {
+    /*Father*/
+    height: 217px;
+    padding-left: 160px;
+}
+
+.selectMenu .name {
+    text-transform: uppercase;
+}
+
+.selectMenu .opacity {
+    background: #000;
+    filter: alpha(opacity=50);
+    height: 100%;
+    opacity: 0.5;
+    position: absolute;
+    width: 100%;
+}
+
+.selectMenu .promptHelp {
+    background-color: #0007;
+    font-size: 1.6vh;
+    color: #fff;
+    margin-top: 0.2vh;
+    padding: 1.5vh;
+}
+
+.selectMenu .promptHelp img {
+    bottom: 0.5vh;
+    float: right;
+    position: relative;
+}
+
+.selectMenu .selected {
+    background: #fff;
+    color: #000;
+}
+
+.selectMenu .selected input[type="text"] {
+    border-bottom: 1px solid #000;
+    color: #000;
+    text-align: center;
+}
+
+.selectMenu .union-img {
+    width: 100%;
+}

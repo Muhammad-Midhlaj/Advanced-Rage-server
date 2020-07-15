@@ -1,0 +1,357 @@
+#selectorCharacters {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: inline-flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#selectorCharacters .donate {
+    margin-right: 0.46296vh;
+}
+
+#selectorCharacters .user-block {
+    width: 37.03704vh;
+    height: 64.07407vh;
+    border-radius: 1.11111vh;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+#selectorCharacters .user-info {
+    position: absolute;
+    width: 37.03704vh;
+    height: 7.59259vh;
+    top: -8.51852vh;
+    border-radius: 0.92593vh;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.6);
+    left: 49.19%;
+    transform: translateX(-50%);
+}
+
+#selectorCharacters .left-part {
+    left: 1.38889vh;
+    top: 0.92593vh;
+    position: absolute;
+    display: grid;
+    text-align: left;
+    color: #fff;
+}
+
+#selectorCharacters .left-part a {
+    font-size: 1.2963vh;
+}
+
+#selectorCharacters .left-part a:last-child {
+    font-size: 2.22222vh;
+    font-weight: 600;
+    margin-top: -0.74074vh;
+    margin-left: -0.18519vh;
+}
+
+#selectorCharacters .right-part {
+    right: 1.38889vh;
+    top: 0.92593vh;
+    position: absolute;
+    display: grid;
+    text-align: right;
+    color: #fff;
+}
+
+#selectorCharacters .right-part a {
+    font-size: 1.66667vh;
+    font-weight: 600;
+}
+
+#selectorCharacters .right-part a:nth-child(2) {
+    position: relative;
+    top: -0.37037vh;
+}
+
+#selectorCharacters .right-part img {
+    top: 0.18519vh;
+    position: relative;
+}
+
+#selectorCharacters .donate-button {
+    transition: 0.5s;
+    width: 8.14815vh;
+    height: 1.85185vh;
+    border-radius: 0.92593vh;
+    background: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    position: relative;
+    top: -0.18519vh;
+    right: -0.83333vh;
+}
+
+#selectorCharacters .donate-button:hover {
+    transition: 0.5s;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+#selectorCharacters .donate-button a {
+    font-size: 1.2037vh;
+    font-weight: 100;
+    text-transform: none;
+}
+
+#selectorCharacters .user-blocks {
+    display: -webkit-box;
+}
+
+#selectorCharacters .user-block {
+    margin-right: 1.85185vh;
+}
+
+#selectorCharacters .user-block-header {
+    position: relative;
+    width: 37.03704vh;
+    height: 8.51852vh;
+    top: -0.09259vh;
+}
+
+#selectorCharacters .active-slot {
+    background: url(../img/selectorCharacter/header-active.png);
+    border-radius: 1.11111vh 1.11111vh 0 0;
+    background-position: center;
+    width: 37.03703703703704vh;
+    height: 8.518518518518519vh;
+    background-size: cover;
+}
+
+#selectorCharacters .free-slot {
+    background: url(../img/selectorCharacter/header-free.png);
+
+    border-radius: 1.11111vh 1.11111vh 0 0;
+    background-position: center;
+    width: 37.03703703703704vh;
+    height: 8.518518518518519vh;
+    background-size: cover;
+}
+
+#selectorCharacters .lock-slot {
+    background: url(../img/selectorCharacter/header-block.png);
+    border-radius: 1.11111vh 1.11111vh 0 0;
+    background-position: center;
+    width: 37.03703703703704vh;
+    height: 8.518518518518519vh;
+    background-size: cover;
+}
+
+#selectorCharacters .user-block-info {
+    color: #fff;
+    text-align: center;
+    padding-top: 1.38889vh;
+    width: 100%;
+    position: relative;
+}
+
+#selectorCharacters .user-block-info p {
+    color: #00b716;
+    font-size: 1.66667vh;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 4.62963vh;
+    padding-bottom: 0.92593vh;
+}
+
+#selectorCharacters .vcicon {
+    position: relative;
+    top: -0.18519vh;
+}
+
+#selectorCharacters .vcicon img {
+    position: relative;
+    top: 0.37037vh;
+    left: 0.27778vh;
+}
+
+#selectorCharacters .creation-date {
+    text-align: right;
+    position: absolute;
+    right: 23.14815vh;
+    padding-top: 0.92593vh;
+}
+
+#selectorCharacters .hour-count {
+    text-align: left;
+    position: absolute;
+    left: 23.14815vh;
+    padding-top: 0.92593vh;
+}
+
+#selectorCharacters .user-avatar {
+    position: absolute;
+    width: 100%;
+}
+
+#selectorCharacters .slot-descr {
+    color: #fff;
+    font-size: 1.2037vh;
+    height: 11.11111vh;
+    padding-top: 1.38889vh;
+    padding-left: 4.16667vh;
+    padding-right: 4.16667vh;
+}
+
+#selectorCharacters .slot-icon {
+    height: 13.88889vh;
+}
+
+#selectorCharacters .slot-free-header {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.22222vh;
+    font-weight: 600;
+    color: #fff;
+    padding: 2.77778vh;
+    padding-bottom: 2.77778vh;
+    height: 4.62963vh;
+}
+
+#selectorCharacters .slot-button {
+    transition: 0.2s;
+    position: relative;
+    width: 18.51852vh;
+    height: 3.24074vh;
+    border: 0.18519vh solid #d8d8d8;
+    border-radius: 1.85185vh;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1.11111vh;
+}
+
+#selectorCharacters .slot-button a {
+    transition: 0.2s;
+    position: relative;
+    font-size: 1.2037vh;
+    color: #fff;
+    top: 0.64815vh;
+}
+
+#selectorCharacters .slot-button:hover {
+    transition: 0.2s;
+    border: 0.18519vh solid #a9a9a9;
+    background: #a9a9a9;
+}
+
+#selectorCharacters .slot-button-yellow {
+    transition: 0.2s;
+    border: 0.18519vh solid #ddc810;
+}
+
+#selectorCharacters .slot-button-yellow:hover {
+    transition: 0.2s;
+    color: #202020;
+    border: 0.18519vh solid #cdb90b;
+    background: #cdb90b;
+}
+
+#selectorCharacters .slot-button-green {
+    transition: 0.2s;
+    border: 0.18519vh solid #00b716;
+}
+
+#selectorCharacters .slot-button-green:hover {
+    transition: 0.2s;
+    border: 0.18519vh solid #009d13;
+    background: #009d13;
+}
+
+#selectorCharacters .info-block {
+    text-align: center;
+    font-size: 1.48148vh;
+    font-weight: 600;
+    color: #fff;
+    padding-bottom: 0.92593vh;
+}
+
+#selectorCharacters .info-block-background {
+    width: 25.92593vh;
+    height: 3.33333vh;
+    background: #ffffff40;
+    border-radius: 1.62037vh;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0.46296vh;
+    font-weight: 100;
+}
+
+#selectorCharacters .info-block-background a {
+    position: relative;
+    top: 0.46296vh;
+}
+
+#selectorCharacters .delete-button {
+    transition: 0.5s;
+    padding-top: 1.38889vh;
+    font-size: 1.2037vh;
+    color: #fff;
+    opacity: 0.4;
+}
+
+#selectorCharacters .delete-button:hover {
+    transition: 0.5s;
+    opacity: 1.0;
+}
+
+#selectorCharacters .delete-button img {
+    position: relative;
+    top: 0.27778vh;
+    right: 0.27778vh;
+}
+
+#selectorCharacters .delete-icon {
+    background: url(../img/selectorCharacter/plus-icon.png);
+}
+
+#selectorCharacters .buttons-list {
+    margin-top: 3.7037vh;
+}
+/* fix */
+#selectorCharacters .user-block.achievements .slot-icon img,
+#selectorCharacters .user-block.free .slot-icon img {
+    width: 12.96296296296296vh;
+    height: 12.96296296296296vh;
+}
+#selectorCharacters .user-block.donate-slot .slot-icon img {
+    width: 10.55555555555556vh;
+    height: 15.64814814814815vh;
+}
+
+@media (min-width: 1360px) and (max-width: 1366px) {
+    #selectorCharacters .buttons-list {
+        margin-top: 3.4vh;
+    }
+    #selectorCharacters .user-block-info p {
+        position: relative;
+        top: 2vh;
+    }
+    #selectorCharacters .creation-date,
+    #selectorCharacters .hour-count { 
+        margin-top: 1vh;
+    }
+    #selectorCharacters .user-block.donate-slot .slot-free .buttons-list .slot-button .vcicon a {
+        top: 0.2vh;
+    }
+}
+@media (min-width: 1400px) and (max-width: 1440px) {
+    #selectorCharacters .buttons-list {
+        margin-top: 3.4vh;
+    }
+    #selectorCharacters .user-block-info p {
+        position: relative;
+        top: 1vh;
+    }
+    #selectorCharacters .creation-date,
+    #selectorCharacters .hour-count { 
+        margin-top: 1vh;
+    }
+    #selectorCharacters .user-block.donate-slot .slot-free .buttons-list .slot-button .vcicon a {
+        top: 0.4vh !important;
+    }
+}

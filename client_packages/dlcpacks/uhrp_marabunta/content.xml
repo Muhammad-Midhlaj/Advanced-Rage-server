@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<CDataFileMgr__ContentsOfDataFileXml>
+	<disabledFiles />
+	<includedXmlFiles />
+	<includedDataFiles />
+	<dataFiles>
+	<Item>
+		<filename>dlc_union_marabunta:/%PLATFORM%/levels/gta5/interiors/clawlesinteriors_metadata.rpf</filename>
+		<fileType>RPF_FILE</fileType>
+		<overlay value="false" />
+		<disabled value="false" />
+		<persistent value="false" />
+	</Item>
+	<Item>
+		<filename>dlc_union_marabunta:/%PLATFORM%/levels/gta5/interiors/int_mp_marabunta_gang.rpf</filename>
+		<fileType>RPF_FILE</fileType>
+		<overlay value="false" />
+		<disabled value="false" />
+		<persistent value="false" />
+	</Item>
+	<Item>
+		<filename>dlc_union_marabunta:/%PLATFORM%/levels/gta5/props/clawles_props.rpf</filename>
+		<fileType>RPF_FILE</fileType>
+		<overlay value="false" />
+		<disabled value="false" />
+		<persistent value="false" />
+	</Item>
+		<Item>
+      <filename>dlc_union_marabunta:/%PLATFORM%/levels/gta5/_citye/ch3_10.rpf</filename>
+      <fileType>RPF_FILE</fileType>
+      <locked value="true"/>
+	    <disabled value="true"/>
+	    <persistent value="true"/>
+	    <overlay value="true"/>
+    </Item>
+	</dataFiles>
+	<contentChangeSets>
+		<Item>
+			<changeSetName>CCS_clawles_interiors_NG_STREAMING_MAP</changeSetName>
+			<filesToInvalidate/>
+			<filesToEnable>		
+			<Item>dlc_union_marabunta:/%PLATFORM%/levels/gta5/_citye/ch3_10.rpf</Item>
+			<Item>dlc_union_marabunta:/%PLATFORM%/levels/gta5/props/clawles_props.rpf</Item>
+			</filesToEnable>
+			<executionConditions>
+				<activeChangesetConditions>
+				</activeChangesetConditions>
+				<genericConditions>$level=MO_JIM_L11</genericConditions>
+			</executionConditions>
+		</Item>
+</contentChangeSets>
+	<patchFiles />
+</CDataFileMgr__ContentsOfDataFileXml>

@@ -1,0 +1,65 @@
+.characterInfo {
+    color: #fff;
+    font-size: 2vh;
+    position: absolute;
+    right: 10vh;
+    text-transform: uppercase;
+    top: 25vh;
+    width: 40vh;
+}
+
+.characterInfo table {
+    color: #fff;
+    font-size: 1.6vh;
+    width: 100%;
+}
+
+.characterInfo .body {
+    height: 33vh;
+    position: relative;
+    width: 100%;
+}
+
+.characterInfo .body td {
+    padding: 1vh 3vh;
+}
+
+.characterInfo .content {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.characterInfo .content table {
+    font-size: 1.4vh;
+    width: 100%;
+}
+
+.characterInfo .content tr {
+    width: 100%;
+}
+
+.characterInfo .filler {
+    background: #fff;
+    height: 100%;
+    width: 0%;
+}
+
+.characterInfo .header {
+    text-align: center;
+}
+
+.characterInfo .opacity {
+    background: #000;
+    border-radius: 5px;
+    filter: alpha(opacity=80);
+    height: 100%;
+    opacity: 0.8;
+    position: absolute;
+    width: 100%;
+}
+
+.characterInfo .progress {
+    height: 0.7vh;
+    width: 20vh;
+}
