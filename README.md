@@ -37,12 +37,8 @@ I'm not the owner of this release, if you want to help the owner of this release
 - [ ] Translate map blip name
 
 
-## Team
 
-| <a href="https://untamedhero.com/" target="_blank">**Cubix**</a> | <a href="https://untamedhero.com/" target="_blank">**iSAlexHere**</a> | <a href="https://untamedhero.com/" target="_blank">**Vali Zum**</a> |
-| :---: |:---:| :---:|
- |
-| <a href="https://github.com/procoder4/procoder4" target="_blank">`github.com/procoder4`</a> | <a href="http://github.com/procoder4" target="_blank">`github.com/procoder4`</a> | <a href="http://github.com/procoder4" target="_blank">`github.com/procoder4`</a> |
+
 
 
 ## Gamemode preview
