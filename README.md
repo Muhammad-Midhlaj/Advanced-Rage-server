@@ -1,5 +1,4 @@
-## uHRP 
-[![UNTAMEDHero](https://i.imgur.com/b3eXTtt.gif)](https://untamedhero.com) 
+
 ___
 Is a rageMP gamemode MySQL/Nodejs/Reac JS based on unionrp gamemode , translated in English & Open source!
 ___
@@ -28,7 +27,7 @@ You can make pull request in order to help and translate this from Russian in En
 
 I'm not the owner of this release, if you want to help the owner of this release go to union-rp.ru and make sure you make a nice gift!
 
-[![Join us on Discord](https://discordapp.com/api/guilds/542217413274370070/widget.png?style=banner4)](https://discord.gg/khpRnAZ
+[![Join us on Discord](https://discordapp.com/api/guilds/695742873588465734/widget.png?style=banner4)](https://discord.gg/yx2v7enzPd
 )
 
 ## TO DO LIST
@@ -36,23 +35,14 @@ I'm not the owner of this release, if you want to help the owner of this release
 - [ ] Translate terminal cmds from database
 - [ ] Translate achievements from database
 - [ ] Translate map blip name
-- [X] To be filled
-- [X] To be filled
-- [X] To be filled
-- [X] To be filled
-- [X] To be filled
-- [X] To be filled
-- [X] To be filled
-- [X] To be filled
-- [X] To be filled
-- [X] To be filled
+
 
 ## Team
 
 | <a href="https://untamedhero.com/" target="_blank">**Cubix**</a> | <a href="https://untamedhero.com/" target="_blank">**iSAlexHere**</a> | <a href="https://untamedhero.com/" target="_blank">**Vali Zum**</a> |
 | :---: |:---:| :---:|
-| [![UNTAMEDHero](https://avatars1.githubusercontent.com/u/14930068?v=3&s=200)](https://forum.untamedhero.com)    | [![UNTAMEDHero](https://avatars1.githubusercontent.com/u/14930068?v=3&s=200)](https://forum.untamedhero.com) | [![UNTAMEDHero](https://avatars1.githubusercontent.com/u/14930068?v=3&s=200)](https://forum.untamedhero.com)  |
-| <a href="https://github.com/UNTAMEDHero/UNTAMEDHero" target="_blank">`github.com/UNTAMEDHero`</a> | <a href="http://github.com/UNTAMEDHero" target="_blank">`github.com/UNTAMEDHero`</a> | <a href="http://github.com/UNTAMEDHero" target="_blank">`github.com/UNTAMEDHero`</a> |
+ |
+| <a href="https://github.com/procoder4/procoder4" target="_blank">`github.com/procoder4`</a> | <a href="http://github.com/procoder4" target="_blank">`github.com/procoder4`</a> | <a href="http://github.com/procoder4" target="_blank">`github.com/procoder4`</a> |
 
 
 ## Gamemode preview
