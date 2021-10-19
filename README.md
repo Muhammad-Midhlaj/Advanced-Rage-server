@@ -1,6 +1,6 @@
 
 ___
-Its a rageMP gamemode MySQL/Nodejs/Reac JS based on unionrp gamemode , translated in English & Open source!
+Its a rageMP gamemode MySQL/Nodejs/React JS based on unionrp gamemode , translated in English & Open source!
 ___
 ## Installation
 
