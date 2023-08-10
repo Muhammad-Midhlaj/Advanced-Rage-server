@@ -27,8 +27,8 @@ You can make pull request in order to help and translate this from Russian in En
 
 I'm not the owner of this release, if you want to help the owner of this release go to union-rp.ru and make sure you make a nice gift!
 
-[![Join us on Discord](https://discordapp.com/api/guilds/695742873588465734/widget.png?style=banner4)](https://discord.gg/yx2v7enzPd
-)
+
+
 
 ## TO DO LIST
 - [ ] Change inventory size when you buy new clothes
